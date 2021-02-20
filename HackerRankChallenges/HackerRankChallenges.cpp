@@ -8,5 +8,6 @@ int main()
 {
     //return SocksMerchantChallenge();
     //return CountingValleysChallenge();
-    return JumpingOnCloudsChallenge();
+    //return JumpingOnCloudsChallenge();
+    return RepeatedStringChallenge();
 }
