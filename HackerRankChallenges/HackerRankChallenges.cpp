@@ -7,5 +7,6 @@
 int main()
 {
     //return SocksMerchantChallenge();
-    return CountingValleysChallenge();
+    //return CountingValleysChallenge();
+    return JumpingOnCloudsChallenge();
 }
