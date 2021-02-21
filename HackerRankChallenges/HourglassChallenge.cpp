@@ -1,6 +1,6 @@
 
 /*
-Hackerrank::Challenges::CountingValley
+Hackerrank::Challenges::Hourglass
 description: https://www.hackerrank.com/challenges/2d-array
 */
 

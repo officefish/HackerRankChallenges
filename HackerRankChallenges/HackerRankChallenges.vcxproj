@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LeftRotationChallenge.cpp" />
     <ClCompile Include="HourglassChallenge.cpp" />
     <ClCompile Include="CountingValleysChallenge.cpp" />
     <ClCompile Include="HackerRankChallenges.cpp" />
     <ClCompile Include="HackerRankMiscellaneous.cpp" />
     <ClCompile Include="JumpingOnCloudsChallenge.cpp" />
+    <ClCompile Include="NewYearChaosChallenge.cpp" />
     <ClCompile Include="RepeatedStringChallenge.cpp" />
     <ClCompile Include="SocksMerchantChallenge.cpp" />
   </ItemGroup>

@@ -10,5 +10,9 @@ int main()
     //return CountingValleysChallenge();
     //return JumpingOnCloudsChallenge();
     //return RepeatedStringChallenge();
-    return HourglassChallenge();
+    
+    // Arrays
+    //return HourglassChallenge();
+    //return LeftRotationChallenge();
+    return NewYearChaosChallenge();
 }
