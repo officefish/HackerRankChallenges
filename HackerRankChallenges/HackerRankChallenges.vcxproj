@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HourglassChallenge.cpp" />
     <ClCompile Include="CountingValleysChallenge.cpp" />
     <ClCompile Include="HackerRankChallenges.cpp" />
     <ClCompile Include="HackerRankMiscellaneous.cpp" />

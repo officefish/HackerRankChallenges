@@ -9,5 +9,6 @@ int main()
     //return SocksMerchantChallenge();
     //return CountingValleysChallenge();
     //return JumpingOnCloudsChallenge();
-    return RepeatedStringChallenge();
+    //return RepeatedStringChallenge();
+    return HourglassChallenge();
 }
