@@ -14,5 +14,6 @@ int main()
     // Arrays
     //return HourglassChallenge();
     //return LeftRotationChallenge();
-    return NewYearChaosChallenge();
+    //return NewYearChaosChallenge();
+    return MinimumSwap2Challenge();
 }

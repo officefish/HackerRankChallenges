@@ -8,6 +8,8 @@ int RepeatedStringChallenge();
 int HourglassChallenge();
 int LeftRotationChallenge();
 int NewYearChaosChallenge();
+int MinimumSwap2Challenge();
+
 
 
 
