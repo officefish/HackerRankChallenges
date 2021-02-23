@@ -9,6 +9,11 @@ int HourglassChallenge();
 int LeftRotationChallenge();
 int NewYearChaosChallenge();
 int MinimumSwap2Challenge();
+int ArrayManipulationChallenge();
+
+
+
+
 
 
 
