@@ -13,6 +13,7 @@ int ArrayManipulationChallenge();
 
 //HasgTables
 int RansomNoteChallenge();
+int TwoStringsChallenge();
 
 //C++
 int InputOutputChallenge();

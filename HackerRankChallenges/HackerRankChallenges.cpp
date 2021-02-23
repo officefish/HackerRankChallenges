@@ -19,7 +19,8 @@ int main()
     //return ArrayManipulationChallenge();
 
     //HashTables
-    return RansomNoteChallenge();
+    //return RansomNoteChallenge();
+    return TwoStringsChallenge();
 
     //C++
     //return InputOutputChallenge();

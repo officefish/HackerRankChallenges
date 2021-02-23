@@ -152,6 +152,7 @@
     <ClCompile Include="RansomNoteChallenge.cpp" />
     <ClCompile Include="RepeatedStringChallenge.cpp" />
     <ClCompile Include="SocksMerchantChallenge.cpp" />
+    <ClCompile Include="TwoStringsCallenge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h" />
