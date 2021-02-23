@@ -1,3 +1,8 @@
+/*
+	Hackerrank::Challenges::InputOutput
+	description: https://www.hackerrank.com/challenges/cpp-input-and-output
+*/
+
 #include "Challenges.h"
 
 #include"HackerRankMiscellaneous.h"

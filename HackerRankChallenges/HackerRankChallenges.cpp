@@ -18,6 +18,9 @@ int main()
     //return MinimumSwap2Challenge();
     //return ArrayManipulationChallenge();
 
+    //HashTables
+    return RansomNoteChallenge();
+
     //C++
-    return InputOutputChallenge();
+    //return InputOutputChallenge();
 }

@@ -149,6 +149,7 @@
     <ClCompile Include="JumpingOnCloudsChallenge.cpp" />
     <ClCompile Include="MinimumSwap2Challenge.cpp" />
     <ClCompile Include="NewYearChaosChallenge.cpp" />
+    <ClCompile Include="RansomNoteChallenge.cpp" />
     <ClCompile Include="RepeatedStringChallenge.cpp" />
     <ClCompile Include="SocksMerchantChallenge.cpp" />
   </ItemGroup>

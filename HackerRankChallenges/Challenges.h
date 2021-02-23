@@ -11,6 +11,8 @@ int NewYearChaosChallenge();
 int MinimumSwap2Challenge();
 int ArrayManipulationChallenge();
 
+//HasgTables
+int RansomNoteChallenge();
 
 //C++
 int InputOutputChallenge();
