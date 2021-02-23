@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArrayManipulationChallenge.cpp" />
+    <ClCompile Include="InputOutputChallenge.cpp" />
     <ClCompile Include="LeftRotationChallenge.cpp" />
     <ClCompile Include="HourglassChallenge.cpp" />
     <ClCompile Include="CountingValleysChallenge.cpp" />

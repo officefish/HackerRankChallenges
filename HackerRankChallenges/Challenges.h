@@ -12,6 +12,9 @@ int MinimumSwap2Challenge();
 int ArrayManipulationChallenge();
 
 
+//C++
+int InputOutputChallenge();
+
 
 
 

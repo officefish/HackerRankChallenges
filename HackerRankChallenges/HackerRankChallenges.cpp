@@ -16,5 +16,8 @@ int main()
     //return LeftRotationChallenge();
     //return NewYearChaosChallenge();
     //return MinimumSwap2Challenge();
-    return ArrayManipulationChallenge();
+    //return ArrayManipulationChallenge();
+
+    //C++
+    return InputOutputChallenge();
 }
