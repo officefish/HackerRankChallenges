@@ -14,6 +14,7 @@ int ArrayManipulationChallenge();
 //HasgTables
 int RansomNoteChallenge();
 int TwoStringsChallenge();
+int SherlockAnagramsChallenge();
 
 //C++
 int InputOutputChallenge();

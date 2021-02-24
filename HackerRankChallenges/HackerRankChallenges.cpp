@@ -20,7 +20,8 @@ int main()
 
     //HashTables
     //return RansomNoteChallenge();
-    return TwoStringsChallenge();
+    //return TwoStringsChallenge();
+    return SherlockAnagramsChallenge();
 
     //C++
     //return InputOutputChallenge();
