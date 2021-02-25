@@ -15,6 +15,7 @@ int ArrayManipulationChallenge();
 int RansomNoteChallenge();
 int TwoStringsChallenge();
 int SherlockAnagramsChallenge();
+int CountRatioTripletsChallenge();
 
 //C++
 int InputOutputChallenge();

@@ -60,6 +60,9 @@
     <ClCompile Include="SherlockAnagramsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="CountRatioTripletsChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h">

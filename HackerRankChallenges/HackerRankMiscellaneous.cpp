@@ -8,6 +8,22 @@ using std::not1;
 using std::ptr_fun;
 
 
+vector<string> hr::split(const string& str) {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(" ", start)) != string::npos) {
+        tokens.push_back(str.substr(start, end - start));
+
+        start = end + 1;
+    }
+
+    tokens.push_back(str.substr(start));
+
+    return tokens;
+}
 
 vector<string> hr::split_string(string input_string) {
     string::iterator new_end = unique(input_string.begin(), input_string.end(), [](const char& x, const char& y) {

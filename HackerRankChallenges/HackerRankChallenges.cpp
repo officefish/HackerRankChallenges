@@ -21,7 +21,8 @@ int main()
     //HashTables
     //return RansomNoteChallenge();
     //return TwoStringsChallenge();
-    return SherlockAnagramsChallenge();
+    //return SherlockAnagramsChallenge();
+    return CountRatioTripletsChallenge();
 
     //C++
     //return InputOutputChallenge();
