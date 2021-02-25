@@ -16,6 +16,7 @@ int RansomNoteChallenge();
 int TwoStringsChallenge();
 int SherlockAnagramsChallenge();
 int CountRatioTripletsChallenge();
+int FrequencyQueriesChallenge();
 
 //C++
 int InputOutputChallenge();
