@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="ArrayManipulationChallenge.cpp" />
     <ClCompile Include="CountRatioTripletsChallenge.cpp" />
+    <ClCompile Include="DataTypesChallenge.cpp" />
     <ClCompile Include="FrequencyQuieriesChallenge.cpp" />
     <ClCompile Include="InputOutputChallenge.cpp" />
     <ClCompile Include="LeftRotationChallenge.cpp" />

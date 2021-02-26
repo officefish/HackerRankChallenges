@@ -20,6 +20,7 @@ int FrequencyQueriesChallenge();
 
 //C++
 int InputOutputChallenge();
+int DataTypesChallenge();
 
 
 

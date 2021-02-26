@@ -22,8 +22,9 @@ int main()
     //return RansomNoteChallenge();
     //return TwoStringsChallenge();
     //return SherlockAnagramsChallenge();
-    return CountRatioTripletsChallenge();
+    //return CountRatioTripletsChallenge();
 
     //C++
     //return InputOutputChallenge();
+    return DataTypesChallenge();
 }
