@@ -23,6 +23,7 @@ int InputOutputChallenge();
 int DataTypesChallenge();
 int ConditionalStatementsChallenge();
 int ForLoopChallenge();
+int FunctionsChallenge();
 
 
 

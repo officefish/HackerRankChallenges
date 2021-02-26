@@ -145,6 +145,7 @@
     <ClCompile Include="DataTypesChallenge.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
     <ClCompile Include="FrequencyQuieriesChallenge.cpp" />
+    <ClCompile Include="FunctionsChallenge.cpp" />
     <ClCompile Include="InputOutputChallenge.cpp" />
     <ClCompile Include="LeftRotationChallenge.cpp" />
     <ClCompile Include="HourglassChallenge.cpp" />

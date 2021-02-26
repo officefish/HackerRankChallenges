@@ -28,5 +28,6 @@ int main()
     //return InputOutputChallenge();
     //return DataTypesChallenge();
     //return ConditionalStatementsChallenge();
-    return ForLoopChallenge();
+    //return ForLoopChallenge();
+    return FunctionsChallenge();
 }
