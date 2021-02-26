@@ -26,5 +26,6 @@ int main()
 
     //C++
     //return InputOutputChallenge();
-    return DataTypesChallenge();
+    //return DataTypesChallenge();
+    return ConditionalStatementsChallenge();
 }
