@@ -27,5 +27,6 @@ int main()
     //C++
     //return InputOutputChallenge();
     //return DataTypesChallenge();
-    return ConditionalStatementsChallenge();
+    //return ConditionalStatementsChallenge();
+    return ForLoopChallenge();
 }

@@ -22,6 +22,7 @@ int FrequencyQueriesChallenge();
 int InputOutputChallenge();
 int DataTypesChallenge();
 int ConditionalStatementsChallenge();
+int ForLoopChallenge();
 
 
 
