@@ -24,6 +24,8 @@ int DataTypesChallenge();
 int ConditionalStatementsChallenge();
 int ForLoopChallenge();
 int FunctionsChallenge();
+int PointerChallenge();
+
 
 
 

@@ -61,7 +61,7 @@ int LeftRotationChallenge() {
 
     vector<int> result = RotationLeft(a, d);
 
-    for (int i = 0; i < result.size(); i++) {
+    for (vector<int>::size_type i = 0; i < result.size(); ++i) {
         fout << result[i];
 
         if (i != result.size() - 1) {

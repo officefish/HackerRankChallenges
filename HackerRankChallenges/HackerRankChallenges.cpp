@@ -29,5 +29,6 @@ int main()
     //return DataTypesChallenge();
     //return ConditionalStatementsChallenge();
     //return ForLoopChallenge();
-    return FunctionsChallenge();
+    //return FunctionsChallenge();
+    return PointerChallenge();
 }
