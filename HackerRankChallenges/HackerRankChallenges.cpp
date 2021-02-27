@@ -7,7 +7,7 @@
 int main()
 {
     /* 30 Days coding Challenge */
-    return Day2DataTypesChallenge();
+    //return Day2DataTypesChallenge();
     
     //return SocksMerchantChallenge();
     //return CountingValleysChallenge();
@@ -36,4 +36,5 @@ int main()
     //return PointerChallenge();
     //return ArrayIntroductionChallenge();
     //return VariableSizedArraysChallenge();
+    return DequeSTLChallenge();
 }

@@ -145,6 +145,7 @@
     <ClCompile Include="CountRatioTripletsChallenge.cpp" />
     <ClCompile Include="DataTypesChallenge.cpp" />
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
+    <ClCompile Include="DequeSTLChallenge.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
     <ClCompile Include="FrequencyQuieriesChallenge.cpp" />
     <ClCompile Include="FunctionsChallenge.cpp" />
