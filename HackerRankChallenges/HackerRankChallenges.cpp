@@ -6,6 +6,9 @@
 
 int main()
 {
+    /* 30 Days coding Challenge */
+    return Day2DataTypesChallenge();
+    
     //return SocksMerchantChallenge();
     //return CountingValleysChallenge();
     //return JumpingOnCloudsChallenge();
@@ -32,5 +35,5 @@ int main()
     //return FunctionsChallenge();
     //return PointerChallenge();
     //return ArrayIntroductionChallenge();
-    return VariableSizedArraysChallenge();
+    //return VariableSizedArraysChallenge();
 }
