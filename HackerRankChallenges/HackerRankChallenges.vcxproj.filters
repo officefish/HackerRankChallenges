@@ -84,6 +84,9 @@
     <ClCompile Include="ArrayIntroductionChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="VariableSizedArraysChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h">

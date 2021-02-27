@@ -31,5 +31,6 @@ int main()
     //return ForLoopChallenge();
     //return FunctionsChallenge();
     //return PointerChallenge();
-    return ArrayIntroductionChallenge();
+    //return ArrayIntroductionChallenge();
+    return VariableSizedArraysChallenge();
 }

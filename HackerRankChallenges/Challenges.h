@@ -26,6 +26,8 @@ int ForLoopChallenge();
 int FunctionsChallenge();
 int PointerChallenge();
 int ArrayIntroductionChallenge();
+int VariableSizedArraysChallenge();
+
 
 
 
