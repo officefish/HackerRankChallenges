@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayIntroductionChallenge.cpp" />
     <ClCompile Include="ArrayManipulationChallenge.cpp" />
     <ClCompile Include="ConditionalStatementsChallenge.cpp" />
     <ClCompile Include="CountRatioTripletsChallenge.cpp" />

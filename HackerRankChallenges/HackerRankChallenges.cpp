@@ -30,5 +30,6 @@ int main()
     //return ConditionalStatementsChallenge();
     //return ForLoopChallenge();
     //return FunctionsChallenge();
-    return PointerChallenge();
+    //return PointerChallenge();
+    return ArrayIntroductionChallenge();
 }

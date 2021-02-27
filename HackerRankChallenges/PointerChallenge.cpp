@@ -30,10 +30,14 @@ int PointerChallenge() {
 
 void update(int* a, int* b) {
 
-    // Complete this function
     int aValue = *a;
     int bValue = *b;
 
     *a = aValue + bValue;
     *b = abs(aValue - bValue);
+
+    /*
+        int sum = *a + *b;
+        int absDifference = *a - *b > 0 ? *a - *b : -(*a - *b);
+    */
 }
