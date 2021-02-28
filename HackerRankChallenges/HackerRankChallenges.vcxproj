@@ -142,6 +142,7 @@
     <ClCompile Include="ArrayIntroductionChallenge.cpp" />
     <ClCompile Include="ArrayManipulationChallenge.cpp" />
     <ClCompile Include="BubbleSortChallenge.cpp" />
+    <ClCompile Include="ComparatorSortChallenge.cpp" />
     <ClCompile Include="ConditionalStatementsChallenge.cpp" />
     <ClCompile Include="CountRatioTripletsChallenge.cpp" />
     <ClCompile Include="DataTypesChallenge.cpp" />
@@ -164,11 +165,13 @@
     <ClCompile Include="Day3OperatorsChallenge.cpp" />
     <ClCompile Include="PointerChallenge.cpp" />
     <ClCompile Include="RansomNoteChallenge.cpp" />
+    <ClCompile Include="RectangleAreaChallenge.cpp" />
     <ClCompile Include="RepeatedStringChallenge.cpp" />
     <ClCompile Include="SherlockAnagramsChallenge.cpp" />
     <ClCompile Include="SocksMerchantChallenge.cpp" />
     <ClCompile Include="TwoStringsCallenge.cpp" />
     <ClCompile Include="VariableSizedArraysChallenge.cpp" />
+    <ClCompile Include="VectorSortChallenge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h" />

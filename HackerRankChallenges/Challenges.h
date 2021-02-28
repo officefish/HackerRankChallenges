@@ -29,6 +29,9 @@ int frequencyQueriesChallenge();
 int bubbleSortChallenge();
 int markAndToysChallenge();
 int mergeSortChallenge();
+int comparatorSortChallenge();
+
+
 
 /* C++ */
 int inputOutputChallenge();
@@ -37,9 +40,11 @@ int conditionalStatementsChallenge();
 int forLoopChallenge();
 int functionsChallenge();
 int pointerChallenge();
+int vectorSortChallenge();
 int arrayIntroductionChallenge();
 int variableSizedArraysChallenge();
 int dequeSTLChallenge();
+int rectangleAreaChallenge();
 
 
 

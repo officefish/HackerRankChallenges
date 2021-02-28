@@ -6,10 +6,11 @@
 
 int main()
 {
-    /* 30 Days coding Challenge */
+    // 30 Days coding Challenge 
     //return day2DataTypesChallenge();
     //return day3OperatorsChallenge();
     
+    // Interview Preparation Kit
     //return socksMerchantChallenge();
     //return countingValleysChallenge();
     //return jumpingOnCloudsChallenge();
@@ -30,9 +31,9 @@ int main()
 
     //Sorting
     //return bubbleSortChallenge();
-    return markAndToysChallenge();
+    //return markAndToysChallenge();
     //return mergeSortChallenge();
-
+    //return comparatorSortChallenge();
 
     //C++
     //return inputOutputChallenge();
@@ -40,8 +41,10 @@ int main()
     //return conditionalStatementsChallenge();
     //return forLoopChallenge();
     //return functionsChallenge();
+    return vectorSortChallenge();
     //return pointerChallenge();
     //return arrayIntroductionChallenge();
     //return variableSizedArraysChallenge();
     //return dequeSTLChallenge();
+    //rectangleAreaChallenge();
 }
