@@ -72,9 +72,9 @@ using std::vector;
 using std::find;
 
 
-int SockMerchant(int, vector<int>);
+int sockMerchant(int, vector<int>);
 
-int SocksMerchantChallenge()
+int socksMerchantChallenge()
 {
    
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
@@ -98,7 +98,7 @@ int SocksMerchantChallenge()
         ar[i] = ar_item;
     }
 
-    int result = SockMerchant(n, ar);
+    int result = sockMerchant(n, ar);
 
     cout << "SockMerchant result: " << result << "\n";
     fout << result << "\n";
@@ -110,7 +110,7 @@ int SocksMerchantChallenge()
 
 }
 
-int SockMerchant(int totalSocks, vector<int> socks) {
+int sockMerchant(int totalSocks, vector<int> socks) {
 
     int pairs = 0;
     vector<int> needPairSocks = {};

@@ -7,34 +7,37 @@
 int main()
 {
     /* 30 Days coding Challenge */
-    //return Day2DataTypesChallenge();
+    //return day2DataTypesChallenge();
     
-    //return SocksMerchantChallenge();
-    //return CountingValleysChallenge();
-    //return JumpingOnCloudsChallenge();
-    //return RepeatedStringChallenge();
+    //return socksMerchantChallenge();
+    //return countingValleysChallenge();
+    //return jumpingOnCloudsChallenge();
+    //return repeatedStringChallenge();
     
     // Arrays
-    //return HourglassChallenge();
-    //return LeftRotationChallenge();
-    //return NewYearChaosChallenge();
-    //return MinimumSwap2Challenge();
-    //return ArrayManipulationChallenge();
+    //return hourglassChallenge();
+    //return leftRotationChallenge();
+    //return newYearChaosChallenge();
+    //return minimumSwap2Challenge();
+    //return arrayManipulationChallenge();
 
     //HashTables
-    //return RansomNoteChallenge();
-    //return TwoStringsChallenge();
-    //return SherlockAnagramsChallenge();
-    //return CountRatioTripletsChallenge();
+    //return ransomNoteChallenge();
+    //return twoStringsChallenge();
+    //return sherlockAnagramsChallenge();
+    //return countRatioTripletsChallenge();
+
+    //Sorting
+    return bubbleSortChallenge();
 
     //C++
-    //return InputOutputChallenge();
-    //return DataTypesChallenge();
-    //return ConditionalStatementsChallenge();
-    //return ForLoopChallenge();
-    //return FunctionsChallenge();
-    //return PointerChallenge();
-    //return ArrayIntroductionChallenge();
-    //return VariableSizedArraysChallenge();
-    return DequeSTLChallenge();
+    //return inputOutputChallenge();
+    //return dataTypesChallenge();
+    //return conditionalStatementsChallenge();
+    //return forLoopChallenge();
+    //return functionsChallenge();
+    //return pointerChallenge();
+    //return arrayIntroductionChallenge();
+    //return variableSizedArraysChallenge();
+    //return dequeSTLChallenge();
 }

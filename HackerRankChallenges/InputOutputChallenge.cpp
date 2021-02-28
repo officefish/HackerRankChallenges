@@ -18,7 +18,7 @@ using std::ofstream;
 
 
 
-int InputOutputChallenge() {
+int inputOutputChallenge() {
 
 	string nd_temp;
 	getline(cin, nd_temp);

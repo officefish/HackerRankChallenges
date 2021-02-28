@@ -18,7 +18,7 @@ using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 
-int MinimumSwaps(vector<int> input) {
+int minimumSwaps(vector<int> input) {
     
     int swaps = 0;
     int counter = 0;
@@ -43,7 +43,7 @@ int MinimumSwaps(vector<int> input) {
     return swaps;
 }
 
-int MinimumSwap2Challenge() {
+int minimumSwap2Challenge() {
 	
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -65,7 +65,7 @@ int MinimumSwap2Challenge() {
         arr[i] = arr_item;
     }
 
-    int res = MinimumSwaps(arr);
+    int res = minimumSwaps(arr);
 
     cout << res << endl;
     

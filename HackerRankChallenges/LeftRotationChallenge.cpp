@@ -16,7 +16,7 @@ using std::endl;
 using std::cin;
 using std::ofstream;
 
-vector<int> RotationLeft(vector<int> a, int d) {
+vector<int> rotationLeft(vector<int> a, int d) {
     
     const int SRC_SIZE = a.size();
     vector<int> output(SRC_SIZE);
@@ -32,7 +32,7 @@ vector<int> RotationLeft(vector<int> a, int d) {
    
 }
 
-int LeftRotationChallenge() {
+int leftRotationChallenge() {
 
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -59,7 +59,7 @@ int LeftRotationChallenge() {
         a[i] = a_item;
     }
 
-    vector<int> result = RotationLeft(a, d);
+    vector<int> result = rotationLeft(a, d);
 
     for (vector<int>::size_type i = 0; i < result.size(); ++i) {
         fout << result[i];

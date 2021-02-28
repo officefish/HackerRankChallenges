@@ -15,7 +15,7 @@ using std::string;
 
 
 
-int ForLoopChallenge() {
+int forLoopChallenge() {
 	
     string numbers[12] = { "I am Moon Hacker","one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "even", "odd"};
     string output;

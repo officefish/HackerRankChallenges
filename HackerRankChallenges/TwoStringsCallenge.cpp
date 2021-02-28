@@ -22,7 +22,7 @@ using std::streamsize;
 using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
-string TwoStrings(string s1, string s2) {
+string twoStrings(string s1, string s2) {
     
     string largeStr;
     string shortStr;
@@ -52,7 +52,7 @@ string TwoStrings(string s1, string s2) {
     return ans =  status ? "YES" : "NO";
 }
 
-int TwoStringsChallenge() {
+int twoStringsChallenge() {
     
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -68,7 +68,7 @@ int TwoStringsChallenge() {
         string s2;
         getline(cin, s2);
 
-        string result = TwoStrings(s1, s2);
+        string result = twoStrings(s1, s2);
         cout << result << '\n';
         fout << result << "\n";
     }

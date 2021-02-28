@@ -12,7 +12,7 @@ using std::numeric_limits;
 using std::streamsize;
 using std::string;
 
-int ConditionalStatementsChallenge() {
+int conditionalStatementsChallenge() {
 
     string numbers[10] = {"Greater than 9","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
     string output = numbers[0];
@@ -20,8 +20,7 @@ int ConditionalStatementsChallenge() {
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      
-
+    
     if (1 <= n && n <= 9)
         output = numbers[n];
 

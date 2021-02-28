@@ -18,7 +18,7 @@ using std::numeric_limits;
 using std::ofstream;
 using std::streamsize;
 
-void MinimumBribes(vector<int> q) {
+void minimumBribes(vector<int> q) {
 
     const int QUEUE_SIZE = q.size();
 
@@ -47,7 +47,7 @@ void MinimumBribes(vector<int> q) {
 
 }
 
-int NewYearChaosChallenge() {
+int newYearChaosChallenge() {
 
     int t;
     cin >> t;
@@ -71,7 +71,7 @@ int NewYearChaosChallenge() {
             q[i] = q_item;
         }
 
-        MinimumBribes(q);
+        minimumBribes(q);
     }
 
     return 0;

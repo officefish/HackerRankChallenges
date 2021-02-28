@@ -43,11 +43,11 @@ using std::setprecision;
 */
 using std::ios_base;
 
-int PrecisionExample();
-int FixedExplanation();
+int precisionExample();
+int fixedExplanation();
 
 
-int DataTypesChallenge() {
+int dataTypesChallenge() {
 
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
@@ -58,15 +58,15 @@ int DataTypesChallenge() {
 	cout << fixed << setprecision(3) << d << "\n";
 	cout << fixed << setprecision(9) << e << "\n";
 
-	//PrecisionExample();
-	//FixedExplanation();
+	//precisionExample();
+	//fixedExplanation();
 	return 0;
 }
 
 
 
 
-int PrecisionExample() {
+int precisionExample() {
 
 	double f = 3.14159;
 	cout << setprecision(5) << f << '\n';  // prints 3.1416 and not 3.141459 why 
@@ -87,7 +87,7 @@ int PrecisionExample() {
 	http://www.cplusplus.com/reference/ios/fixed/?kw=fixed
 */
 
-int FixedExplanation() {
+int fixedExplanation() {
 	
 	double a = 3.1415926534;
 	double b = 2006.0;

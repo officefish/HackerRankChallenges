@@ -27,7 +27,7 @@ using std::endl;
 using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
-vector<int> FrequencyQuery(vector<vector<int>> queries) {
+vector<int> frequencyQuery(vector<vector<int>> queries) {
     
     //initialize two maps where :
     //freq has for key the frequence z and the value is the datas having this frequency
@@ -89,7 +89,7 @@ vector<int> FrequencyQuery(vector<vector<int>> queries) {
 }
 
 
-int FrequencyQueriesChallenge() {
+int frequencyQueriesChallenge() {
     
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -116,7 +116,7 @@ int FrequencyQueriesChallenge() {
         }
     }
 
-    vector<int> ans = FrequencyQuery(queries);
+    vector<int> ans = frequencyQuery(queries);
 
     for (int i = 0; i < ans.size(); i++) {
         fout << ans[i];

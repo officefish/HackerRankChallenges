@@ -5,14 +5,12 @@
 
 #include "Challenges.h"
 
-
 #include<bits/stdc++.h>
 using std::cout;
 using std::cin;
 using std::endl;
 
-
-int VariableSizedArraysChallenge (){
+int variableSizedArraysChallenge (){
 
     int n, q, r, v, i, j;
 
@@ -48,6 +46,7 @@ int VariableSizedArraysChallenge (){
 
     delete[]output;
 
+    return 0;
 
     /*
         (1) To access a two-dimensional array, declare a variable 'data' of type pointer to pointer to type
@@ -60,6 +59,4 @@ int VariableSizedArraysChallenge (){
         (4) Memory is freed in the exact reverse order: first, arrays of int values are destroyed, and then the array of pointers is destroyed.
 
     */
-
-    return 0;
 }

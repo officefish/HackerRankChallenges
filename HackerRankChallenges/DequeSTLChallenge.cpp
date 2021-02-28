@@ -145,7 +145,7 @@ void PrintKMaxTemplate(T arr[], int n, int k) {
     cout << endl;
 }
 
-int DequeSTLChallenge() {
+int dequeSTLChallenge() {
 
     int t;
     cin >> t;
@@ -156,6 +156,7 @@ int DequeSTLChallenge() {
         int* arr = new int[n];
         for (i = 0; i < n; i++)
             cin >> arr[i];
+        //PrintKMaxTemplate(arr, n, k);
         printKMax(arr, n, k);
         delete[] arr;
         t--;

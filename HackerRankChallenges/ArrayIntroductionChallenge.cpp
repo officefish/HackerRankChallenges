@@ -10,7 +10,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int ArrayIntroductionChallenge() {
+int arrayIntroductionChallenge() {
         
     int length;
     cin >> length;

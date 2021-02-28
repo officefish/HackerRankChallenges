@@ -26,7 +26,7 @@ using std::endl;
 using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
-long CountTriplets(vector<long> arr, long r) {
+long countTriplets(vector<long> arr, long r) {
 
     long triplets = 0;
     unordered_map<string, long> pairs;
@@ -56,7 +56,7 @@ long CountTriplets(vector<long> arr, long r) {
     return triplets;
 }
 
-int CountRatioTripletsChallenge() {
+int countRatioTripletsChallenge() {
 
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -83,7 +83,7 @@ int CountRatioTripletsChallenge() {
         arr[i] = arr_item;
     }
 
-    long ans = CountTriplets(arr, r);
+    long ans = countTriplets(arr, r);
 
     cout << ans << "\n";
     fout << ans << "\n";

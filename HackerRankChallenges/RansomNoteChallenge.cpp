@@ -22,7 +22,7 @@ using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
 
-void CheckMagazine(vector<string> magazine, vector<string> note) {
+void checkMagazine(vector<string> magazine, vector<string> note) {
     
     bool status = true;
     unordered_map<string, int> words;
@@ -44,7 +44,7 @@ void CheckMagazine(vector<string> magazine, vector<string> note) {
     cout << ans << endl;
 }
 
-int RansomNoteChallenge() {
+int ransomNoteChallenge() {
     
     string mn_temp;
     getline(cin, mn_temp);
@@ -81,7 +81,7 @@ int RansomNoteChallenge() {
         note[i] = note_item;
     }
 
-    CheckMagazine(magazine, note);
+    checkMagazine(magazine, note);
 
     return 0;
 }

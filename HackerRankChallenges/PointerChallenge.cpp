@@ -14,7 +14,7 @@ using std::streamsize;
 
 void update(int* a, int* b);
 
-int PointerChallenge() {
+int pointerChallenge() {
     int a, b;
     int* pa = &a, * pb = &b;
 

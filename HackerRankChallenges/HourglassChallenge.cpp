@@ -21,7 +21,7 @@ using std::streamsize;
 using std::numeric_limits;
 using std::sort;
 
-int HourglassSum(vector<vector<int>> arr) {
+int hourglassSum(vector<vector<int>> arr) {
         
     const size_t FIELD_SIZE = 4;
     vector<int> sums(0);
@@ -43,7 +43,7 @@ int HourglassSum(vector<vector<int>> arr) {
     return sums[15];
 }
 
-int HourglassChallenge() {
+int hourglassChallenge() {
 
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -59,7 +59,7 @@ int HourglassChallenge() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
-    int result = HourglassSum(arr);
+    int result = hourglassSum(arr);
     
     cout << "\n" << result << "\n";
     

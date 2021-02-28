@@ -1,39 +1,43 @@
 #pragma once
 /* 30 days coding Challenge */
-int Day2DataTypesChallenge();
+int day2DataTypesChallenge();
 
 /* Interview Preparation kit */
 
 //Warm up Challenges
-int SocksMerchantChallenge();
-int CountingValleysChallenge();
-int JumpingOnCloudsChallenge();
-int RepeatedStringChallenge();
+int socksMerchantChallenge();
+int countingValleysChallenge();
+int jumpingOnCloudsChallenge();
+int repeatedStringChallenge();
 
 //Arrays
-int HourglassChallenge();
-int LeftRotationChallenge();
-int NewYearChaosChallenge();
-int MinimumSwap2Challenge();
-int ArrayManipulationChallenge();
+int hourglassChallenge();
+int leftRotationChallenge();
+int newYearChaosChallenge();
+int minimumSwap2Challenge();
+int arrayManipulationChallenge();
 
 //HasgTables
-int RansomNoteChallenge();
-int TwoStringsChallenge();
-int SherlockAnagramsChallenge();
-int CountRatioTripletsChallenge();
-int FrequencyQueriesChallenge();
+int ransomNoteChallenge();
+int twoStringsChallenge();
+int sherlockAnagramsChallenge();
+int countRatioTripletsChallenge();
+int frequencyQueriesChallenge();
+
+//Sorting
+int bubbleSortChallenge();
+
 
 /* C++ */
-int InputOutputChallenge();
-int DataTypesChallenge();
-int ConditionalStatementsChallenge();
-int ForLoopChallenge();
-int FunctionsChallenge();
-int PointerChallenge();
-int ArrayIntroductionChallenge();
-int VariableSizedArraysChallenge();
-int DequeSTLChallenge();
+int inputOutputChallenge();
+int dataTypesChallenge();
+int conditionalStatementsChallenge();
+int forLoopChallenge();
+int functionsChallenge();
+int pointerChallenge();
+int arrayIntroductionChallenge();
+int variableSizedArraysChallenge();
+int dequeSTLChallenge();
 
 
 

@@ -15,7 +15,7 @@ using std::sort;
 
 int max_of_four(int a, int b, int c, int d);
 
-int FunctionsChallenge() {
+int functionsChallenge() {
 
     
     int n1, n2, n3, n4;

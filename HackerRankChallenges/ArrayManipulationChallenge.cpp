@@ -45,7 +45,7 @@ Output:
 
 */
 
-long ArrayManipulation(int n, vector<vector<int>> queries) {
+long arrayManipulation(int n, vector<vector<int>> queries) {
     
     vector<int> accumulator(n, 0);
 
@@ -121,7 +121,7 @@ then add that to position 2, and so forth, looking for the point where it was th
 
 */
 
-int ArrayManipulationChallenge() {
+int arrayManipulationChallenge() {
 
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -146,7 +146,7 @@ int ArrayManipulationChallenge() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
-    long result = ArrayManipulation(n, queries);
+    long result = arrayManipulation(n, queries);
 
     cout << result << endl;
     

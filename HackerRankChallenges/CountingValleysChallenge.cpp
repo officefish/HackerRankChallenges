@@ -59,7 +59,7 @@ using std::cin;
 using std::cout;
 using std::stoi;
 
-int CountingValleys(int steps, string path) {
+int countingValleys(int steps, string path) {
 
     int height = 0;
     const int skyline = 0;
@@ -83,7 +83,7 @@ int CountingValleys(int steps, string path) {
     return valleysCounter;
 }
 
-int CountingValleysChallenge() {
+int countingValleysChallenge() {
     
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -96,7 +96,7 @@ int CountingValleysChallenge() {
     string path;
     getline(cin, path);
 
-    int result = CountingValleys(steps, path);
+    int result = countingValleys(steps, path);
 
     fout << result << "\n";
     cout << "\n" << result << "\n";

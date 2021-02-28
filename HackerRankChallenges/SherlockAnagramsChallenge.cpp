@@ -23,7 +23,7 @@ using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
 
-bool AreAnagram(string str1, string str2)
+bool areAnagram(string str1, string str2)
 {
     int n1 = str1.length();
     int n2 = str2.length();
@@ -41,7 +41,7 @@ bool AreAnagram(string str1, string str2)
     return true;
 }
 
-int SubstrSum(string s) {
+int substrSum(string s) {
 
     int sum = 0;
 
@@ -53,12 +53,12 @@ int SubstrSum(string s) {
     return sum;
 }
 
-int FindAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
+int findAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
     
     bool areAnagram = false;
     int anagramCounter = 0;
 
-    int substrSum = SubstrSum(s);
+    int substrSum = substrSum(s);
   
     vector<string>* pBufferSubs;
     
@@ -69,7 +69,7 @@ int FindAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
               
         areAnagram = false;
         for (auto& str : *pBufferSubs) {
-            areAnagram = AreAnagram(s, str);
+            areAnagram = areAnagram(s, str);
             if (areAnagram) {
                 ++anagramCounter;
             }
@@ -87,7 +87,7 @@ int FindAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
 
 }
 
-int SherlockAndAnagrams(string s) {
+int sherlockAndAnagrams(string s) {
     
     /*
         Elegant
@@ -141,7 +141,7 @@ int SherlockAndAnagrams(string s) {
 }
 
 
-int SherlockAnagramsChallenge() {
+int sherlockAnagramsChallenge() {
 
     string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
     ofstream fout(hackerrank_output_str);
@@ -154,7 +154,7 @@ int SherlockAnagramsChallenge() {
         string s;
         getline(cin, s);
 
-        int result = SherlockAndAnagrams(s);
+        int result = sherlockAndAnagrams(s);
 
         fout << result << "\n";
     }

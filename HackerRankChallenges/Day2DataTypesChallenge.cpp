@@ -17,7 +17,7 @@ using std::streamsize;
 using std::fixed;
 using std::setprecision;
 
-int Day2DataTypesChallenge() {
+int day2DataTypesChallenge() {
 
 	int i1 = 4;
 	double d1 = 4.0;
