@@ -5,8 +5,6 @@ description:https://www.hackerrank.com/challenges/ctci-bubble-sort
 
 #include "Challenges.h"
 
-#include "Challenges.h"
-
 #include "HackerRankMiscellaneous.h"
 using hr::output_str;
 using hr::split_string;
@@ -68,3 +66,4 @@ int bubbleSortChallenge()
     return 0;
 }
 
+// How to count Swaps without swaps see: 

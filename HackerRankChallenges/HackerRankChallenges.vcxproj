@@ -157,8 +157,11 @@
     <ClCompile Include="HackerRankChallenges.cpp" />
     <ClCompile Include="HackerRankMiscellaneous.cpp" />
     <ClCompile Include="JumpingOnCloudsChallenge.cpp" />
+    <ClCompile Include="MarkAndToysChallenge.cpp" />
+    <ClCompile Include="MergeSortChallenge.cpp" />
     <ClCompile Include="MinimumSwap2Challenge.cpp" />
     <ClCompile Include="NewYearChaosChallenge.cpp" />
+    <ClCompile Include="Day3OperatorsChallenge.cpp" />
     <ClCompile Include="PointerChallenge.cpp" />
     <ClCompile Include="RansomNoteChallenge.cpp" />
     <ClCompile Include="RepeatedStringChallenge.cpp" />

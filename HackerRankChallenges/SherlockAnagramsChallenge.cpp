@@ -55,22 +55,22 @@ int substrSum(string s) {
 
 int findAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
     
-    bool areAnagram = false;
+    bool m_areAnagram = false;
     int anagramCounter = 0;
 
-    int substrSum = substrSum(s);
+    int m_substrSum = substrSum(s);
   
     vector<string>* pBufferSubs;
     
-    unordered_map<int, vector<string>*>::const_iterator got = substrs->find(substrSum);
+    unordered_map<int, vector<string>*>::const_iterator got = substrs->find(m_substrSum);
 
     if (got != substrs->end()) {
         pBufferSubs = got->second;
               
-        areAnagram = false;
+        m_areAnagram = false;
         for (auto& str : *pBufferSubs) {
-            areAnagram = areAnagram(s, str);
-            if (areAnagram) {
+            m_areAnagram = areAnagram(s, str);
+            if (m_areAnagram) {
                 ++anagramCounter;
             }
         }
@@ -80,7 +80,7 @@ int findAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
     else {
         pBufferSubs = new vector<string>();
         pBufferSubs->push_back(s);
-        substrs->insert({ {substrSum, pBufferSubs} });
+        substrs->insert({ {m_substrSum, pBufferSubs} });
     }
    
     return anagramCounter;

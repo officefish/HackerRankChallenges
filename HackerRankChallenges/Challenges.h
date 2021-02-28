@@ -1,6 +1,7 @@
 #pragma once
 /* 30 days coding Challenge */
-int day2DataTypesChallenge();
+int day2DataTypesChallenge(); // day2
+int day3OperatorsChallenge(); // day3
 
 /* Interview Preparation kit */
 
@@ -26,7 +27,8 @@ int frequencyQueriesChallenge();
 
 //Sorting
 int bubbleSortChallenge();
-
+int markAndToysChallenge();
+int mergeSortChallenge();
 
 /* C++ */
 int inputOutputChallenge();

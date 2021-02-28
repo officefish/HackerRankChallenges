@@ -8,6 +8,7 @@ int main()
 {
     /* 30 Days coding Challenge */
     //return day2DataTypesChallenge();
+    //return day3OperatorsChallenge();
     
     //return socksMerchantChallenge();
     //return countingValleysChallenge();
@@ -28,7 +29,10 @@ int main()
     //return countRatioTripletsChallenge();
 
     //Sorting
-    return bubbleSortChallenge();
+    //return bubbleSortChallenge();
+    return markAndToysChallenge();
+    //return mergeSortChallenge();
+
 
     //C++
     //return inputOutputChallenge();
