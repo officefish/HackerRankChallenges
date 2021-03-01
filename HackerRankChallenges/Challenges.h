@@ -1,7 +1,9 @@
 #pragma once
 /* 30 days coding Challenge */
+int day1IfStatementsChallenge(); // day 1
 int day2DataTypesChallenge(); // day2
 int day3OperatorsChallenge(); // day3
+
 
 /* Interview Preparation kit */
 

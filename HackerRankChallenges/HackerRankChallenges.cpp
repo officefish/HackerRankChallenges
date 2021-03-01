@@ -7,6 +7,7 @@
 int main()
 {
     // 30 Days coding Challenge 
+    return day1IfStatementsChallenge();
     //return day2DataTypesChallenge();
     //return day3OperatorsChallenge();
     
@@ -34,7 +35,7 @@ int main()
     //return markAndToysChallenge();
     //return mergeSortChallenge();
     //return comparatorSortChallenge();
-    return fraudNotChallenge();
+    //return fraudNotChallenge();
 
     //C++
     //return inputOutputChallenge();
