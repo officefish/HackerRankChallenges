@@ -149,6 +149,7 @@
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
     <ClCompile Include="DequeSTLChallenge.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
+    <ClCompile Include="FraudulentNotifications.cpp" />
     <ClCompile Include="FrequencyQuieriesChallenge.cpp" />
     <ClCompile Include="FunctionsChallenge.cpp" />
     <ClCompile Include="InputOutputChallenge.cpp" />

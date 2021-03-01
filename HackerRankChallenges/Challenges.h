@@ -30,8 +30,7 @@ int bubbleSortChallenge();
 int markAndToysChallenge();
 int mergeSortChallenge();
 int comparatorSortChallenge();
-
-
+int fraudNotChallenge();
 
 /* C++ */
 int inputOutputChallenge();

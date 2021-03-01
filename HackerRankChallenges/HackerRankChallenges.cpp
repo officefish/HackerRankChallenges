@@ -34,6 +34,7 @@ int main()
     //return markAndToysChallenge();
     //return mergeSortChallenge();
     //return comparatorSortChallenge();
+    return fraudNotChallenge();
 
     //C++
     //return inputOutputChallenge();
@@ -41,7 +42,7 @@ int main()
     //return conditionalStatementsChallenge();
     //return forLoopChallenge();
     //return functionsChallenge();
-    return vectorSortChallenge();
+    //return vectorSortChallenge();
     //return pointerChallenge();
     //return arrayIntroductionChallenge();
     //return variableSizedArraysChallenge();
