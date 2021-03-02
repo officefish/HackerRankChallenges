@@ -40,7 +40,8 @@ int main()
 
     //Strings
     //return stringsAnagramsChallenge();
-    return alternatingCharactersChallenge();
+    //return alternatingCharactersChallenge();
+    return sherlockValidStrChallenge();
 
     //C++
     //return inputOutputChallenge();

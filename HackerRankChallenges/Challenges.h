@@ -37,8 +37,9 @@ int fraudNotChallenge();
 
 //Strings
 int stringsAnagramsChallenge();
-int stringSteamChallenge();
 int alternatingCharactersChallenge();
+int sherlockValidStrChallenge();
+
 
 
 /* C++ */
@@ -53,6 +54,7 @@ int arrayIntroductionChallenge();
 int variableSizedArraysChallenge();
 int dequeSTLChallenge();
 int rectangleAreaChallenge();
+int stringSteamChallenge();
 
 
 

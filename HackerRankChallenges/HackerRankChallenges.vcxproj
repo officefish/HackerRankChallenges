@@ -172,6 +172,7 @@
     <ClCompile Include="RectangleAreaChallenge.cpp" />
     <ClCompile Include="RepeatedStringChallenge.cpp" />
     <ClCompile Include="SherlockAnagramsChallenge.cpp" />
+    <ClCompile Include="SherlockValidStringChallenge.cpp" />
     <ClCompile Include="SocksMerchantChallenge.cpp" />
     <ClCompile Include="StringsAnagramsChallenge.cpp" />
     <ClCompile Include="StringStreamChallenge.cpp" />
