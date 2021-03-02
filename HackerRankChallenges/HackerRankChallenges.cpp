@@ -7,9 +7,10 @@
 int main()
 {
     // 30 Days coding Challenge 
-    return day1IfStatementsChallenge();
+    //return day1IfStatementsChallenge();
     //return day2DataTypesChallenge();
     //return day3OperatorsChallenge();
+    //return day4ClassVsInstance();
     
     // Interview Preparation Kit
     //return socksMerchantChallenge();
@@ -37,6 +38,9 @@ int main()
     //return comparatorSortChallenge();
     //return fraudNotChallenge();
 
+    //Strings
+    //return stringsAnagramsChallenge();
+
     //C++
     //return inputOutputChallenge();
     //return dataTypesChallenge();
@@ -48,5 +52,6 @@ int main()
     //return arrayIntroductionChallenge();
     //return variableSizedArraysChallenge();
     //return dequeSTLChallenge();
-    //rectangleAreaChallenge();
+    //return rectangleAreaChallenge();
+    //return stringSteamChallenge();
 }

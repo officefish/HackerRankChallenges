@@ -148,6 +148,7 @@
     <ClCompile Include="DataTypesChallenge.cpp" />
     <ClCompile Include="Day1IfStatementChallenge.cpp" />
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
+    <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />
     <ClCompile Include="DequeSTLChallenge.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
     <ClCompile Include="FraudulentNotifications.cpp" />
@@ -171,6 +172,8 @@
     <ClCompile Include="RepeatedStringChallenge.cpp" />
     <ClCompile Include="SherlockAnagramsChallenge.cpp" />
     <ClCompile Include="SocksMerchantChallenge.cpp" />
+    <ClCompile Include="StringsAnagramsChallenge.cpp" />
+    <ClCompile Include="StringStreamChallenge.cpp" />
     <ClCompile Include="TwoStringsCallenge.cpp" />
     <ClCompile Include="VariableSizedArraysChallenge.cpp" />
     <ClCompile Include="VectorSortChallenge.cpp" />

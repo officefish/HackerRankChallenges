@@ -3,6 +3,7 @@
 int day1IfStatementsChallenge(); // day 1
 int day2DataTypesChallenge(); // day2
 int day3OperatorsChallenge(); // day3
+int day4ClassVsInstance(); // day4
 
 
 /* Interview Preparation kit */
@@ -33,6 +34,11 @@ int markAndToysChallenge();
 int mergeSortChallenge();
 int comparatorSortChallenge();
 int fraudNotChallenge();
+
+//Strings
+int stringsAnagramsChallenge();
+int stringSteamChallenge();
+
 
 /* C++ */
 int inputOutputChallenge();
