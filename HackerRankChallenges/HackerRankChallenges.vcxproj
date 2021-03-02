@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AlternatingCharsChallenge.cpp" />
     <ClCompile Include="ArrayIntroductionChallenge.cpp" />
     <ClCompile Include="ArrayManipulationChallenge.cpp" />
     <ClCompile Include="BubbleSortChallenge.cpp" />

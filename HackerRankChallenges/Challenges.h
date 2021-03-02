@@ -38,6 +38,7 @@ int fraudNotChallenge();
 //Strings
 int stringsAnagramsChallenge();
 int stringSteamChallenge();
+int alternatingCharactersChallenge();
 
 
 /* C++ */
