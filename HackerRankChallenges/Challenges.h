@@ -1,4 +1,6 @@
 #pragma once
+#include <bits/stdc++.h>
+
 /* 30 days coding Challenge */
 int day1IfStatementsChallenge(); // day 1
 int day2DataTypesChallenge(); // day2
@@ -40,8 +42,6 @@ int stringsAnagramsChallenge();
 int alternatingCharactersChallenge();
 int sherlockValidStrChallenge();
 
-
-
 /* C++ */
 int inputOutputChallenge();
 int dataTypesChallenge();
@@ -56,7 +56,9 @@ int dequeSTLChallenge();
 int rectangleAreaChallenge();
 int stringSteamChallenge();
 
-
+namespace hrs {
+	std::string isValidSherlockString(std::string);
+}
 
 
 

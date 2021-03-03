@@ -10,19 +10,18 @@ description: https://www.hackerrank.com/challenges/sherlock-and-valid-string/
 using hr::output_str;
 using hr::split_string;
 
-#include <bits/stdc++.h>
-
 using std::cout;
 using std::endl;
 using std::cin;
 using std::vector;
 using std::ofstream;
 using std::max_element;
+using std::string;
 
 #include <unordered_map>
 using std::unordered_map;
 
-string isValid(string s) {
+string hrs::isValidSherlockString(string s) {
 
     const string YES = { "YES" };
     const string NO = { "NO" };
@@ -63,11 +62,11 @@ string isValid(string s) {
         p2F = pIterTwo->first;
         p2S = pIterTwo->second;
         
-        cout << "pair 1. First: " << p1F << ", Second: " << p1S << endl;
-        cout << "pair 2. First: " << p2F << ", Second: " << p2S << endl;
+        //cout << "pair 1. First: " << p1F << ", Second: " << p1S << endl;
+        //cout << "pair 2. First: " << p2F << ", Second: " << p2S << endl;
 
-        status = (p1F == 1 && (p1S == 1 || p1S == 3)) ||
-                 (p2F == 1 && (p2S == 1 || p2S == 3)) ? YES : NO;
+        status = ( (p1F == 1 || p1F == 3) && (p1S == 1 || p1S == 3)) ||
+                 ( (p2F == 1 || p2F == 3) && (p2S == 1 || p2S == 3)) ? YES : NO;
             
     }
 
@@ -78,18 +77,18 @@ string isValid(string s) {
 int sherlockValidStrChallenge() {
 
 
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
+    //string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
+    //ofstream fout(hackerrank_output_str);
 
     string s;
     getline(cin, s);
 
-    string result = isValid(s);
+    string result = hrs::isValidSherlockString(s);
 
     cout << result << "\n";
-    fout << result << "\n";
+    //fout << result << "\n";
 
-    fout.close();
+    //fout.close();
 
     return 0;
 }
