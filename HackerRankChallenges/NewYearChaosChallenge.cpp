@@ -13,7 +13,6 @@ using std::endl;
 using std::cin;
 using std::max;
 using std::numeric_limits;
-using std::ofstream;
 using std::streamsize;
 
 int hrs::minimumBribes(vector<int> q) {

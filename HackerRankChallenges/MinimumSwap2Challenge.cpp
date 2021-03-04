@@ -11,7 +11,6 @@ using hr::split_string;
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 
@@ -27,8 +26,8 @@ int hrs::minimumSwaps(vector<int> input) {
     while (counter < INPUT_SIZE) {
         currentValue = input[counter];
         if (currentValue != counter + 1) {
-            tempValue = input[counter - 1];
-            input[counter - 1] = currentValue;
+            tempValue = input[size_t(currentValue) - 1];
+            input[size_t(currentValue) - 1] = currentValue;
             input[counter] = tempValue;
             ++swaps;
         }

@@ -67,7 +67,7 @@ namespace hrs {
 	int socksMerchant(int, vector<int>);
 	int countingValleys(int, string);
 	int jumpingOnClouds(vector<int>);
-	int repeatedString(string, long);
+	long repeatedString(string, long);
 
 	// Arrays
 	int hourglassSum(vector<vector<int>>);

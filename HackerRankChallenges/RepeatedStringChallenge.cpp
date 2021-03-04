@@ -19,7 +19,7 @@ using std::streamsize;
 using std::max;
 using std::numeric_limits;
 
-int hrs::repeatedString(string s, long n) {
+long hrs::repeatedString(string s, long n) {
     const char symbol = 'a';
     char currentSymbol;
     string::size_type stringSize = s.size();

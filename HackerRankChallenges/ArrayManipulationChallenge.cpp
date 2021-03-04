@@ -12,7 +12,6 @@ using hr::split_string;
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 

@@ -1,6 +1,7 @@
 /*
 
 Hackerrank::Chalenges::SockMerchant
+description: https://www.hackerrank.com/challenges/sock-merchant
 
 There is a large pile of socks that must be paired by color.
 Given an array of integers representing the color of each sock,
@@ -52,14 +53,10 @@ Sample Output
 
 #include "HackerRankMiscellaneous.h"
 using hr::split_string;
-using hr::output_str;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 
