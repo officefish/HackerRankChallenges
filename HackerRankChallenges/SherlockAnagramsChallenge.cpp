@@ -5,15 +5,11 @@
 
 #include "Challenges.h"
 
-#include "HackerRankMiscellaneous.h"
-using hr::output_str;
-
-#include <bits/stdc++.h>
-
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
+using std::string;
+using std::vector;
 using std::max;
 using std::numeric_limits;
 using std::streamsize;
@@ -25,8 +21,8 @@ using std::unordered_map;
 
 bool areAnagram(string str1, string str2)
 {
-    int n1 = str1.length();
-    int n2 = str2.length();
+    size_t n1 = str1.length();
+    size_t n2 = str2.length();
        
     if (n1 != n2)
         return false;
@@ -87,7 +83,7 @@ int findAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
 
 }
 
-int sherlockAndAnagrams(string s) {
+int hrs::sherlockAndAnagrams(string s) {
     
     /*
         Elegant
@@ -143,9 +139,6 @@ int sherlockAndAnagrams(string s) {
 
 int sherlockAnagramsChallenge() {
 
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     int q;
     cin >> q;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -154,12 +147,10 @@ int sherlockAnagramsChallenge() {
         string s;
         getline(cin, s);
 
-        int result = sherlockAndAnagrams(s);
+        int result = hrs::sherlockAndAnagrams(s);
 
-        fout << result << "\n";
+        cout << result << "\n";
     }
-
-    fout.close();
-
+    
     return 0;
 }

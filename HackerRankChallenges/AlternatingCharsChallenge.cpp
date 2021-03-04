@@ -6,10 +6,7 @@ description: https://www.hackerrank.com/challenges/alternating-characters/
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
@@ -19,7 +16,7 @@ using std::max;
 using std::numeric_limits;
 using std::streamsize;
 
-int alternatingCharacters(string s) {
+int hrs::alternatingCharacters(string s) {
 
     int counter = { 0 };
     size_t size = s.size();
@@ -36,9 +33,6 @@ int alternatingCharacters(string s) {
 
 int alternatingCharactersChallenge() {
 
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     int q;
     cin >> q;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -47,14 +41,11 @@ int alternatingCharactersChallenge() {
         string s;
         getline(cin, s);
 
-        int result = alternatingCharacters(s);
+        int result = hrs::alternatingCharacters(s);
 
         cout << result << endl;
-        fout << result << "\n";
-        
+              
     }
-
-    fout.close();
 
     return 0;
 }

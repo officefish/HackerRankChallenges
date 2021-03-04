@@ -7,15 +7,12 @@
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::ltrim;
 using hr::rtrim;
 using hr::split;
 
-#include <bits/stdc++.h>
 #include <algorithm>
 
-using std::ofstream;
 using std::cin;
 using std::cout;
 using std::stoi;
@@ -26,13 +23,13 @@ using std::endl;
 using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
-long countTriplets(vector<long> arr, long r) {
+long hrs::countTriplets(vector<long> arr, long r) {
 
     long triplets = 0;
     unordered_map<string, long> pairs;
     unordered_map<long, long> map;
 
-    const long SIZE = arr.size();
+    const int SIZE = int(arr.size());
 
     long x;
     long rx;
@@ -40,7 +37,7 @@ long countTriplets(vector<long> arr, long r) {
     string pairWeWant;
     string pair;
 
-    for (long i = SIZE - 1; i >= 0; --i) {
+    for (int i = SIZE - 1; i >= 0; --i) {
         x = arr[i];
         rx = x * r;
         r2x = rx * r;
@@ -57,9 +54,6 @@ long countTriplets(vector<long> arr, long r) {
 }
 
 int countRatioTripletsChallenge() {
-
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
 
     string nr_temp;
     getline(cin, nr_temp);
@@ -83,12 +77,9 @@ int countRatioTripletsChallenge() {
         arr[i] = arr_item;
     }
 
-    long ans = countTriplets(arr, r);
+    long ans = hrs::countTriplets(arr, r);
 
     cout << ans << "\n";
-    fout << ans << "\n";
-
-    fout.close();
-
+   
     return 0;
 }

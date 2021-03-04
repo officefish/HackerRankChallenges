@@ -72,15 +72,9 @@ using std::vector;
 using std::find;
 
 
-int sockMerchant(int, vector<int>);
-
 int socksMerchantChallenge()
 {
    
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-
-    ofstream fout(hackerrank_output_str);
-
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -98,19 +92,16 @@ int socksMerchantChallenge()
         ar[i] = ar_item;
     }
 
-    int result = sockMerchant(n, ar);
+    int result = hrs::socksMerchant(n, ar);
 
-    cout << "SockMerchant result: " << result << "\n";
-    fout << result << "\n";
-
-    fout.close();
-
+    cout << result << "\n";
+   
     return 0;
 
 
 }
 
-int sockMerchant(int totalSocks, vector<int> socks) {
+int hrs::socksMerchant(int totalSocks, vector<int> socks) {
 
     int pairs = 0;
     vector<int> needPairSocks = {};

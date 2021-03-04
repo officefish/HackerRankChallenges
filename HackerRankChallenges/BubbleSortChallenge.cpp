@@ -6,24 +6,20 @@ description:https://www.hackerrank.com/challenges/ctci-bubble-sort
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 using std::swap;
 
-void countSwaps(vector<int> a) {
+size_t hrs::countSwaps(vector<int> a) {
 
-    int i, j;
-    int n = a.size();
-    int counter = 0;
+    size_t i, j;
+    size_t n = a.size();
+    size_t counter = 0;
 
     for (i = 0; i < n; i++) {
 
@@ -36,9 +32,8 @@ void countSwaps(vector<int> a) {
         }
 
     }
-    cout << "Array is sorted in " << counter << " swaps." << endl;
-    cout << "First Element: " << a[0] << endl;
-    cout << "Last Element: " << a[n - 1] << endl;
+    
+    return counter;
 
 }
 
@@ -61,7 +56,10 @@ int bubbleSortChallenge()
         a[i] = a_item;
     }
 
-    countSwaps(a);
+    cout << "Array is sorted in " << hrs::countSwaps(a) << " swaps." << endl;
+    cout << "First Element: " << a[0] << endl;
+    cout << "Last Element: " << a[n - 1] << endl;
+    
 
     return 0;
 }

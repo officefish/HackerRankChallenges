@@ -7,15 +7,11 @@ description: https://www.hackerrank.com/challenges/ctci-merge-sort/problem
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 
@@ -64,7 +60,7 @@ long mergeSort(vector<int>& arr, int first, int last)
     invCount += merge(arr, first, mid, last);
     return invCount;
 }
-long countInversions(vector<int>& arr)
+long hrs::countInversions(vector<int>& arr)
 {
     int first{ 0 };
     int last{ static_cast<int>(arr.size()) - 1 };
@@ -75,9 +71,6 @@ long countInversions(vector<int>& arr)
 
 int mergeSortChallenge() {
     
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     int t;
     cin >> t;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -100,13 +93,11 @@ int mergeSortChallenge() {
             arr[i] = arr_item;
         }
 
-        long result = countInversions(arr);
+        long result = hrs::countInversions(arr);
 
         cout << result << "\n";
-        fout << result << "\n";
+        
     }
-
-    fout.close();
 
     return 0;
 }

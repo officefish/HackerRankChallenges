@@ -150,6 +150,7 @@
     <ClCompile Include="Day1IfStatementChallenge.cpp" />
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
     <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />
+    <ClCompile Include="Day5LoopsChallenge.cpp" />
     <ClCompile Include="DequeSTLChallenge.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
     <ClCompile Include="FraudulentNotifications.cpp" />

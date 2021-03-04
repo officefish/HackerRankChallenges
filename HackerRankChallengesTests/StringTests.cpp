@@ -21,6 +21,15 @@ TEST(StringChallengesTests, SherlockValidStringTest_03) {
 	EXPECT_EQ(YES, hrs::isValidSherlockString(s));
 }
 
+TEST(StringChallengesTests, StringAnagramsTest_01) {
+	
+	std::string s1 = { "abcdefghhgfedecba" };
+	std::string	s2 = { "sdsdsd" };
+
+	EXPECT_EQ(2, hrs::makeAnagramFromStings(s1,s2));
+}
+
+
 
 
 

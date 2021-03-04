@@ -7,10 +7,7 @@
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
@@ -22,7 +19,7 @@ using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
 
-void checkMagazine(vector<string> magazine, vector<string> note) {
+bool hrs::checkMagazine(vector<string> magazine, vector<string> note) {
     
     bool status = true;
     unordered_map<string, int> words;
@@ -40,8 +37,7 @@ void checkMagazine(vector<string> magazine, vector<string> note) {
         }
     }
     
-    string ans = status ? "Yes" : "No";
-    cout << ans << endl;
+    return status;
 }
 
 int ransomNoteChallenge() {
@@ -81,7 +77,8 @@ int ransomNoteChallenge() {
         note[i] = note_item;
     }
 
-    checkMagazine(magazine, note);
+    hrs::checkMagazine(magazine, note) ? cout << "Yes" : cout << "No";
+    cout << endl;
 
     return 0;
 }

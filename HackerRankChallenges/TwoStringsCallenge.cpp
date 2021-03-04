@@ -5,24 +5,19 @@
 
 #include "Challenges.h"
 
-#include "HackerRankMiscellaneous.h"
-using hr::output_str;
-
-#include <bits/stdc++.h>
-
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::max;
 using std::numeric_limits;
 using std::streamsize;
+using std::string;
 
 #include <unordered_map>
 using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
-string twoStrings(string s1, string s2) {
+string hrs::twoStrings(string s1, string s2) {
     
     string largeStr;
     string shortStr;
@@ -54,9 +49,6 @@ string twoStrings(string s1, string s2) {
 
 int twoStringsChallenge() {
     
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     int q;
     cin >> q;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -68,12 +60,10 @@ int twoStringsChallenge() {
         string s2;
         getline(cin, s2);
 
-        string result = twoStrings(s1, s2);
+        string result = hrs::twoStrings(s1, s2);
         cout << result << '\n';
-        fout << result << "\n";
+       
     }
-
-    fout.close();
 
     return 0;
 }

@@ -19,10 +19,10 @@ using std::streamsize;
 using std::max;
 using std::numeric_limits;
 
-int repeatedString(string s, long n) {
+int hrs::repeatedString(string s, long n) {
     const char symbol = 'a';
     char currentSymbol;
-    const std::string::size_type stringSize = s.size();
+    string::size_type stringSize = s.size();
     
     long repeatedCounter = 0;
 
@@ -33,7 +33,7 @@ int repeatedString(string s, long n) {
         }
     }
     
-    long relations = n / stringSize;
+    long relations = n / long(stringSize);
     repeatedCounter *= relations;
     size_t remainder = n % stringSize;
 
@@ -53,9 +53,6 @@ int repeatedString(string s, long n) {
 
 int repeatedStringChallenge() {
 
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     string s;
     getline(cin, s);
 
@@ -63,13 +60,9 @@ int repeatedStringChallenge() {
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    long result = repeatedString(s, n);
+    long result = hrs::repeatedString(s, n);
 
     cout << "\n" << result << "\n";
-    fout << result << "\n";
    
-    fout.close();
-
     return 0;
-	return 0;
 }

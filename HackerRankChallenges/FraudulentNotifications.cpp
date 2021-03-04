@@ -7,15 +7,11 @@ description: https://www.hackerrank.com/challenges/fraudulent-activity-notificat
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::vector;
 using std::sort;
 using std::priority_queue;
@@ -41,7 +37,7 @@ double calcMedian(vector<int> scores)
     }
 }
 
-int activityNotifications(vector<int> expenditure, int d) {
+int hrs::activityNotifications(vector<int> expenditure, int d) {
     
     int warnings = { 0 };
     int half_chunk = { d / 2 };
@@ -53,7 +49,7 @@ int activityNotifications(vector<int> expenditure, int d) {
     // still slow but fuck this challenge, it work's rather ok.
     // Look at esential solution, it is in the end of the page, by the way.
 
-    int size = expenditure.size() - d;
+    int size = int(expenditure.size()) - d;
     int recurrent;
 
     for (int i = 0; i < size; ++i) {
@@ -65,7 +61,7 @@ int activityNotifications(vector<int> expenditure, int d) {
         if (d < 4) {
             
             median = 0;
-            for (int j = i; j < i + d; ++j) {
+            for (size_t j = i; j < i + d; ++j) {
                 median += expenditure[j];
             }
             median /= d;
@@ -194,9 +190,6 @@ int fraudNotChallenge() {
 
     std::ios_base::sync_with_stdio(0);
 
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     string nd_temp;
     getline(cin, nd_temp);
 
@@ -219,12 +212,9 @@ int fraudNotChallenge() {
         expenditure[i] = expenditure_item;
     }
 
-    int result = activityNotifications(expenditure, d);
+    int result = hrs::activityNotifications(expenditure, d);
 
-    fout << result << "\n";
     cout << result << endl;
-
-    fout.close();
 
     return 0;
 }

@@ -6,25 +6,22 @@ description: https://www.hackerrank.com/challenges/ctci-array-left-rotation/
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
 using std::ofstream;
 
-vector<int> rotationLeft(vector<int> a, int d) {
+vector<int> hrs::rotationLeft(vector<int> a, int d) {
     
-    const int SRC_SIZE = a.size();
+    const size_t SRC_SIZE = a.size();
     vector<int> output(SRC_SIZE);
 
-    int srcIndex;
+    size_t srcIndex;
 
-    for (int i = 0; i < SRC_SIZE; ++i) {
-        srcIndex = i + d;
+    for (size_t i = 0; i < SRC_SIZE; ++i) {
+        srcIndex = i + size_t(d);
         if (srcIndex >= SRC_SIZE) srcIndex -= SRC_SIZE;
         output[i] = a[srcIndex];
     }
@@ -33,9 +30,6 @@ vector<int> rotationLeft(vector<int> a, int d) {
 }
 
 int leftRotationChallenge() {
-
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
 
     string nd_temp;
     getline(cin, nd_temp);
@@ -59,22 +53,11 @@ int leftRotationChallenge() {
         a[i] = a_item;
     }
 
-    vector<int> result = rotationLeft(a, d);
-
-    for (vector<int>::size_type i = 0; i < result.size(); ++i) {
-        fout << result[i];
-
-        if (i != result.size() - 1) {
-            fout << " ";
-        }
-    }
+    vector<int> result = hrs::rotationLeft(a, d);
 
     for (auto x : result)
         cout << x << " ";
     cout << "\n";
-
-    fout << "\n";
-    fout.close();
 
     return 0;
 }

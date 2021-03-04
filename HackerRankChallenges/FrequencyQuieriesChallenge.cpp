@@ -8,15 +8,12 @@
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::ltrim;
 using hr::rtrim;
 using hr::split;
 
-#include <bits/stdc++.h>
 #include <algorithm>
 
-using std::ofstream;
 using std::cin;
 using std::cout;
 using std::stoi;
@@ -27,7 +24,7 @@ using std::endl;
 using std::unordered_map;
 // https://en.cppreference.com/w/cpp/container/unordered_map
 
-vector<int> frequencyQuery(vector<vector<int>> queries) {
+vector<int> hrs::frequencyQuery(vector<vector<int>> queries) {
     
     //initialize two maps where :
     //freq has for key the frequence z and the value is the datas having this frequency
@@ -91,9 +88,6 @@ vector<int> frequencyQuery(vector<vector<int>> queries) {
 
 int frequencyQueriesChallenge() {
     
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     string q_temp;
     getline(cin, q_temp);
 
@@ -116,21 +110,16 @@ int frequencyQueriesChallenge() {
         }
     }
 
-    vector<int> ans = frequencyQuery(queries);
+    vector<int> ans = hrs::frequencyQuery(queries);
 
     for (int i = 0; i < ans.size(); i++) {
-        fout << ans[i];
         cout << ans[i];
 
         if (i != ans.size() - 1) {
-            fout << "\n";
             cout << endl;
         }
     }
-
-    fout << "\n";
-
-    fout.close();
+    cout << endl;
 
     return 0;
 }

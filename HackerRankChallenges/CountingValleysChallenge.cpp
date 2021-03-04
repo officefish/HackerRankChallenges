@@ -49,7 +49,6 @@ Sample Output
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::ltrim;
 using hr::rtrim;
 
@@ -59,7 +58,7 @@ using std::cin;
 using std::cout;
 using std::stoi;
 
-int countingValleys(int steps, string path) {
+int hrs::countingValleys(int steps, string path) {
 
     int height = 0;
     const int skyline = 0;
@@ -85,9 +84,6 @@ int countingValleys(int steps, string path) {
 
 int countingValleysChallenge() {
     
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     string steps_temp;
     getline(cin, steps_temp);
 
@@ -96,12 +92,9 @@ int countingValleysChallenge() {
     string path;
     getline(cin, path);
 
-    int result = countingValleys(steps, path);
+    int result = hrs::countingValleys(steps, path);
 
-    fout << result << "\n";
     cout << "\n" << result << "\n";
-
-    fout.close();
 
     return 0;
 }

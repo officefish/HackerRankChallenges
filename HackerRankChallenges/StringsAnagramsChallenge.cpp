@@ -3,26 +3,18 @@ Hackerrank::Challenges:Strings: Making Anagrams
 description: https://www.hackerrank.com/challenges/ctci-making-anagrams/
 */
 
-
+#include <unordered_map>
 #include "Challenges.h"
-
-#include "HackerRankMiscellaneous.h"
-using hr::output_str;
-using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::vector;
 using std::sort;
 using std::priority_queue;
-
-
-#include <unordered_map>
+using std::string;
 using std::unordered_map;
+
 
 struct CustomCompare
 {
@@ -36,7 +28,8 @@ int intToAscii(int number) {
     return '0' + number;
 }
 
-int makeAnagram(string a, string b) {
+
+int hrs::makeAnagramFromStings(std::string a, std::string b) {
 	
     // Genious one! Frequency rocks!!
     
@@ -127,22 +120,15 @@ int makeAnagram(string a, string b) {
 
 int stringsAnagramsChallenge() {
 
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     string a;
     getline(cin, a);
 
     string b;
     getline(cin, b);
 
-    int res = makeAnagram(a, b);
+    int res = hrs::makeAnagramFromStings(a, b);
 
-    fout << res << "\n";
     cout << res << endl;
 
-    fout.close();
-
-    return 0;
 	return 0;
 }

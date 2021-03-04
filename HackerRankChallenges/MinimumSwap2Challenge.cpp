@@ -6,10 +6,7 @@ description: https://www.hackerrank.com/challenges/minimum-swaps-2/
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
@@ -18,11 +15,11 @@ using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 
-int minimumSwaps(vector<int> input) {
+int hrs::minimumSwaps(vector<int> input) {
     
     int swaps = 0;
-    int counter = 0;
-    const int INPUT_SIZE = input.size();
+    size_t counter = 0;
+    const size_t INPUT_SIZE = input.size();
 
     int currentValue;
     int tempValue;
@@ -30,8 +27,8 @@ int minimumSwaps(vector<int> input) {
     while (counter < INPUT_SIZE) {
         currentValue = input[counter];
         if (currentValue != counter + 1) {
-            tempValue = input[currentValue - 1];
-            input[currentValue - 1] = currentValue;
+            tempValue = input[counter - 1];
+            input[counter - 1] = currentValue;
             input[counter] = tempValue;
             ++swaps;
         }
@@ -45,9 +42,6 @@ int minimumSwaps(vector<int> input) {
 
 int minimumSwap2Challenge() {
 	
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -65,14 +59,10 @@ int minimumSwap2Challenge() {
         arr[i] = arr_item;
     }
 
-    int res = minimumSwaps(arr);
+    int res = hrs::minimumSwaps(arr);
 
     cout << res << endl;
     
-    fout << res << "\n";
-    fout.close();
-
-	
 	return 0;
 }
 

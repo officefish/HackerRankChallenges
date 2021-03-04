@@ -7,10 +7,7 @@
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
@@ -45,21 +42,20 @@ Output:
 
 */
 
-long arrayManipulation(int n, vector<vector<int>> queries) {
+long hrs::arrayManipulation(int n, vector<vector<int>> queries) {
     
     vector<int> accumulator(n, 0);
 
     long maxValue = 0;
     long accumulatorValue = 0;
 
-    const int size = queries.size();
+    const size_t size = queries.size();
 
     int begin;
     int end;
     int value;
-    int max;
-
-    for (int i = 0; i < size; ++i) {
+   
+    for (size_t i = 0; i < size; ++i) {
 
         begin = queries[i][0] - 1;
         end = queries[i][1];
@@ -123,9 +119,6 @@ then add that to position 2, and so forth, looking for the point where it was th
 
 int arrayManipulationChallenge() {
 
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
-
     string nm_temp;
     getline(cin, nm_temp);
 
@@ -146,12 +139,9 @@ int arrayManipulationChallenge() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
-    long result = arrayManipulation(n, queries);
+    long result = hrs::arrayManipulation(n, queries);
 
     cout << result << endl;
     
-    fout << result << "\n";
-    fout.close();
-
     return 0;
 }

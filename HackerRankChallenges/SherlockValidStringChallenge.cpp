@@ -76,20 +76,13 @@ string hrs::isValidSherlockString(string s) {
 
 int sherlockValidStrChallenge() {
 
-
-    //string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    //ofstream fout(hackerrank_output_str);
-
     string s;
     getline(cin, s);
 
     string result = hrs::isValidSherlockString(s);
 
     cout << result << "\n";
-    //fout << result << "\n";
-
-    //fout.close();
-
+   
     return 0;
 }
 

@@ -8,8 +8,6 @@ description: https://www.hackerrank.com/challenges/new-year-chaos/
 #include "HackerRankMiscellaneous.h"
 using hr::split_string;
 
-#include <bits/stdc++.h>
-
 using std::cout;
 using std::endl;
 using std::cin;
@@ -18,21 +16,20 @@ using std::numeric_limits;
 using std::ofstream;
 using std::streamsize;
 
-void minimumBribes(vector<int> q) {
+int hrs::minimumBribes(vector<int> q) {
 
-    const int QUEUE_SIZE = q.size();
+    const int QUEUE_SIZE = int(q.size());
 
     int bribesCounter = 0;
     int currentValue;
     int minIndex;
 
-    for (int i = QUEUE_SIZE - 1; i >= 0; i--) {
+    for (int i = QUEUE_SIZE - 1; i >= 0; --i) {
 
         currentValue = q[i];
 
         if (currentValue > i + 3) {
-            cout << "Too chaotic" << endl;
-            return;
+            return -1;
         }
 
         // Because of "Too chaotic" condition we can optimize second loop; 
@@ -43,7 +40,7 @@ void minimumBribes(vector<int> q) {
 
     }
 
-    cout << bribesCounter << endl;
+    return bribesCounter;
 
 }
 
@@ -53,6 +50,8 @@ int newYearChaosChallenge() {
     cin >> t;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
+    int result;
+    
     for (int t_itr = 0; t_itr < t; t_itr++) {
         int n;
         cin >> n;
@@ -71,7 +70,10 @@ int newYearChaosChallenge() {
             q[i] = q_item;
         }
 
-        minimumBribes(q);
+
+        result = hrs::minimumBribes(q);
+        result == -1 ? cout << "Too chaotic" : cout << result;
+        cout << endl;
     }
 
     return 0;

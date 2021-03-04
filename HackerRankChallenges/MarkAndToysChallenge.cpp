@@ -7,20 +7,16 @@ description:https://www.hackerrank.com/challenges/mark-and-toys/
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 using std::sort;
 
-int maximumToys(vector<int> prices, int k) {
+int hrs::maximumToys(vector<int> prices, int k) {
     
     int counter = { 0 }, remainder = { k };
    
@@ -38,9 +34,6 @@ int maximumToys(vector<int> prices, int k) {
 }
 
 int markAndToysChallenge() {
-
-    string hackerrank_output_str = output_str("HACKERRANK_OUTPUT_PATH");
-    ofstream fout(hackerrank_output_str);
 
     string nk_temp;
     getline(cin, nk_temp);
@@ -64,12 +57,9 @@ int markAndToysChallenge() {
         prices[i] = prices_item;
     }
 
-    int result = maximumToys(prices, k);
+    int result = hrs::maximumToys(prices, k);
 
-    fout << result << "\n";
     cout << result << "\n";
-
-    fout.close();
 
     return 0;
 }

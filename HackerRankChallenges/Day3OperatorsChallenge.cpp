@@ -32,7 +32,7 @@ void solve(double meal_cost, int tip_percent, int tax_percent) {
     // also do not use because of warning 4244
     // use floor operator instead!
   
-    int total_cost = floor(meal_cost + m_tax_percent + m_tip_percent);
+    int total_cost = int(floor(meal_cost + m_tax_percent + m_tip_percent));
     
     //cout << "The total meal cost is " << total_cost << " dollars.";
     cout << total_cost << endl;

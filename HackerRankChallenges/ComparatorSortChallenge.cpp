@@ -7,15 +7,11 @@ description: https://www.hackerrank.com/challenges/ctci-comparator-sorting
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
-using hr::output_str;
 using hr::split_string;
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
 using std::cin;
-using std::ofstream;
 using std::streamsize;
 using std::numeric_limits;
 using std::sort;
