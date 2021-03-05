@@ -93,7 +93,21 @@ TEST(StringChallengesTests, SpecialStringAgainTest_03) {
 	EXPECT_EQ(7, hrs::substrCount(n, s));
 }
 
-
+TEST(StringChallengesTests, CommonChildTest_01) {
+	std::string s1 = { "HARRY" };
+	std::string	s2 = { "SALLY" };
+	EXPECT_EQ(2, hrs::commonChild(s1,s2));
+}
+TEST(StringChallengesTests, CommonChildTest_02) {
+	std::string s1 = { "AA" };
+	std::string	s2 = { "BB" };
+	EXPECT_EQ(0, hrs::commonChild(s1, s2));
+}
+TEST(StringChallengesTests, CommonChildTest_03) {
+	std::string s1 = { "SHINCHAN" };
+	std::string	s2 = { "NOHARAAA" };
+	EXPECT_EQ(3, hrs::commonChild(s1, s2));
+}
 
 
 

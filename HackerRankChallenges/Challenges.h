@@ -45,6 +45,7 @@ int stringsAnagramsChallenge();
 int alternatingCharactersChallenge();
 int sherlockValidStrChallenge();
 int specialStrAgainChallenge();
+int commonChildChallenge();
 
 
 /* C++ */
@@ -98,6 +99,7 @@ namespace hrs {
 	int alternatingCharacters(string s);
 	string isValidSherlockString(string);
 	int64_t substrCount(size_t, string);
+	int commonChild(string s1, string s2);
 
 	//DayChallenges
 	vector<int> reverseRange(char, const vector<int>& input);
