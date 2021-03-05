@@ -2,11 +2,13 @@
 #include <bits/stdc++.h>
 
 /* 30 days coding Challenge */
-int day1IfStatementsChallenge(); // day 1
-int day2DataTypesChallenge(); // day2
-int day3OperatorsChallenge(); // day3
-int day4ClassVsInstance(); // day4
-int day5LoopsChallenge();
+int day1IfStatementsChallenge();// day1
+int day2DataTypesChallenge();	// day2
+int day3OperatorsChallenge();	// day3
+int day4ClassVsInstance();		// day4
+int day5LoopsChallenge();		// day5
+int day6LetsReviewChallenge();	// day6
+int day7ArraysChallange();		// day7
 
 
 /* Interview Preparation kit */
@@ -42,6 +44,8 @@ int fraudNotChallenge();
 int stringsAnagramsChallenge();
 int alternatingCharactersChallenge();
 int sherlockValidStrChallenge();
+int specialStrAgainChallenge();
+
 
 /* C++ */
 int inputOutputChallenge();
@@ -93,6 +97,10 @@ namespace hrs {
 	int makeAnagramFromStings(string a, string b);
 	int alternatingCharacters(string s);
 	string isValidSherlockString(string);
+	int64_t substrCount(size_t, string);
+
+	//DayChallenges
+	vector<int> reverseRange(char, const vector<int>& input);
 }
 
 

@@ -11,6 +11,11 @@ int main()
     //return day2DataTypesChallenge();
     //return day3OperatorsChallenge();
     //return day4ClassVsInstance();
+    //return day5LoopsChallenge();		
+    //return day6LetsReviewChallenge();	
+    return day7ArraysChallange();		
+
+
     
     // Interview Preparation Kit
     //return socksMerchantChallenge();
@@ -41,7 +46,8 @@ int main()
     //Strings
     //return stringsAnagramsChallenge();
     //return alternatingCharactersChallenge();
-    return sherlockValidStrChallenge();
+    //return sherlockValidStrChallenge();
+    //return specialStrAgainChallenge();
 
     //C++
     //return inputOutputChallenge();

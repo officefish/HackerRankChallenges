@@ -2,38 +2,34 @@
 Hackerrank::Challenges::Day2DataTypes
 description: see below the code
 */
+#include <string>
+#include <limits>
 
-#include "Challenges.h"
-
-
-#include <bits/stdc++.h>
-
-using std::cout;
-using std::endl;
-using std::cin;
-using std::string;
-using std::numeric_limits;
-using std::streamsize;
-using std::fixed;
-using std::setprecision;
+#include "./Challenges.h"
 
 int day2DataTypesChallenge() {
+	using std::cout;
+	using std::endl;
+	using std::cin;
+	using std::string;
+	using std::numeric_limits;
+	using std::streamsize;
+	using std::fixed;
+	using std::setprecision;
 
-	int i1 = 4;
-	double d1 = 4.0;
-	string s1 = "HackerRank ";
-
-	int i2; double d2; string s2;
+	int i1{ 4 };
+	uint64_t d1 = { 4 };
+	string s1 { "HackerRank " };
+	int i2; uint64_t d2; string s2;
 	
 	cin >> i2 >> d2;
-	cin.ignore(numeric_limits<streamsize>::max(), '\n');		//(1)
-
+	//(1)
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	getline(cin, s2);
-
+	
 	cout << i1 + i2 << endl;
 	cout << fixed << setprecision(1) << d1 + d2 << endl;
 	cout << s1 + s2 << endl;
-		
 	return 0;
 }
 

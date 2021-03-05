@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,6 +152,8 @@
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
     <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />
     <ClCompile Include="Day5LoopsChallenge.cpp" />
+    <ClCompile Include="Day6LetsReviewChallenge.cpp" />
+    <ClCompile Include="Day7ArraysChallenge.cpp" />
     <ClCompile Include="DequeSTLChallenge.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
     <ClCompile Include="FraudulentNotifications.cpp" />
@@ -175,6 +178,7 @@
     <ClCompile Include="SherlockAnagramsChallenge.cpp" />
     <ClCompile Include="SherlockValidStringChallenge.cpp" />
     <ClCompile Include="SocksMerchantChallenge.cpp" />
+    <ClCompile Include="SpecialStrAgainChallenge.cpp" />
     <ClCompile Include="StringsAnagramsChallenge.cpp" />
     <ClCompile Include="StringStreamChallenge.cpp" />
     <ClCompile Include="TwoStringsCallenge.cpp" />

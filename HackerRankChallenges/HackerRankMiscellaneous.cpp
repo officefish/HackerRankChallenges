@@ -4,9 +4,6 @@
 using std::min;
 using std::cout;
 using std::endl;
-using std::not1;
-using std::ptr_fun;
-
 
 vector<string> hr::split(const string& str) {
     vector<string> tokens;
@@ -81,7 +78,7 @@ string hr::ltrim(const string& str) {
 
     s.erase(
         s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+        find_if(s.begin(), s.end(), [](int c) {return !std::isspace(c); })
     );
 
     return s;
@@ -91,7 +88,7 @@ string hr::rtrim(const string& str) {
     string s(str);
 
     s.erase(
-        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        find_if(s.rbegin(), s.rend(), [](int c) {return !std::isspace(c); }).base(),
         s.end()
     );
 

@@ -67,19 +67,31 @@ TEST(StringChallengesTests, SherlockValidStringTest_01) {
 	std::string s = { "aabbcd" };
 	EXPECT_TRUE(NO == hrs::isValidSherlockString(s));
 }
-
 TEST(StringChallengesTests, SherlockValidStringTest_02) {
 	std::string s = { "aabbccddeefghi" };
 	EXPECT_TRUE(NO == hrs::isValidSherlockString(s));
 
 }
-
 TEST(StringChallengesTests, SherlockValidStringTest_03) {
 	std::string s = { "abcdefghhgfedecba" };
 	EXPECT_EQ(YES, hrs::isValidSherlockString(s));
 }
 
-
+TEST(StringChallengesTests, SpecialStringAgainTest_01) {
+	std::string s = { "abcbaba" };
+	int n = { 7 };
+	EXPECT_EQ(10, hrs::substrCount(n, s));
+}
+TEST(StringChallengesTests, SpecialStringAgainTest_02) {
+	std::string s = { "aaaa" };
+	int n = { 4 };
+	EXPECT_EQ(10, hrs::substrCount(n, s));
+}
+TEST(StringChallengesTests, SpecialStringAgainTest_03) {
+	std::string s = { "asasd" };
+	int n = { 5 };
+	EXPECT_EQ(7, hrs::substrCount(n, s));
+}
 
 
 
