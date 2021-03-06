@@ -61,6 +61,7 @@ int variableSizedArraysChallenge();
 int dequeSTLChallenge();
 int rectangleAreaChallenge();
 int stringSteamChallenge();
+int compositeNumbersChallenge();
 
 // hackerrank solutions
 namespace hrs {
@@ -103,6 +104,8 @@ namespace hrs {
 
 	//DayChallenges
 	vector<int> reverseRange(char, const vector<int>& input);
+	vector<int16_t> getCompositeNumbers(int16_t n);
+	vector<int16_t> getPrimeNumbers(int16_t n);
 }
 
 

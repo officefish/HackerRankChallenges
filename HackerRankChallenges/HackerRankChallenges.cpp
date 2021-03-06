@@ -13,10 +13,8 @@ int main()
     //return day4ClassVsInstance();
     //return day5LoopsChallenge();		
     //return day6LetsReviewChallenge();	
-    return day7ArraysChallange();		
-
-
-    
+    //return day7ArraysChallange();		
+        
     // Interview Preparation Kit
     //return socksMerchantChallenge();
     //return countingValleysChallenge();
@@ -62,4 +60,5 @@ int main()
     //return dequeSTLChallenge();
     //return rectangleAreaChallenge();
     //return stringSteamChallenge();
+    return compositeNumbersChallenge();
 }

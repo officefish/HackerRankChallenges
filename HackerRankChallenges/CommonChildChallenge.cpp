@@ -20,7 +20,7 @@ theory: https://en.wikipedia.org/wiki/Longest_common_subsequence_problem
 int hrs::commonChild(string s1, string s2) {
     size_t m = s1.size();
     size_t n = s2.size();
-    vector<vector<int>> field(m+1, vector<int>(n+1, 0));
+    vector<vector<uint8_t>> field(m+1, vector<uint8_t>(n+1, 0));
 
     for (size_t i = 0; i <= m; i++) {
         for (size_t j = 0; j <= n; j++) {

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\CPP_Challenges">
+      <UniqueIdentifier>{c87c89a3-63eb-460f-bb1f-af78b89b96f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HackerRankChallenges.cpp">
@@ -149,6 +152,9 @@
     </ClCompile>
     <ClCompile Include="CommonChildChallenge.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositeNumsChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

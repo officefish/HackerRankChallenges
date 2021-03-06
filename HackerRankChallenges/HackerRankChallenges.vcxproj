@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -146,6 +146,7 @@
     <ClCompile Include="BubbleSortChallenge.cpp" />
     <ClCompile Include="CommonChildChallenge.cpp" />
     <ClCompile Include="ComparatorSortChallenge.cpp" />
+    <ClCompile Include="CompositeNumsChallenge.cpp" />
     <ClCompile Include="ConditionalStatementsChallenge.cpp" />
     <ClCompile Include="CountRatioTripletsChallenge.cpp" />
     <ClCompile Include="DataTypesChallenge.cpp" />
