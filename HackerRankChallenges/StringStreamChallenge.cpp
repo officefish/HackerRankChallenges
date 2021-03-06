@@ -5,9 +5,7 @@ description: https://www.hackerrank.com/challenges/c-tutorial-stringstream/
 */
 
 
-#include "Challenges.h"
-
-#include <bits/stdc++.h>
+#include "./Challenges.h"
 
 using std::cout;
 using std::endl;

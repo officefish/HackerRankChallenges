@@ -62,6 +62,7 @@ int dequeSTLChallenge();
 int rectangleAreaChallenge();
 int stringSteamChallenge();
 int compositeNumbersChallenge();
+int stringsSTLChallenge();
 
 // hackerrank solutions
 namespace hrs {

@@ -60,5 +60,5 @@ int main()
     //return dequeSTLChallenge();
     //return rectangleAreaChallenge();
     //return stringSteamChallenge();
-    return compositeNumbersChallenge();
+    //return compositeNumbersChallenge();
 }

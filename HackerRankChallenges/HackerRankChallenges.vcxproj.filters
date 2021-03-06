@@ -156,6 +156,9 @@
     <ClCompile Include="CompositeNumsChallenge.cpp">
       <Filter>Исходные файлы\CPP_Challenges</Filter>
     </ClCompile>
+    <ClCompile Include="CPPStringsChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h">
