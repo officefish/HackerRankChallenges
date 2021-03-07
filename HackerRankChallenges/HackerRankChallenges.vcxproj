@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AllAnyNoneOfChallenge.cpp" />
     <ClCompile Include="AlternatingCharsChallenge.cpp" />
     <ClCompile Include="ArrayIntroductionChallenge.cpp" />
     <ClCompile Include="ArrayManipulationChallenge.cpp" />
@@ -173,6 +174,7 @@
     <ClCompile Include="JumpingOnCloudsChallenge.cpp" />
     <ClCompile Include="MarkAndToysChallenge.cpp" />
     <ClCompile Include="MergeSortChallenge.cpp" />
+    <ClCompile Include="MinAbsDifferenceChallenge.cpp" />
     <ClCompile Include="MinimumSwap2Challenge.cpp" />
     <ClCompile Include="NewYearChaosChallenge.cpp" />
     <ClCompile Include="Day3OperatorsChallenge.cpp" />

@@ -19,6 +19,12 @@
     <Filter Include="Исходные файлы\DaysChallenges">
       <UniqueIdentifier>{f2ed95e3-6ba4-4f01-bd2a-c92d80166825}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\GreedyAlgorithms">
+      <UniqueIdentifier>{34578110-7ece-4caa-a28c-7796e3fb7b31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\STDLibraryChallenges">
+      <UniqueIdentifier>{a18a451c-0729-4915-ba65-363371dacf24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HackerRankChallenges.cpp">
@@ -167,6 +173,12 @@
     </ClCompile>
     <ClCompile Include="Day9RecursionChallenge.cpp">
       <Filter>Исходные файлы\DaysChallenges</Filter>
+    </ClCompile>
+    <ClCompile Include="MinAbsDifferenceChallenge.cpp">
+      <Filter>Исходные файлы\GreedyAlgorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="AllAnyNoneOfChallenge.cpp">
+      <Filter>Исходные файлы\STDLibraryChallenges</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

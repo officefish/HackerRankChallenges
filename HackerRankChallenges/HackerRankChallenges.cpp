@@ -15,9 +15,8 @@ int main()
     //return day6LetsReviewChallenge();	
     //return day7ArraysChallange();	
     //return day8MapsChallenge();
-    return day9RecursionChallenge();
-    
-        
+    //return day9RecursionChallenge();
+            
     // Interview Preparation Kit
     //return socksMerchantChallenge();
     //return countingValleysChallenge();
@@ -65,4 +64,7 @@ int main()
     //return stringSteamChallenge();
     //return compositeNumbersChallenge();
     //return stringsSTLChallenge();
+
+    //C++ Standard Library :: Algorithm
+    return allAnyNoneOfChallenge();
 }

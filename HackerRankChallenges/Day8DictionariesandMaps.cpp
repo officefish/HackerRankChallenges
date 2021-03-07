@@ -14,7 +14,6 @@ Solution Copyright (c) 2021 Officefish / Techies Team.
 #include "./Challenges.h"
 #include "./HackerRankMiscellaneous.h"
 
-
 int day8MapsChallenge() {
     using std::cout;
     using std::endl;

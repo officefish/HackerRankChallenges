@@ -48,6 +48,8 @@ int sherlockValidStrChallenge();
 int specialStrAgainChallenge();
 int commonChildChallenge();
 
+//Greedy Algorithms
+int minAbsDifferenceChallenge();
 
 /* C++ */
 int inputOutputChallenge();
@@ -64,6 +66,9 @@ int rectangleAreaChallenge();
 int stringSteamChallenge();
 int compositeNumbersChallenge();
 int stringsSTLChallenge();
+
+/*C++ Standard Algorithm Challenge */
+int allAnyNoneOfChallenge();
 
 // hackerrank solutions
 namespace hrs {
@@ -104,11 +109,20 @@ namespace hrs {
 	int64_t substrCount(size_t, string);
 	int commonChild(string s1, string s2);
 
+	//Greedy Algs
+	int minAbsDifference(vector<int>);
+	int minAbsDifference_uSTD(vector<int>);
+
+
 	//DayChallenges
 	vector<int> reverseRange(char, const vector<int>& input);
 	vector<int16_t> getCompositeNumbers(int16_t n);
 	vector<int16_t> getPrimeNumbers(int16_t n);
 	int32_t factorial(int32_t);
+
+	//CPP Algorithm Library
+	bool isEven(int32_t input);
+	bool isOdd(int32_t input);
 }
 
 
