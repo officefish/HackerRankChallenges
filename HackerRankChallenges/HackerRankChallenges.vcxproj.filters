@@ -180,6 +180,9 @@
     <ClCompile Include="AllAnyNoneOfChallenge.cpp">
       <Filter>Исходные файлы\STDLibraryChallenges</Filter>
     </ClCompile>
+    <ClCompile Include="LuckBalanceChallenge.cpp">
+      <Filter>Исходные файлы\GreedyAlgorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h">

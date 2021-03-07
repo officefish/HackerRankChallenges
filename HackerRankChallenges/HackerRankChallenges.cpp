@@ -49,6 +49,9 @@ int main()
     //return sherlockValidStrChallenge();
     //return specialStrAgainChallenge();
 
+    //Greedy Algorithms
+    return luckBalanceChallenge();
+
     //C++
     //return inputOutputChallenge();
     //return dataTypesChallenge();
@@ -66,5 +69,5 @@ int main()
     //return stringsSTLChallenge();
 
     //C++ Standard Library :: Algorithm
-    return allAnyNoneOfChallenge();
+    //return allAnyNoneOfChallenge();
 }

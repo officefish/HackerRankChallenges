@@ -50,6 +50,7 @@ int commonChildChallenge();
 
 //Greedy Algorithms
 int minAbsDifferenceChallenge();
+int luckBalanceChallenge();
 
 /* C++ */
 int inputOutputChallenge();
@@ -112,6 +113,7 @@ namespace hrs {
 	//Greedy Algs
 	int minAbsDifference(vector<int>);
 	int minAbsDifference_uSTD(vector<int>);
+	int32_t luckBalance(int32_t, vector<vector<int32_t>>);
 
 
 	//DayChallenges
