@@ -13,3 +13,13 @@ TEST(DaysChallengesTests, Day7ArraysTest_01) {
 	EXPECT_EQ(output, hrs::reverseRange(3, input));
 	EXPECT_EQ(output, hrs::reverseRange(4, input));
 }
+
+TEST(DaysChallengesTests, Day9RecursionTest_01) {
+
+	int32_t input1 = { 5 }, input2 = { 7 }, input3 = { 10 };
+	int32_t output1 = { 120 }, output2 = { 5040 }, output3 = { 3628800 };
+
+	EXPECT_EQ(output1, hrs::factorial(input1));
+	EXPECT_EQ(output2, hrs::factorial(input2));
+	EXPECT_EQ(output3, hrs::factorial(input3));
+}

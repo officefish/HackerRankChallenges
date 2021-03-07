@@ -9,7 +9,8 @@ int day4ClassVsInstance();		// day4
 int day5LoopsChallenge();		// day5
 int day6LetsReviewChallenge();	// day6
 int day7ArraysChallange();		// day7
-
+int day8MapsChallenge();		// day8
+int day9RecursionChallenge();	// day9
 
 /* Interview Preparation kit */
 
@@ -107,6 +108,7 @@ namespace hrs {
 	vector<int> reverseRange(char, const vector<int>& input);
 	vector<int16_t> getCompositeNumbers(int16_t n);
 	vector<int16_t> getPrimeNumbers(int16_t n);
+	int32_t factorial(int32_t);
 }
 
 

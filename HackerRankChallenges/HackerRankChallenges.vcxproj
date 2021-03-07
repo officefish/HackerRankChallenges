@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -157,6 +157,8 @@
     <ClCompile Include="Day5LoopsChallenge.cpp" />
     <ClCompile Include="Day6LetsReviewChallenge.cpp" />
     <ClCompile Include="Day7ArraysChallenge.cpp" />
+    <ClCompile Include="Day8DictionariesandMaps.cpp" />
+    <ClCompile Include="Day9RecursionChallenge.cpp" />
     <ClCompile Include="DequeSTLChallenge.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
     <ClCompile Include="FraudulentNotifications.cpp" />

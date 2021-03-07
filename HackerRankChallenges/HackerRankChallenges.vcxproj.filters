@@ -16,6 +16,9 @@
     <Filter Include="Исходные файлы\CPP_Challenges">
       <UniqueIdentifier>{c87c89a3-63eb-460f-bb1f-af78b89b96f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\DaysChallenges">
+      <UniqueIdentifier>{f2ed95e3-6ba4-4f01-bd2a-c92d80166825}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HackerRankChallenges.cpp">
@@ -158,6 +161,12 @@
     </ClCompile>
     <ClCompile Include="CPPStringsChallenge.cpp">
       <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="Day8DictionariesandMaps.cpp">
+      <Filter>Исходные файлы\DaysChallenges</Filter>
+    </ClCompile>
+    <ClCompile Include="Day9RecursionChallenge.cpp">
+      <Filter>Исходные файлы\DaysChallenges</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -75,12 +75,10 @@ string hr::output_str(const char* path) {
 
 string hr::ltrim(const string& str) {
     string s(str);
-
     s.erase(
         s.begin(),
         find_if(s.begin(), s.end(), [](int c) {return !std::isspace(c); })
     );
-
     return s;
 }
 
