@@ -67,6 +67,7 @@ int rectangleAreaChallenge();
 int stringSteamChallenge();
 int compositeNumbersChallenge();
 int stringsSTLChallenge();
+int structChallenge();
 
 /*C++ Standard Algorithm Challenge */
 int allAnyNoneOfChallenge();

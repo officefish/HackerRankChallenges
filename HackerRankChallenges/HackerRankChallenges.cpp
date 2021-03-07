@@ -50,7 +50,7 @@ int main()
     //return specialStrAgainChallenge();
 
     //Greedy Algorithms
-    return luckBalanceChallenge();
+    //return luckBalanceChallenge();
 
     //C++
     //return inputOutputChallenge();
@@ -67,6 +67,7 @@ int main()
     //return stringSteamChallenge();
     //return compositeNumbersChallenge();
     //return stringsSTLChallenge();
+    return structChallenge();
 
     //C++ Standard Library :: Algorithm
     //return allAnyNoneOfChallenge();

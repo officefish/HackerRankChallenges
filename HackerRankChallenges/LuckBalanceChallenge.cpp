@@ -10,7 +10,7 @@ std::multimap https://en.cppreference.com/w/cpp/container/multimap
 #include <numeric>
 #include <iterator>
 #include <map>
-#include <iterator>
+#include <limits>
 
 #include "./Challenges.h"
 #include "./HackerRankMiscellaneous.h"
@@ -29,8 +29,7 @@ public:
 };
 // Helper creation function
 template <typename Range>
-Reverser<Range> reverse(Range& r)
-{
+Reverser<Range> reverse(Range& r){
     return Reverser<Range>(r);
 }
 
@@ -41,13 +40,14 @@ int32_t hrs::luckBalance(int32_t k, vector<vector<int32_t>> contests) {
     for (int32_t i = 0; i < contests.size(); ++i) {
         for (int32_t j = 0; j < contests[i].size(); ++j) {
             if (j == 0) key = contests[i][j];
-            else value = contests[i][j];
+            else
+                value = contests[i][j];
         }
         mpContests.insert({ key, value });
     }
     // we benefit as long as we are lucky
     int32_t maxProfit = 0, currentLuck = k;
-    // p.s. need some custom stuff for reverse ranging, so using template. 
+    // p.s. need some custom stuff for reverse ranging, so using template
     for (auto&& [profit, luck] : reverse(mpContests)) {
         if (luck == 1 && currentLuck > 0) {
             --currentLuck;
@@ -73,7 +73,6 @@ int luckBalanceChallenge() {
     int32_t n = stoi(nk[0]);
     int32_t k = stoi(nk[1]);
     vector<vector<int32_t>> contests(n);
-    
     for (int32_t i = 0; i < n; i++) {
         contests[i].resize(2);
         for (int32_t j = 0; j < 2; j++) {
@@ -83,5 +82,5 @@ int luckBalanceChallenge() {
     }
     int32_t result = hrs::luckBalance(k, contests);
     cout << result << "\n";
-	return 0;
+    return 0;
 }
