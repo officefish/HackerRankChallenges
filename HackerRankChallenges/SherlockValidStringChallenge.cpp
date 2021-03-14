@@ -3,7 +3,7 @@ Hackerrank::Challenges:Strings:SherlockAndTheValidString
 description: https://www.hackerrank.com/challenges/sherlock-and-valid-string/
 */
 
-
+#include <algorithm>
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
@@ -27,9 +27,9 @@ string hrs::isValidSherlockString(string s) {
     const string NO = { "NO" };
 
     if (!s.size()) return NO;
-    
+
     string status;
-  
+
     vector<int> frequency(26, 0);
     unordered_map<int, int> frequencyGroup;
     typedef  unordered_map<int, int>::const_iterator frequencyGroupIterator;
@@ -53,21 +53,21 @@ string hrs::isValidSherlockString(string s) {
     }
     else {
 
-        int p1F, p1S, p2F, p2S; // pair1, pair2 : first, second  
-        
+        int p1F, p1S, p2F, p2S; // pair1, pair2 : first, second
+
         p1S = frequencyGroup.begin()->first;
         p1F = frequencyGroup.begin()->second;
-        
+
         frequencyGroupIterator pIterTwo = std::next(frequencyGroup.begin(), 1);
         p2F = pIterTwo->first;
         p2S = pIterTwo->second;
-        
+
         //cout << "pair 1. First: " << p1F << ", Second: " << p1S << endl;
         //cout << "pair 2. First: " << p2F << ", Second: " << p2S << endl;
 
         status = ( (p1F == 1 || p1F == 3) && (p1S == 1 || p1S == 3)) ||
                  ( (p2F == 1 || p2F == 3) && (p2S == 1 || p2S == 3)) ? YES : NO;
-            
+
     }
 
     return status;
@@ -82,7 +82,7 @@ int sherlockValidStrChallenge() {
     string result = hrs::isValidSherlockString(s);
 
     cout << result << "\n";
-   
+
     return 0;
 }
 

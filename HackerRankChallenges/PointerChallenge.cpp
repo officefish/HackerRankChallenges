@@ -5,7 +5,6 @@
 
 #include "Challenges.h"
 
-#include<bits/stdc++.h>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -24,7 +23,7 @@ int pointerChallenge() {
     update(pa, pb);
 
     cout << "a: " << a << ", b:" << b << endl;
-    
+
     return 0;
 }
 

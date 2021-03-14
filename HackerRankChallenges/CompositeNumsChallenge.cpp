@@ -1,6 +1,6 @@
 /*
 MIPT::Challenges::CompositeNumbersSearch
-description: below 
+description: below
 Solution Copyright (c) 2021 Officefish / Techies Team.
 theory:https://en.wikipedia.org/wiki/Composite_number
 */
@@ -10,9 +10,9 @@ theory:https://en.wikipedia.org/wiki/Composite_number
 #include "./Challenges.h"
 #include "./HackerRankMiscellaneous.h"
 
-vector<bool> getPrineCompositeMatrix(int16_t n) {
+std::vector<bool> getPrineCompositeMatrix(int16_t n) {
 	int32_t len = static_cast<int32_t>(n) + 1;
-	vector<bool> sieve(len, true);
+	std::vector<bool> sieve(len, true);
 	int16_t x = 2;
 
 	while (x * x < len) {
@@ -26,8 +26,8 @@ vector<bool> getPrineCompositeMatrix(int16_t n) {
 	return sieve;
 }
 
-vector<int16_t> hrs::getPrimeNumbers(int16_t n) {
-	vector<int16_t> output;
+std::vector<int16_t> hrs::getPrimeNumbers(int16_t n) {
+	std::vector<int16_t> output;
 	if (n < 2) return output;
 	vector<bool> matrix = getPrineCompositeMatrix(n);
 
@@ -37,8 +37,8 @@ vector<int16_t> hrs::getPrimeNumbers(int16_t n) {
 	return output;
 }
 
-vector<int16_t> hrs::getCompositeNumbers(int16_t n) {
-	vector<int16_t> output;
+std::vector<int16_t> hrs::getCompositeNumbers(int16_t n) {
+	std::vector<int16_t> output;
 	if (n < 2) return output;
 	vector<bool> matrix = getPrineCompositeMatrix(n);
 
@@ -54,12 +54,10 @@ int compositeNumbersChallenge() {
 	using std::cin;
 	using std::streamsize;
 	using std::numeric_limits;
-	
 	int16_t n;
 	cin >> n;
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
-	vector<int16_t> output = hrs::getCompositeNumbers(n);
-	
+	std::vector<int16_t> output = hrs::getCompositeNumbers(n);
 	cout << output.size() << endl;
 	for (int16_t v : output) {
 		cout << v << " ";

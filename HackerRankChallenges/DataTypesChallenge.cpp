@@ -3,9 +3,9 @@
 	https://www.hackerrank.com/challenges/c-tutorial-basic-data-types
 */
 
+#include <iomanip>
 #include "Challenges.h"
 
-#include<bits/stdc++.h>
 using std::cout;
 using std::cin;
 
@@ -13,18 +13,18 @@ using std::cin;
 	Use fixed floating-point notation
 	Sets the floatfield format flag for the str stream to fixed.
 
-	When floatfield is set to fixed, floating-point values are written using fixed-point notation: 
-	the value is represented with exactly as many digits in the decimal part as specified 
+	When floatfield is set to fixed, floating-point values are written using fixed-point notation:
+	the value is represented with exactly as many digits in the decimal part as specified
 	by the precision field (precision) and with no exponent part.
 
 	This manipulator is declared in header <iostram>.
 */
 using std::scientific;
 
-using std::fixed;											// 
+using std::fixed;											//
 /*
 	Sets the decimal precision to be used to format floating-point values on output operations.
-	Behaves as if member precision were called with n as argument on the stream on 
+	Behaves as if member precision were called with n as argument on the stream on
 	which it is inserted/extracted as a manipulator (it can be inserted/extracted on input streams or output streams).
 
 	This manipulator is declared in header <iomanip>.
@@ -67,9 +67,8 @@ int dataTypesChallenge() {
 
 
 int precisionExample() {
-
 	double f = 3.14159;
-	cout << setprecision(5) << f << '\n';  // prints 3.1416 and not 3.141459 why 
+	cout << setprecision(5) << f << '\n';  // prints 3.1416 and not 3.141459 why
 	cout << setprecision(9) << f << '\n';
 	cout << fixed;
 	cout << setprecision(5) << f << '\n';
@@ -88,7 +87,7 @@ int precisionExample() {
 */
 
 int fixedExplanation() {
-	
+
 	double a = 3.1415926534;
 	double b = 2006.0;
 	double c = 1.0e-10;
@@ -106,10 +105,10 @@ int fixedExplanation() {
 	cout << '\n';
 	cout << "scientific:\n" << scientific;
 	cout << a << '\n' << b << '\n' << c << '\n';
-		
+
 /*
 	Output:
-	
+
 	default:
 	3.1416
 	2006
@@ -127,7 +126,7 @@ int fixedExplanation() {
 
 */
 	return 0;
-	
+
 }
 
 

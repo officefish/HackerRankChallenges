@@ -29,7 +29,7 @@ int bubbleSortChallenge(){
     using std::cin;
     using std::streamsize;
     using std::numeric_limits;
-
+    using std::string, std::vector;
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -47,4 +47,4 @@ int bubbleSortChallenge(){
     return 0;
 }
 
-// How to count Swaps without swaps see: 
+// How to count Swaps without swaps see:

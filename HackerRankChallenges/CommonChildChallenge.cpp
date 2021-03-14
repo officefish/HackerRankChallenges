@@ -21,7 +21,6 @@ int hrs::commonChild(string s1, string s2) {
     size_t m = s1.size();
     size_t n = s2.size();
     vector<vector<uint8_t>> field(m+1, vector<uint8_t>(n+1, 0));
-
     for (size_t i = 0; i <= m; i++) {
         for (size_t j = 0; j <= n; j++) {
             if (i == 0 || j == 0) {
@@ -36,24 +35,21 @@ int hrs::commonChild(string s1, string s2) {
     return field[m][n];
 }
 
-int commonChildChallenge()
-{
+int commonChildChallenge() {
     using std::cout;
     using std::endl;
     using std::cin;
     using std::numeric_limits;
     using std::streamsize;
-    string s1, s2;
-
+    std::string s1, s2;
     getline(cin, s1);
     getline(cin, s2);
-
     int result = hrs::commonChild(s1, s2);
     return 0;
 }
 
 /*
-Решение задачи поиска наибольшей общей подстроки для двух строк s1 и s2, 
+Решение задачи поиска наибольшей общей подстроки для двух строк s1 и s2,
 длины которых m и n соответственно, заключается в заполнении таблицы размером
 (m+1) * (n+1) по следующему правилу, принимая, что символы в строке нумеруются от единицы.
 

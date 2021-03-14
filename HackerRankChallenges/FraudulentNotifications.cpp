@@ -3,7 +3,8 @@ Hackerrank::Challenges:FraudulentActivityNotifications
 description: https://www.hackerrank.com/challenges/fraudulent-activity-notifications
 */
 
-
+#include <algorithm>
+#include <queue>
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
@@ -16,65 +17,46 @@ using std::vector;
 using std::sort;
 using std::priority_queue;
 
-double calcMedian(vector<int> scores)
-{
+double calcMedian(vector<int> scores) {
     size_t size = scores.size();
-
-    if (size == 0)
-    {
+    if (size == 0) {
         return 0;  // Undefined, really.
-    }
-    else
-    {
+    } else {
         if (size % 2 == 0)
         {
             return (double)(scores[size / 2 - 1] + scores[size / 2]) / 2.0;
-        }
-        else
-        {
+        } else {
             return scores[size / 2];
         }
     }
 }
 
 int hrs::activityNotifications(vector<int> expenditure, int d) {
-    
     int warnings = { 0 };
     int half_chunk = { d / 2 };
     int current_half_chunk;
-
     double median;
-    
     // one more try to using queies but avoid second loop
     // still slow but fuck this challenge, it work's rather ok.
     // Look at esential solution, it is in the end of the page, by the way.
-
     int size = int(expenditure.size()) - d;
     int recurrent;
-
     for (int i = 0; i < size; ++i) {
-
         recurrent = i + d;
         current_half_chunk = half_chunk + i;
-
         // too small interval so calc meridian without queries
         if (d < 4) {
-            
             median = 0;
             for (size_t j = i; j < i + d; ++j) {
                 median += expenditure[j];
             }
             median /= d;
-
         }
         // use queries for calc approximate meridian
         else {
-
             priority_queue<int> highers(expenditure.begin() + i, expenditure.begin() + current_half_chunk);
             priority_queue<int, std::vector<int>, std::greater<int>> lowers(expenditure.begin() + current_half_chunk, expenditure.begin() + recurrent);
-
             median = (double(lowers.top()) + double(highers.top())) / 2.0;
-          
             /* not sure we about life cycles of these containers
             while (!lowers.empty()) {
                 lowers.pop();
@@ -83,24 +65,16 @@ int hrs::activityNotifications(vector<int> expenditure, int d) {
                 highers.pop();
             }
             */
-           
         }
-        
         if (expenditure[recurrent] >= round(median * 2)) {
             ++warnings;
         }
-    
     }
-
-
-    // using priority queies for avoid sorting! 
+    // using priority queies for avoid sorting!
     // p.s Still slow :(
-
-
     /*
     int size = expenditure.size() - d;
     int recurrent;
-
     priority_queue<int, std::vector<int>, std::greater<int>> lowers;
     priority_queue<int> highers;
 
@@ -131,23 +105,19 @@ int hrs::activityNotifications(vector<int> expenditure, int d) {
         while (!highers.empty()) {
             highers.pop();
         }
-       
+
         if (expenditure[recurrent] >= round(median * 2)) {
             ++warnings;
         }
 
     }
     */
-       
     /*
-    
-
     vector<int> chunk(d);
-
     // alternative loop, with using same vector still slow
     for (auto itr = expenditure.begin(); itr != expenditure.end() - d; ++itr)
     {
-        
+
         std::copy(itr, itr + d, chunk.begin());
         sort(chunk.begin(), chunk.end());
         median = calcMedian(chunk);
@@ -155,13 +125,12 @@ int hrs::activityNotifications(vector<int> expenditure, int d) {
             ++warnings;
     }
     */
-
     /*
     int size = { static_cast<int>(expenditure.size() - d) };
     int recurrent;
     vector<int>::const_iterator first; // = myVec.begin() + 100000;
     vector<int>::const_iterator last; //= myVec.begin() + 101000;
-    
+
     for (int i = 0; i < size; ++i) {
         recurrent = i + d;
         first = expenditure.begin() + i;
@@ -180,42 +149,28 @@ int hrs::activityNotifications(vector<int> expenditure, int d) {
             ++warnings;
         }
     }*/
-
     return warnings;
-
 }
 
 
 int fraudNotChallenge() {
-
+    using std::string, std::vector;
     std::ios_base::sync_with_stdio(0);
-
     string nd_temp;
     getline(cin, nd_temp);
-
     vector<string> nd = split_string(nd_temp);
-
     int n = stoi(nd[0]);
-
     int d = stoi(nd[1]);
-
     string expenditure_temp_temp;
     getline(cin, expenditure_temp_temp);
-
     vector<string> expenditure_temp = split_string(expenditure_temp_temp);
-
     vector<int> expenditure(n);
-
     for (int i = 0; i < n; i++) {
         int expenditure_item = stoi(expenditure_temp[i]);
-
         expenditure[i] = expenditure_item;
     }
-
     int result = hrs::activityNotifications(expenditure, d);
-
     cout << result << endl;
-
     return 0;
 }
 

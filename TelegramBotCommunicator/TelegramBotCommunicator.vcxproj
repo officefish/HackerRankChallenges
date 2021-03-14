@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9414a80c-4f5f-4a63-a53f-16d449fe5ed0}</ProjectGuid>
-    <RootNamespace>HackerRankChallenges</RootNamespace>
+    <ProjectGuid>{ca706865-c200-4566-9f1d-b4a7caf58605}</ProjectGuid>
+    <RootNamespace>TelegramBotCommunicator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -78,9 +78,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>D:\Qt\5.15.2\mingw81_64\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>D:\Qt\5.15.2\mingw81_64\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -116,7 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\Qt\5.15.2\mingw81_64\include;C:\TreeFrog\1.31.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,8 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>D:\Qt\5.15.2\mingw81_64\include;C:\TreeFrog\1.31.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,65 +143,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\jes\HackerRankChallenge\Day10BinaryNumbersChallenge.cpp" />
-    <ClCompile Include="..\..\..\jes\HackerRankChallenge\Day112DArrayChallenge.cpp" />
-    <ClCompile Include="AllAnyNoneOfChallenge.cpp" />
-    <ClCompile Include="AlternatingCharsChallenge.cpp" />
-    <ClCompile Include="ArrayIntroductionChallenge.cpp" />
-    <ClCompile Include="ArrayManipulationChallenge.cpp" />
-    <ClCompile Include="BubbleSortChallenge.cpp" />
-    <ClCompile Include="CommonChildChallenge.cpp" />
-    <ClCompile Include="ComparatorSortChallenge.cpp" />
-    <ClCompile Include="CompositeNumsChallenge.cpp" />
-    <ClCompile Include="ConditionalStatementsChallenge.cpp" />
-    <ClCompile Include="CountRatioTripletsChallenge.cpp" />
-    <ClCompile Include="CPPStringsChallenge.cpp" />
-    <ClCompile Include="CPPStructChallenge.cpp" />
-    <ClCompile Include="DataTypesChallenge.cpp" />
-    <ClCompile Include="Day1IfStatementChallenge.cpp" />
-    <ClCompile Include="Day2DataTypesChallenge.cpp" />
-    <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />
-    <ClCompile Include="Day5LoopsChallenge.cpp" />
-    <ClCompile Include="Day6LetsReviewChallenge.cpp" />
-    <ClCompile Include="Day7ArraysChallenge.cpp" />
-    <ClCompile Include="Day8DictionariesandMaps.cpp" />
-    <ClCompile Include="Day9RecursionChallenge.cpp" />
-    <ClCompile Include="DequeSTLChallenge.cpp" />
-    <ClCompile Include="ForLoopChallenge.cpp" />
-    <ClCompile Include="FraudulentNotifications.cpp" />
-    <ClCompile Include="FrequencyQuieriesChallenge.cpp" />
-    <ClCompile Include="FunctionsChallenge.cpp" />
-    <ClCompile Include="InputOutputChallenge.cpp" />
-    <ClCompile Include="LeftRotationChallenge.cpp" />
-    <ClCompile Include="HourglassChallenge.cpp" />
-    <ClCompile Include="CountingValleysChallenge.cpp" />
-    <ClCompile Include="HackerRankChallenges.cpp" />
-    <ClCompile Include="HackerRankMiscellaneous.cpp" />
-    <ClCompile Include="JumpingOnCloudsChallenge.cpp" />
-    <ClCompile Include="LuckBalanceChallenge.cpp" />
-    <ClCompile Include="MarkAndToysChallenge.cpp" />
-    <ClCompile Include="MergeSortChallenge.cpp" />
-    <ClCompile Include="MinAbsDifferenceChallenge.cpp" />
-    <ClCompile Include="MinimumSwap2Challenge.cpp" />
-    <ClCompile Include="NewYearChaosChallenge.cpp" />
-    <ClCompile Include="Day3OperatorsChallenge.cpp" />
-    <ClCompile Include="PointerChallenge.cpp" />
-    <ClCompile Include="RansomNoteChallenge.cpp" />
-    <ClCompile Include="RectangleAreaChallenge.cpp" />
-    <ClCompile Include="RepeatedStringChallenge.cpp" />
-    <ClCompile Include="SherlockAnagramsChallenge.cpp" />
-    <ClCompile Include="SherlockValidStringChallenge.cpp" />
-    <ClCompile Include="SocksMerchantChallenge.cpp" />
-    <ClCompile Include="SpecialStrAgainChallenge.cpp" />
-    <ClCompile Include="StringsAnagramsChallenge.cpp" />
-    <ClCompile Include="StringStreamChallenge.cpp" />
-    <ClCompile Include="TwoStringsCallenge.cpp" />
-    <ClCompile Include="VariableSizedArraysChallenge.cpp" />
-    <ClCompile Include="VectorSortChallenge.cpp" />
+    <ClCompile Include="TelegramBotCommunicator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Challenges.h" />
-    <ClInclude Include="HackerRankMiscellaneous.h" />
+    <ProjectReference Include="..\HackerRankChallenges\HackerRankChallenges.vcxproj">
+      <Project>{9414a80c-4f5f-4a63-a53f-16d449fe5ed0}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

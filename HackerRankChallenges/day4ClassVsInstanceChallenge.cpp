@@ -10,12 +10,9 @@ or below the code int this page
 using hr::output_str;
 using hr::split_string;
 
-#include <bits/stdc++.h>
-
 using std::cout;
 using std::endl;
 using std::cin;
-
 
 class Person {
 public:
@@ -29,8 +26,7 @@ Person::Person(int initialAge) {
     if (initialAge < 0) {
         age = 0;
         cout << "Age is not valid, setting age to 0." << endl;
-    }
-    else {
+    } else {
         age = initialAge;
     }
 }
@@ -38,8 +34,7 @@ Person::Person(int initialAge) {
 void Person::amIOld() {
     if (age >= 13 && age < 18) {
         cout << "You are a teenager." << endl;
-    }
-    else {
+    } else {
         (age >= 18) ? (cout << "You are old.") : (cout << "You are young.");
         cout << endl;
     }
@@ -62,25 +57,23 @@ int day4ClassVsInstance() {
             p.yearPasses();
         }
         p.amIOld();
-
         cout << '\n';
     }
-
     return 0;
 }
 
 
 /*
     Objective
-    In this challenge, we're going to learn about the difference between a class and an instance; 
-    because this is an Object Oriented concept, it's only enabled in certain languages. 
+    In this challenge, we're going to learn about the difference between a class and an instance;
+    because this is an Object Oriented concept, it's only enabled in certain languages.
     Check out the Tutorial tab for learning materials and an instructional video!
 
     Task
-    Write a Person class with an instance variable (in C++ it calls field, actually), "age", 
-    and a constructor that takes an integer, "initialAge", as a parameter. 
-    The constructor must assign "initalAge" to "age" after confirming the argument passed as "initialAge" is not negative; 
-    if a negative argument is passed as "initialAge", the constructor should set "age" to 0 and print "Age is not valid, 
+    Write a Person class with an instance variable (in C++ it calls field, actually), "age",
+    and a constructor that takes an integer, "initialAge", as a parameter.
+    The constructor must assign "initalAge" to "age" after confirming the argument passed as "initialAge" is not negative;
+    if a negative argument is passed as "initialAge", the constructor should set "age" to 0 and print "Age is not valid,
     setting age to 0.." In addition, you must write the following instance methods:
 
     yearPasses() should increase the "age" instance variable by 1.
@@ -89,8 +82,8 @@ int day4ClassVsInstance() {
     If "age" < 13, print You are young..
     If  "age" >= 13 and "age" < 18, print You are a teenager..
     Otherwise, print You are old..
-    
-    To help you learn by example and complete this challenge, much of the code is provided for you, 
+
+    To help you learn by example and complete this challenge, much of the code is provided for you,
     but you'll be writing everything in the future. The code that creates each instance of your Person class is in the main method.
     Don't worry if you don't understand it all quite yet!
 
@@ -106,12 +99,12 @@ int day4ClassVsInstance() {
     Constraints
 
      1 <= T <= 4
-    -5 <= age <= 30  
+    -5 <= age <= 30
 
     Output Format
 
-    Complete the method definitions provided in the editor so they meet the specifications outlined above; 
-    the code to test your work is already in the editor. If your methods are implemented correctly, 
+    Complete the method definitions provided in the editor so they meet the specifications outlined above;
+    the code to test your work is already in the editor. If your methods are implemented correctly,
     each test case will print 2 or 3 lines (depending on whether or not a valid initalAge was passed to the constructor).
 
     Sample Input
@@ -121,7 +114,7 @@ int day4ClassVsInstance() {
     10
     16
     18
-    
+
     Sample Output
 
     Age is not valid, setting age to 0.

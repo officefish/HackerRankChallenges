@@ -8,8 +8,6 @@ description: https://www.hackerrank.com/challenges/repeated-string/problem
 #include "HackerRankMiscellaneous.h"
 using hr::output_str;
 
-#include <bits/stdc++.h>
-
 using std::cout;
 using std::endl;
 using std::cin;
@@ -23,20 +21,16 @@ long hrs::repeatedString(string s, long n) {
     const char symbol = 'a';
     char currentSymbol;
     string::size_type stringSize = s.size();
-    
     long repeatedCounter = 0;
-
     for (std::string::size_type i = 0; i < stringSize; ++i) {
         currentSymbol = s[i];
         if (currentSymbol == symbol) {
             ++repeatedCounter;
         }
     }
-    
     long relations = n / long(stringSize);
     repeatedCounter *= relations;
     size_t remainder = n % stringSize;
-
     if (remainder) {
         string remainderString = s.substr(0, remainder);
 
@@ -47,22 +41,16 @@ long hrs::repeatedString(string s, long n) {
             }
         }
     }
-    
     return repeatedCounter;
 }
 
 int repeatedStringChallenge() {
-
-    string s;
+    std::string s;
     getline(cin, s);
-
     long n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
     long result = hrs::repeatedString(s, n);
-
     cout << "\n" << result << "\n";
-   
     return 0;
 }

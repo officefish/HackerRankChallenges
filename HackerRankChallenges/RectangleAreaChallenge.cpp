@@ -6,8 +6,6 @@ description: https://www.hackerrank.com/challenges/rectangle-area
 
 #include "Challenges.h"
 
-#include <bits/stdc++.h>
-
 using std::cout;
 using std::endl;
 using std::cin;
@@ -35,7 +33,7 @@ public:
 };
 
 int rectangleAreaChallenge() {
-    
+
     // Declare a RectangleArea object
     RectangleArea r_area;
 
@@ -43,7 +41,7 @@ int rectangleAreaChallenge() {
     r_area.read_input();
 
     //Print the width and height
-    
+
     r_area.Rectangle::display();
 
     // Print the area

@@ -5,7 +5,6 @@
 
 #include "Challenges.h"
 
-#include<bits/stdc++.h>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -18,10 +17,10 @@ int variableSizedArraysChallenge (){
 
     int **data;                         // (1)
     data = new int * [n];               // (2)
-    
+
     int* output = new int[q];
-    
-    for (i = 0; i < n; ++i) {           
+
+    for (i = 0; i < n; ++i) {
         cin >> r;
         data[i] = new int[r];           // (3)
         for (j = 0; j < r; ++j) {
@@ -35,7 +34,7 @@ int variableSizedArraysChallenge (){
         output[i] = data[r][v];
     }
 
-    for (i = 0; i < n; i++) {           // (4) 
+    for (i = 0; i < n; i++) {           // (4)
         delete[] data[i];
     }
     delete[] data;

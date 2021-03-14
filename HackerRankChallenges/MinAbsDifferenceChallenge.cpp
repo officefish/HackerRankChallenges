@@ -11,6 +11,7 @@ std::adjacment_difference https://en.cppreference.com/w/cpp/algorithm/adjacent_d
 #include <vector>
 #include <numeric>
 #include <iterator>
+#include <algorithm>
 
 #include "./Challenges.h"
 #include "./HackerRankMiscellaneous.h"
@@ -28,7 +29,7 @@ int hrs::minAbsDifference(vector<int> arr) {
     // first sort
     sort(arr.begin(), arr.end());
     int minDifference = INT_MAX, absDifference;
-    // goes through vector and save current closest option element 
+    // goes through vector and save current closest option element
     for (size_t i = 0, s = arr.size() - 1; i < s; ++i) {
         absDifference = abs(arr[i + 1] - arr[i]);
         if (!minDifference || absDifference < minDifference) {
@@ -48,7 +49,8 @@ int minAbsDifferenceChallenge() {
     using std::cin;
     using std::numeric_limits;
     using std::streamsize;
-    
+    using std::string;
+    using std::vector;
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');

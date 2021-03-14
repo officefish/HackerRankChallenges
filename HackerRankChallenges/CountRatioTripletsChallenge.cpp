@@ -54,32 +54,21 @@ long hrs::countTriplets(vector<long> arr, long r) {
 }
 
 int countRatioTripletsChallenge() {
-
+    using std::string, std::vector;
     string nr_temp;
     getline(cin, nr_temp);
-
     vector<string> nr = split(rtrim(nr_temp));
-
     int n = stoi(nr[0]);
-
     long r = stol(nr[1]);
-
     string arr_temp_temp;
     getline(cin, arr_temp_temp);
-
     vector<string> arr_temp = split(rtrim(arr_temp_temp));
-
     vector<long> arr(n);
-
     for (int i = 0; i < n; i++) {
         long arr_item = stol(arr_temp[i]);
-
         arr[i] = arr_item;
     }
-
     long ans = hrs::countTriplets(arr, r);
-
     cout << ans << "\n";
-   
     return 0;
 }

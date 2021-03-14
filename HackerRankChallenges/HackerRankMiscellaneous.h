@@ -1,21 +1,15 @@
 #pragma once
-
-#include <bits/stdc++.h>
-
-using std::string;
-using std::vector;
+#include <string>
+#include <vector>
 
 namespace hr {
-	
-	string output_str(const char* path);
 
-	vector<string> split_string(string input_string);
-	vector<string> split(const string&);
+	std::string output_str(const char* path);
 
-	string ltrim(const string&);
-	string rtrim(const string&);
+	std::vector<std::string> split_string(std::string input_string);
+	std::vector<std::string> split(const std::string&);
 
-	
-
+	std::string ltrim(const std::string&);
+	std::string rtrim(const std::string&);
 }
 

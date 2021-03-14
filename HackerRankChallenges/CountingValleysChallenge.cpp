@@ -1,6 +1,49 @@
 ﻿/*
 Hackerrank::Challenges::CountingValley
 description: https://www.hackerrank.com/challenges/counting-valleys/
+*/
+
+#include "Challenges.h"
+
+#include "HackerRankMiscellaneous.h"
+using hr::ltrim;
+using hr::rtrim;
+
+using std::cin;
+using std::cout;
+using std::stoi;
+
+int hrs::countingValleys(int steps, std::string path) {
+    int height = 0;
+    const int skyline = 0;
+    int valleysCounter = 0;
+    bool inValley = false;
+    for (size_t i = 0; i < steps; ++i) {
+        path[i] == 'U' ? ++height : --height;
+        if (height < 0 && !inValley) {
+            inValley = true;
+            ++valleysCounter;
+        }
+        if (height >= 0 && inValley) {
+            inValley = false;
+        }
+    }
+    return valleysCounter;
+}
+
+int countingValleysChallenge() {
+    using std::string;
+    string steps_temp;
+    getline(cin, steps_temp);
+    int steps = stoi(ltrim(rtrim(steps_temp)));
+    string path;
+    getline(cin, path);
+    int result = hrs::countingValleys(steps, path);
+    cout << "\n" << result << "\n";
+    return 0;
+}
+
+/*
 
 An avid hiker keeps meticulous records of their hikes. During the last hike that took exactly  steps, for every step it was noted if it was an uphill, , or a downhill,  step. Hikes always start and end at sea level, and each step up or down represents a  unit change in altitude. We define the following terms:
 
@@ -43,58 +86,4 @@ UDDDUDUU
 Sample Output
 
 1
-
 */
-
-
-#include "Challenges.h"
-
-#include "HackerRankMiscellaneous.h"
-using hr::ltrim;
-using hr::rtrim;
-
-using std::cin;
-using std::cout;
-using std::stoi;
-
-int hrs::countingValleys(int steps, string path) {
-
-    int height = 0;
-    const int skyline = 0;
-    int valleysCounter = 0;
-    bool inValley = false;
-
-    for (size_t i = 0; i < steps; ++i) {
-        
-        path[i] == 'U' ? ++height : --height;
-        
-        if (height < 0 && !inValley) {
-            inValley = true;
-            ++valleysCounter;
-        }
-        if (height >= 0 && inValley) {
-            inValley = false;
-        }
-
-    }
-
-    return valleysCounter;
-}
-
-int countingValleysChallenge() {
-    
-    string steps_temp;
-    getline(cin, steps_temp);
-
-    int steps = stoi(ltrim(rtrim(steps_temp)));
-
-    string path;
-    getline(cin, path);
-
-    int result = hrs::countingValleys(steps, path);
-
-    cout << "\n" << result << "\n";
-
-    return 0;
-}
-

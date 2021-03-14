@@ -1,5 +1,7 @@
 #pragma once
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <iostream>
 
 /* 30 days coding Challenge */
 int day1IfStatementsChallenge();// day1
@@ -11,6 +13,8 @@ int day6LetsReviewChallenge();	// day6
 int day7ArraysChallange();		// day7
 int day8MapsChallenge();		// day8
 int day9RecursionChallenge();	// day9
+int day10BinNumsChallenge();	// day10
+int day112DArrsChallenge();		// day11
 
 /* Interview Preparation kit */
 
@@ -90,7 +94,7 @@ namespace hrs {
 	int minimumBribes(vector<int>);
 	int minimumSwaps(vector<int>);
 	long arrayManipulation(int, vector<vector<int>>);
-	
+
 	//HashTables
 	bool checkMagazine(vector<string>, vector<string>);
 	string twoStrings(string, string);

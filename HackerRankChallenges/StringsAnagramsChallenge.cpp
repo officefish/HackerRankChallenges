@@ -4,6 +4,9 @@ description: https://www.hackerrank.com/challenges/ctci-making-anagrams/
 */
 
 #include <unordered_map>
+#include <algorithm>
+#include <queue>
+
 #include "Challenges.h"
 
 using std::cout;
@@ -30,21 +33,21 @@ int intToAscii(int number) {
 
 
 int hrs::makeAnagramFromStings(std::string a, std::string b) {
-	
+
     // Genious one! Frequency rocks!!
-    
-    
+
+
     auto count = 0;
     vector<int> freq(26, 0);
     for (auto c : a) { ++freq[c - 'a']; }
     for (auto c : b) { --freq[c - 'a']; }
     for (auto val : freq) { count += abs(val); }
     return count;
-    
+
     /*
 
     int counter = { 0 };
-    
+
     string shortStr, longStr, currentSubstr;
     size_t SHORT_SIZE, LONG_SIZE;
 
@@ -65,7 +68,7 @@ int hrs::makeAnagramFromStings(std::string a, std::string b) {
     {
         return lhs.length() > rhs.length();
     };
-    
+
     unordered_map<string, bool> shortSubstrs;
     unordered_map<string, bool> longSubstrs;
     priority_queue<string, vector<string>, decltype(compare)> chunk(compare);
@@ -80,8 +83,8 @@ int hrs::makeAnagramFromStings(std::string a, std::string b) {
         }
     }
 
-    
-    
+
+
     for (size_t i = 0; i < LONG_SIZE; ++i) {
         for (size_t j = LONG_SIZE - i; j > 0; --j) {
             currentSubstr = longStr.substr(i, j);
@@ -90,31 +93,31 @@ int hrs::makeAnagramFromStings(std::string a, std::string b) {
                 longSubstrs[currentSubstr] = true;
                 chunk.push(currentSubstr);
             }
-            
+
         }
     }
-    
+
 
     while (!chunk.empty()) {
         currentSubstr = chunk.top();
         chunk.pop();
         if (longSubstrs[currentSubstr] && shortSubstrs[currentSubstr]) {
-            
+
             //cout << currentSubstr << endl;
             //counter += longStr.length() - currentSubstr.length();
             //counter += shortStr.length() - currentSubstr.length();
-            
+
             //return counter;
         }
     }
-    
+
 
     return counter;
     */
-    
 
-            
-    
+
+
+
 }
 
 

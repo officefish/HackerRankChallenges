@@ -2,11 +2,10 @@
     Hackerrank::Challenges::DequeSTL
     description: https://www.hackerrank.com/challenges/deque-stl
 */
-
-
+#include <algorithm>
+#include <deque>
 #include "Challenges.h"
 
-#include <bits/stdc++.h>
 using std::cout;
 using std::endl;
 using std::cin;
@@ -20,18 +19,18 @@ using std::end;
 // A Dequeue (Double ended queue) based method for printing maixmum element of
 // all subarrays of size k
 void printKMax(int arr[], int n, int k) {
-    
+
     deque<int>  Qi(k);                                          // (1)
     int i;
 
-    for (i = 0; i < k; ++i)                                     // (2) 
+    for (i = 0; i < k; ++i)                                     // (2)
     {
         while ((!Qi.empty()) && arr[i] >= arr[Qi.back()])       // (3)
             Qi.pop_back();                                      // (4)
-        
+
         Qi.push_back(i);                                        // (5)
     }
-    
+
     for (; i < n; ++i)                                          // (6)
     {
         cout << arr[Qi.front()] << " ";                         // (7)
@@ -50,7 +49,7 @@ void printKMax(int arr[], int n, int k) {
 /*
     (1)     Create a Double Ended Queue, Qi that will store indexes of array elements
             The queue will store indexes of useful elements in every window and it will
-            maintain decreasing order of values from front to rear in Qi, i.e., 
+            maintain decreasing order of values from front to rear in Qi, i.e.,
             arr[Qi.front[]] to arr[Qi.rear()] are sorted in decreasing order.
 
     (2)     Process first k (or first window) elements of array.
@@ -77,25 +76,25 @@ void printKMax(int arr[], int n, int k) {
 
     /*
         Brutforce:
-        
+
         int subsCount = n - k + 1;
 
         deque<deque<int>> data(subsCount);
         deque<int> output = deque<int>();
-    
+
         for (int i = 0; i < subsCount; ++i) {
-            
+
             data[i] = deque<int>();
-            
+
             for (int j = i; j < k + i; ++j) {
                 data[i].push_back(arr[j]);
             }
-            
-            sort(begin(data[i]), end(data[i]));        
+
+            sort(begin(data[i]), end(data[i]));
             output.push_back(data[i][data[i].size() - 1]);
-        
+
         }
-    
+
         for (auto v : output) {
             cout << v << " ";
         }

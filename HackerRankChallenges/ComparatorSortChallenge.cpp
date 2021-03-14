@@ -3,7 +3,7 @@ Hackerrank::Challenges:Sorting:Comparator
 description: https://www.hackerrank.com/challenges/ctci-comparator-sorting
 */
 
-
+#include <algorithm>
 #include "Challenges.h"
 
 #include "HackerRankMiscellaneous.h"
@@ -31,7 +31,7 @@ public:
 private:
     //int m_score;
     //string m_name;
-    
+
 };
 
 class Checker {
@@ -43,7 +43,7 @@ public:
 };
 
 int Checker::comparator(Player a, Player b) {
-    
+
     int index = { 0 };
 
     if (a.score - b.score) {
@@ -68,7 +68,7 @@ bool compare(Player a, Player b) {
 int comparatorSortChallenge() {
     int n;
     cin >> n;
-    vector< Player > players;
+    std::vector< Player > players;
     string name;
     int score;
     for (int i = 0; i < n; i++) {

@@ -3,10 +3,8 @@ Hackerrank::Challenges:CPP::VectorSort
 description: https://www.hackerrank.com/challenges/rectangle-area
 */
 
-
+#include <algorithm>
 #include "Challenges.h"
-
-#include <bits/stdc++.h>
 
 using std::cout;
 using std::endl;
@@ -17,7 +15,7 @@ using std::sort;
 void vectorLooping(vector<int>&);
 
 int vectorSortChallenge() {
-	
+
 	int length;
 	cin >> length;
 
@@ -42,11 +40,11 @@ int vectorSortChallenge() {
 
 /*
 	Vectors are same as dynamic arrays with the ability to resize itself automatically when an element is inserted or deleted,
-	with their storage being handled automatically by the container. 
-	Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators. 
-	In vectors, data is inserted at the end. Inserting at the end takes differential time, 
-	as sometimes there may be a need of extending the array. 
-	Removing the last element takes only constant time because no resizing happens. 
+	with their storage being handled automatically by the container.
+	Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators.
+	In vectors, data is inserted at the end. Inserting at the end takes differential time,
+	as sometimes there may be a need of extending the array.
+	Removing the last element takes only constant time because no resizing happens.
 	Inserting and erasing at the beginning or in the middle is linear in time.
 
 	Certain functions associated with the vector are:
@@ -65,7 +63,7 @@ int vectorSortChallenge() {
 */
 
 void vectorLooping(vector<int>&g1) {
-	
+
 
 	cout << "Output of begin and end: ";
 	for (auto i = g1.begin(); i != g1.end(); ++i)

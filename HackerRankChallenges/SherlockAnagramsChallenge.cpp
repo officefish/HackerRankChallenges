@@ -2,7 +2,7 @@
     Hackerrank::Challenges::SherlockAnagrams
     description: https://www.hackerrank.com/challenges/sherlock-and-anagrams/
 */
-
+#include <algorithm>
 #include "Challenges.h"
 
 using std::cout;
@@ -23,7 +23,7 @@ bool areAnagram(string str1, string str2)
 {
     size_t n1 = str1.length();
     size_t n2 = str2.length();
-       
+
     if (n1 != n2)
         return false;
 
@@ -50,19 +50,19 @@ int substrSum(string s) {
 }
 
 int findAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
-    
+
     bool m_areAnagram = false;
     int anagramCounter = 0;
 
     int m_substrSum = substrSum(s);
-  
+
     vector<string>* pBufferSubs;
-    
+
     unordered_map<int, vector<string>*>::const_iterator got = substrs->find(m_substrSum);
 
     if (got != substrs->end()) {
         pBufferSubs = got->second;
-              
+
         m_areAnagram = false;
         for (auto& str : *pBufferSubs) {
             m_areAnagram = areAnagram(s, str);
@@ -70,7 +70,7 @@ int findAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
                 ++anagramCounter;
             }
         }
-        
+
         pBufferSubs->push_back(s);
     }
     else {
@@ -78,13 +78,13 @@ int findAnagrams(unordered_map<int, vector<string>*> *substrs, string s) {
         pBufferSubs->push_back(s);
         substrs->insert({ {m_substrSum, pBufferSubs} });
     }
-   
+
     return anagramCounter;
 
 }
 
 int hrs::sherlockAndAnagrams(string s) {
-    
+
     /*
         Elegant
     */
@@ -122,7 +122,7 @@ int hrs::sherlockAndAnagrams(string s) {
 
             currentSubstr = s.substr(i, j);
             pairs += FindAnagrams(&substrs, currentSubstr);
-                
+
         }
     }
 
@@ -131,7 +131,7 @@ int hrs::sherlockAndAnagrams(string s) {
     }
     substrs.clear();
     */
-    
+
     return pairs;
 
 }
@@ -151,6 +151,6 @@ int sherlockAnagramsChallenge() {
 
         cout << result << "\n";
     }
-    
+
     return 0;
 }

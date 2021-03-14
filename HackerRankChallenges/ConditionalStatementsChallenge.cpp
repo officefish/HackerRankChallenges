@@ -5,7 +5,6 @@
 
 #include "Challenges.h"
 
-#include<bits/stdc++.h>
 using std::cout;
 using std::cin;
 using std::numeric_limits;
@@ -20,12 +19,12 @@ int conditionalStatementsChallenge() {
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    
+
     if (1 <= n && n <= 9)
         output = numbers[n];
 
     cout << output;
-    
+
     return 0;
 
 }

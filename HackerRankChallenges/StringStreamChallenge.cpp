@@ -4,7 +4,7 @@ Hackerrank::Challenges:StringStreamChallenge
 description: https://www.hackerrank.com/challenges/c-tutorial-stringstream/
 */
 
-
+#include <sstream>
 #include "./Challenges.h"
 
 using std::cout;
@@ -16,7 +16,7 @@ using std::string;
 using std::stringstream; // https://en.cppreference.com/w/cpp/io/basic_stringstream
 
 vector<int> parseInts(string str) {
-    
+
     stringstream ss(str);
     int out;
 

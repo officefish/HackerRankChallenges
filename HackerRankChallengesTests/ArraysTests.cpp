@@ -6,9 +6,9 @@ using std::vector;
 using std::string;
 
 TEST(ArraysChallengesTests, HourglassSumTest_01) {
-		
+
 	vector<vector<int>> matrix =
-	{ 
+	{
 		{1, 1, 1, 0, 0, 0},
 		{0, 1, 0, 0, 0, 0},
 		{1, 1, 1, 0, 0, 0},
@@ -55,7 +55,7 @@ TEST(ArraysChallengesTests, RotationLeftTest_01) {
 
 	vector<int> input = { 1, 2, 3, 4, 5 };
 	int countRotations = { 4 };
-	
+
 	vector<int> output = { 5, 1, 2, 3, 4 };
 
 	EXPECT_EQ(output, hrs::rotationLeft(input, countRotations));
@@ -85,7 +85,7 @@ TEST(ArraysChallengesTests, NewYearChaosTest_01) {
 
 	vector<int> input1 = { 2, 1, 5, 3, 4 };
 	vector<int> input2 = { 2, 5, 1, 3, 4 };
-	
+
 	EXPECT_EQ(3, hrs::minimumBribes(input1));
 	EXPECT_EQ(-1, hrs::minimumBribes(input2));
 }
@@ -102,7 +102,7 @@ TEST(ArraysChallengesTests, NewYearChaosTest_02) {
 TEST(ArraysChallengesTests, NewYearChaosTest_03) {
 
 	vector<int> input1 = { 1, 2, 5, 3, 4, 7, 8, 6 };
-	
+
 	EXPECT_EQ(4, hrs::minimumBribes(input1));
 }
 

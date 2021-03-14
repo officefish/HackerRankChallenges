@@ -45,8 +45,8 @@ reverse_wrapper<C> r_wrap(C& c) {
 }
 */
 
-vector<int> hrs::reverseRange(char style, const vector<int>& input) {
-    vector<int> output;
+std::vector<int> hrs::reverseRange(char style, const vector<int>& input) {
+    std::vector<int> output;
     switch (style) {
     case 1: {
         size_t counter { input.size() };
@@ -114,25 +114,20 @@ int day7ArraysChallange() {
     using std::cout;
     using std::endl;
     using std::cin;
-    using std::string;
+    using std::string, std::vector;
     using std::numeric_limits;
     using std::streamsize;
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
     string arr_temp_temp;
     getline(cin, arr_temp_temp);
-
     vector<string> arr_temp = hr::split_string(arr_temp_temp);
-
     vector<int> arr(n);
-
     for (int i = 0; i < n; i++) {
         int arr_item = stoi(arr_temp[i]);
         arr[i] = arr_item;
     }
-
     vector<int> output;
     for (int i = 1; i <= 7; ++i) {
         output = hrs::reverseRange(i, arr);
@@ -151,7 +146,7 @@ int day7ArraysChallange() {
 
 /*
 Objective
-Today, we will learn about the Array data structure. 
+Today, we will learn about the Array data structure.
 Check out the Tutorial tab for learning materials and an instructional video.
 
 Task
@@ -188,23 +183,23 @@ Sample Output
 */
 
 /*(1)
-Firstly, your usage of the copy_backward() function is riddled with fallacy as (from what I am assuming) 
-you are attempting to reverse the order of the elements inputted by the user via copying the elements 
-to a new container in the reverse order starting from the end of the new container, which is nugatory 
-in reversing the original order as the copy_backward() function merely copies the elements 
+Firstly, your usage of the copy_backward() function is riddled with fallacy as (from what I am assuming)
+you are attempting to reverse the order of the elements inputted by the user via copying the elements
+to a new container in the reverse order starting from the end of the new container, which is nugatory
+in reversing the original order as the copy_backward() function merely copies the elements
 to the specified container in the reverse order rather than actually reversing the order of the elements.
 
-Secondly, as for the actual source of the error, the container which you are copying to (reversed) 
+Secondly, as for the actual source of the error, the container which you are copying to (reversed)
 is empty which makes it too small to store any passed data, triggering an undefined behavior.
 
 Using the function reverse_copy() will resolve your problem regarding the reversal of the order of elements
-and the function back_inserter() will allow you to add elements to an empty container as it constructs 
+and the function back_inserter() will allow you to add elements to an empty container as it constructs
 an iterator which can be used to add elements towards the end of the container.
 
-Replace your copy_backward() function call with the following function call: 
+Replace your copy_backward() function call with the following function call:
 std::reverse_copy(toReverse.begin(), toReverse.end(), std::back_inserter(reversed)).
 
-Furthermore, the pound (#) character in your input is not filtered from the elements 
-stored in the toReverse container (which, as per my assumption, must be filtered). 
+Furthermore, the pound (#) character in your input is not filtered from the elements
+stored in the toReverse container (which, as per my assumption, must be filtered).
 Add a condition like if (input != '#') before adding the element to the toReverse container
 */

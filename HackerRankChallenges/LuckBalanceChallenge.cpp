@@ -2,7 +2,7 @@
 Hackerrank::Challenges::GreedyAlgorithm::LuckBalance
 description: https://www.hackerrank.com/challenges/luck-balance/
 Solution Copyright (c) 2021 Officefish / Techies Team.
-stuff: 
+stuff:
 std::multimap https://en.cppreference.com/w/cpp/container/multimap
 */
 #include <string>
@@ -66,7 +66,7 @@ int luckBalanceChallenge() {
     using std::cin;
     using std::numeric_limits;
     using std::streamsize;
-
+    using std::string, std::vector;
     string nk_temp;
     getline(cin, nk_temp);
     vector<string> nk = split_string(nk_temp);

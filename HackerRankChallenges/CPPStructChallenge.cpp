@@ -8,6 +8,7 @@ Solution Copyright (c) 2021 Officefish / Techies Team.
 #include <algorithm>
 
 #include "./Challenges.h"
+
 struct Student {
     int16_t age;
     std::string first_name;
