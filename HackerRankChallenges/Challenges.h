@@ -86,6 +86,7 @@ int inheritanceIntroChallenge();
 int multiInheritanceChallenge();
 int overloadOperatorChallenge();
 int lowerBoundChallenge();
+int setChallenge();
 
 /*C++ Standard Algorithm Challenge */
 int allAnyNoneOfChallenge();

@@ -160,6 +160,7 @@
     <ClCompile Include="CPPInheritanceIntroChallenge.cpp" />
     <ClCompile Include="CPPLowerBoundChallenge.cpp" />
     <ClCompile Include="CPPOverloadOperatorChallenge.cpp" />
+    <ClCompile Include="CPPSetChallenge.cpp" />
     <ClCompile Include="CPPStringsChallenge.cpp" />
     <ClCompile Include="CPPStructChallenge.cpp" />
     <ClCompile Include="DataTypesChallenge.cpp" />
