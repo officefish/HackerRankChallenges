@@ -21,6 +21,7 @@ int day14ScopeChallenge();		// day14
 int day15LinkedListChallenge(); // day15
 int day16ExceptionsChallenge();	// day16
 int day17MoreExceptsChallenge();// day17
+int day18QuAndStChallenge();	// day18
 
 /* Interview Preparation kit */
 
@@ -78,6 +79,13 @@ int stringSteamChallenge();
 int compositeNumbersChallenge();
 int stringsSTLChallenge();
 int structChallenge();
+int classChallenge();
+int classAndObjectChallenge();
+int boxItChallenge();
+int inheritanceIntroChallenge();
+int multiInheritanceChallenge();
+int overloadOperatorChallenge();
+int lowerBoundChallenge();
 
 /*C++ Standard Algorithm Challenge */
 int allAnyNoneOfChallenge();

@@ -210,6 +210,30 @@
     <ClCompile Include="Day17MoreExceptionsChallenge.cpp">
       <Filter>Исходные файлы\DaysChallenges</Filter>
     </ClCompile>
+    <ClCompile Include="Day18QueuesAndStacksChallenge.cpp">
+      <Filter>Исходные файлы\DaysChallenges</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPClassChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPClassAndObjectChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPBoxItChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPInheritanceIntroChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="MultyInheritanceChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPOverloadOperatorChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPLowerBoundChallenge.cpp">
+      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h">

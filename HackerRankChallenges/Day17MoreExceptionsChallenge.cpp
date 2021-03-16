@@ -20,7 +20,7 @@ public:
     }
 };
 
-int day17moreExceptsChallenge() {
+int day17MoreExceptsChallenge() {
     using std::cin, std::cout, std::endl, std::exception;
     Calculator myCalculator = Calculator();
     int T, n, p;

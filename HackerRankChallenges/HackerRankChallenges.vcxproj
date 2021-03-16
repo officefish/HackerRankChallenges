@@ -154,6 +154,12 @@
     <ClCompile Include="CompositeNumsChallenge.cpp" />
     <ClCompile Include="ConditionalStatementsChallenge.cpp" />
     <ClCompile Include="CountRatioTripletsChallenge.cpp" />
+    <ClCompile Include="CPPBoxItChallenge.cpp" />
+    <ClCompile Include="CPPClassAndObjectChallenge.cpp" />
+    <ClCompile Include="CPPClassChallenge.cpp" />
+    <ClCompile Include="CPPInheritanceIntroChallenge.cpp" />
+    <ClCompile Include="CPPLowerBoundChallenge.cpp" />
+    <ClCompile Include="CPPOverloadOperatorChallenge.cpp" />
     <ClCompile Include="CPPStringsChallenge.cpp" />
     <ClCompile Include="CPPStructChallenge.cpp" />
     <ClCompile Include="DataTypesChallenge.cpp" />
@@ -163,6 +169,7 @@
     <ClCompile Include="Day15LinkedListChallenge.cpp" />
     <ClCompile Include="Day16ExceptionsChallenge.cpp" />
     <ClCompile Include="Day17MoreExceptionsChallenge.cpp" />
+    <ClCompile Include="Day18QueuesAndStacksChallenge.cpp" />
     <ClCompile Include="Day1IfStatementChallenge.cpp" />
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
     <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />
@@ -188,6 +195,7 @@
     <ClCompile Include="MergeSortChallenge.cpp" />
     <ClCompile Include="MinAbsDifferenceChallenge.cpp" />
     <ClCompile Include="MinimumSwap2Challenge.cpp" />
+    <ClCompile Include="MultyInheritanceChallenge.cpp" />
     <ClCompile Include="NewYearChaosChallenge.cpp" />
     <ClCompile Include="Day3OperatorsChallenge.cpp" />
     <ClCompile Include="PointerChallenge.cpp" />
