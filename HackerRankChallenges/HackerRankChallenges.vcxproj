@@ -157,6 +157,12 @@
     <ClCompile Include="CPPStringsChallenge.cpp" />
     <ClCompile Include="CPPStructChallenge.cpp" />
     <ClCompile Include="DataTypesChallenge.cpp" />
+    <ClCompile Include="Day12InheritanceChallenge.cpp" />
+    <ClCompile Include="Day13AbstractClassesChallenge.cpp" />
+    <ClCompile Include="Day14ScopeChallenge.cpp" />
+    <ClCompile Include="Day15LinkedListChallenge.cpp" />
+    <ClCompile Include="Day16ExceptionsChallenge.cpp" />
+    <ClCompile Include="Day17MoreExceptionsChallenge.cpp" />
     <ClCompile Include="Day1IfStatementChallenge.cpp" />
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
     <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />

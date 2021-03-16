@@ -15,6 +15,12 @@ int day8MapsChallenge();		// day8
 int day9RecursionChallenge();	// day9
 int day10BinNumsChallenge();	// day10
 int day112DArrsChallenge();		// day11
+int day12InheritanceChallenge();// day12
+int day13AbstrClassChallenge(); // day13
+int day14ScopeChallenge();		// day14
+int day15LinkedListChallenge(); // day15
+int day16ExceptionsChallenge();	// day16
+int day17MoreExceptsChallenge();// day17
 
 /* Interview Preparation kit */
 

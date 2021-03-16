@@ -6,23 +6,24 @@
 
 int main()
 {
-    // 30 Days coding Challenge 
+    // 30 Days coding Challenge
     //return day1IfStatementsChallenge();
     //return day2DataTypesChallenge();
     //return day3OperatorsChallenge();
     //return day4ClassVsInstance();
-    //return day5LoopsChallenge();		
-    //return day6LetsReviewChallenge();	
-    //return day7ArraysChallange();	
+    //return day5LoopsChallenge();
+    //return day6LetsReviewChallenge();
+    //return day7ArraysChallange();
     //return day8MapsChallenge();
     //return day9RecursionChallenge();
-            
+    //return day10()
+
     // Interview Preparation Kit
     //return socksMerchantChallenge();
     //return countingValleysChallenge();
     //return jumpingOnCloudsChallenge();
     //return repeatedStringChallenge();
-    
+
     // Arrays
     //return hourglassChallenge();
     //return leftRotationChallenge();
@@ -67,7 +68,7 @@ int main()
     //return stringSteamChallenge();
     //return compositeNumbersChallenge();
     //return stringsSTLChallenge();
-    return structChallenge();
+    //return structChallenge();
 
     //C++ Standard Library :: Algorithm
     //return allAnyNoneOfChallenge();
