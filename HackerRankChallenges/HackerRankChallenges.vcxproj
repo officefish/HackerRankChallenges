@@ -157,12 +157,17 @@
     <ClCompile Include="CPPBoxItChallenge.cpp" />
     <ClCompile Include="CPPClassAndObjectChallenge.cpp" />
     <ClCompile Include="CPPClassChallenge.cpp" />
+    <ClCompile Include="CPPClassTemplateChallenge.cpp" />
     <ClCompile Include="CPPInheritanceIntroChallenge.cpp" />
     <ClCompile Include="CPPLowerBoundChallenge.cpp" />
+    <ClCompile Include="CPPMapChallenge.cpp" />
     <ClCompile Include="CPPOverloadOperatorChallenge.cpp" />
+    <ClCompile Include="CPPPreprocessorChallenge.cpp" />
+    <ClCompile Include="CPPPrettyPrintChallenge.cpp" />
     <ClCompile Include="CPPSetChallenge.cpp" />
     <ClCompile Include="CPPStringsChallenge.cpp" />
     <ClCompile Include="CPPStructChallenge.cpp" />
+    <ClCompile Include="CPPVectorEraseChallenge.cpp" />
     <ClCompile Include="DataTypesChallenge.cpp" />
     <ClCompile Include="Day12InheritanceChallenge.cpp" />
     <ClCompile Include="Day13AbstractClassesChallenge.cpp" />
@@ -171,6 +176,7 @@
     <ClCompile Include="Day16ExceptionsChallenge.cpp" />
     <ClCompile Include="Day17MoreExceptionsChallenge.cpp" />
     <ClCompile Include="Day18QueuesAndStacksChallenge.cpp" />
+    <ClCompile Include="Day19InterfaceChallenge.cpp" />
     <ClCompile Include="Day1IfStatementChallenge.cpp" />
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
     <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />

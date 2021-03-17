@@ -1,5 +1,5 @@
 /*
-Hackerrank::Challenges::Day12:Inheritance
+Hackerrank::Challenges::SetChallenge
 description:https://www.hackerrank.com/challenges/cpp-sets/
 Solution Copyright (c) 2021 Officefish / Techies Team.
 */

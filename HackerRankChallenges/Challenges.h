@@ -22,6 +22,7 @@ int day15LinkedListChallenge(); // day15
 int day16ExceptionsChallenge();	// day16
 int day17MoreExceptsChallenge();// day17
 int day18QuAndStChallenge();	// day18
+int day19InterfaceChallenge();	// day19
 
 /* Interview Preparation kit */
 
@@ -87,6 +88,11 @@ int multiInheritanceChallenge();
 int overloadOperatorChallenge();
 int lowerBoundChallenge();
 int setChallenge();
+int vectorEraseChallenge();
+int mapChallenge();
+int prettyPrintChallenge();
+int classTemplateChallenge();
+int preprocessorChallenge();
 
 /*C++ Standard Algorithm Challenge */
 int allAnyNoneOfChallenge();
