@@ -27,4 +27,4 @@ int day19InterfaceChallenge() {
     int sum = myCalculator->divisorSum(n);
     std::cout << "I implemented: AdvancedArithmetic\n" << sum;
     return 0;
-}
+};

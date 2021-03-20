@@ -23,6 +23,8 @@ int day16ExceptionsChallenge();	// day16
 int day17MoreExceptsChallenge();// day17
 int day18QuAndStChallenge();	// day18
 int day19InterfaceChallenge();	// day19
+int day20BubbleSortChallenge(); // day20
+int day21GenericChallenge(); // day21
 
 /* Interview Preparation kit */
 
@@ -63,6 +65,25 @@ int commonChildChallenge();
 //Greedy Algorithms
 int minAbsDifferenceChallenge();
 int luckBalanceChallenge();
+
+//Lists
+// singly
+int insertNodeAtHeadChallenge();
+int instertNodeAtTailChallenge();
+int insertNodeAtPositionChallenge();
+int deleteNodeChallenge();
+int reverseListChallenge();
+int getNodeDataChallenge();
+int printListChallenge();
+int printReverseChallenge();
+int compareListsChallenge();
+int sortListChallenge();
+int mergeSinglySortedChallenge();
+int findMergePointChallenge();
+int removeDuplicatesInSortedChallenge();
+int listHasCycleChallenge();
+// doubly
+int sortedInsertChallenge();
 
 /* C++ */
 int inputOutputChallenge();
@@ -151,8 +172,8 @@ namespace hrs {
 	//CPP Algorithm Library
 	bool isEven(int32_t input);
 	bool isOdd(int32_t input);
-}
 
+}
 
 
 

@@ -53,6 +53,11 @@ int main()
     //Greedy Algorithms
     //return luckBalanceChallenge();
 
+    //Lists
+    //return sortListChallenge();
+    //return mergeSinglySortedChallenge();
+    return sortedInsertChallenge();
+
     //C++
     //return inputOutputChallenge();
     //return dataTypesChallenge();
@@ -72,4 +77,5 @@ int main()
 
     //C++ Standard Library :: Algorithm
     //return allAnyNoneOfChallenge();
+    return 0;
 }

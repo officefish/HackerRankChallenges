@@ -25,6 +25,9 @@
     <Filter Include="Исходные файлы\STDLibraryChallenges">
       <UniqueIdentifier>{a18a451c-0729-4915-ba65-363371dacf24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Lists">
+      <UniqueIdentifier>{b00e809a-882a-46fd-afac-6e4cfb64f988}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HackerRankChallenges.cpp">
@@ -255,6 +258,24 @@
     <ClCompile Include="Day19InterfaceChallenge.cpp">
       <Filter>Исходные файлы\DaysChallenges</Filter>
     </ClCompile>
+    <ClCompile Include="SinglyLinkedListChallenges.cpp">
+      <Filter>Исходные файлы\Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="SinglyLinkedList.cpp">
+      <Filter>Исходные файлы\Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleLinkedList.cpp">
+      <Filter>Исходные файлы\Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="DoublyLinkedListChallenges.cpp">
+      <Filter>Исходные файлы\Lists</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20BubbleSortChallenge.cpp">
+      <Filter>Исходные файлы\DaysChallenges</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21GenericChallenge.cpp">
+      <Filter>Исходные файлы\DaysChallenges</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h">
@@ -262,6 +283,12 @@
     </ClInclude>
     <ClInclude Include="HackerRankMiscellaneous.h">
       <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglyLinkedList.h">
+      <Filter>Исходные файлы\Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinkedList.h">
+      <Filter>Исходные файлы\Lists</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

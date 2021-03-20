@@ -46,7 +46,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -178,6 +178,8 @@
     <ClCompile Include="Day18QueuesAndStacksChallenge.cpp" />
     <ClCompile Include="Day19InterfaceChallenge.cpp" />
     <ClCompile Include="Day1IfStatementChallenge.cpp" />
+    <ClCompile Include="Day20BubbleSortChallenge.cpp" />
+    <ClCompile Include="Day21GenericChallenge.cpp" />
     <ClCompile Include="Day2DataTypesChallenge.cpp" />
     <ClCompile Include="day4ClassVsInstanceChallenge.cpp" />
     <ClCompile Include="Day5LoopsChallenge.cpp" />
@@ -186,11 +188,15 @@
     <ClCompile Include="Day8DictionariesandMaps.cpp" />
     <ClCompile Include="Day9RecursionChallenge.cpp" />
     <ClCompile Include="DequeSTLChallenge.cpp" />
+    <ClCompile Include="DoubleLinkedList.cpp" />
+    <ClCompile Include="DoublyLinkedListChallenges.cpp" />
     <ClCompile Include="ForLoopChallenge.cpp" />
     <ClCompile Include="FraudulentNotifications.cpp" />
     <ClCompile Include="FrequencyQuieriesChallenge.cpp" />
     <ClCompile Include="FunctionsChallenge.cpp" />
     <ClCompile Include="InputOutputChallenge.cpp" />
+    <ClCompile Include="SinglyLinkedList.cpp" />
+    <ClCompile Include="SinglyLinkedListChallenges.cpp" />
     <ClCompile Include="LeftRotationChallenge.cpp" />
     <ClCompile Include="HourglassChallenge.cpp" />
     <ClCompile Include="CountingValleysChallenge.cpp" />
@@ -221,7 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenges.h" />
+    <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="HackerRankMiscellaneous.h" />
+    <ClInclude Include="SinglyLinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -14,19 +14,15 @@ using std::cin;
 using std::ofstream;
 
 std::vector<int> hrs::rotationLeft(vector<int> a, int d) {
-
     const size_t SRC_SIZE = a.size();
     std::vector<int> output(SRC_SIZE);
-
     size_t srcIndex;
-
     for (size_t i = 0; i < SRC_SIZE; ++i) {
         srcIndex = i + size_t(d);
         if (srcIndex >= SRC_SIZE) srcIndex -= SRC_SIZE;
-        output[i] = a[srcIndex];
+        output[i] = std::move(a[srcIndex]);
     }
     return output;
-
 }
 
 int leftRotationChallenge() {
