@@ -13,8 +13,8 @@ int day6LetsReviewChallenge();	// day6
 int day7ArraysChallange();		// day7
 int day8MapsChallenge();		// day8
 int day9RecursionChallenge();	// day9
-int day10BinNumsChallenge();	// day10
-int day112DArrsChallenge();		// day11
+//int day10BinNumsChallenge();	// day10
+//int day112DArrsChallenge();		// day11
 int day12InheritanceChallenge();// day12
 int day13AbstrClassChallenge(); // day13
 int day14ScopeChallenge();		// day14
@@ -49,7 +49,7 @@ int countRatioTripletsChallenge();
 int frequencyQueriesChallenge();
 
 //Sorting
-int bubbleSortChallenge();
+//int bubbleSortChallenge();
 int markAndToysChallenge();
 int mergeSortChallenge();
 int comparatorSortChallenge();
@@ -113,7 +113,7 @@ int vectorEraseChallenge();
 int mapChallenge();
 int prettyPrintChallenge();
 int classTemplateChallenge();
-int preprocessorChallenge();
+//int preprocessorChallenge();
 
 /*C++ Standard Algorithm Challenge */
 int allAnyNoneOfChallenge();

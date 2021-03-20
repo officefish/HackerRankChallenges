@@ -13,262 +13,259 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Исходные файлы\CPP_Challenges">
+    <Filter Include="Исходные файлы\_CPP_Challenges">
       <UniqueIdentifier>{c87c89a3-63eb-460f-bb1f-af78b89b96f9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\DaysChallenges">
+    <Filter Include="Исходные файлы\_DaysChallenges">
       <UniqueIdentifier>{f2ed95e3-6ba4-4f01-bd2a-c92d80166825}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\GreedyAlgorithms">
+    <Filter Include="Исходные файлы\_GreedyAlgorithms">
       <UniqueIdentifier>{34578110-7ece-4caa-a28c-7796e3fb7b31}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\STDLibraryChallenges">
-      <UniqueIdentifier>{a18a451c-0729-4915-ba65-363371dacf24}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\Lists">
+    <Filter Include="Исходные файлы\_Lists">
       <UniqueIdentifier>{b00e809a-882a-46fd-afac-6e4cfb64f988}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\_STDLibraryChallenges">
+      <UniqueIdentifier>{a18a451c-0729-4915-ba65-363371dacf24}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HackerRankChallenges.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SocksMerchantChallenge.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="HackerRankMiscellaneous.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CountingValleysChallenge.cpp">
+    <ClCompile Include="Strings\AlternatingCharsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="JumpingOnCloudsChallenge.cpp">
+    <ClCompile Include="Std\AllAnyNoneOfChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="RepeatedStringChallenge.cpp">
+    <ClCompile Include="CppChallenges\ArrayIntroductionChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="HourglassChallenge.cpp">
+    <ClCompile Include="Arrays\ArrayManipulationChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="LeftRotationChallenge.cpp">
+    <ClCompile Include="CppChallenges\ConditionalStatementsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="NewYearChaosChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPBoxItChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MinimumSwap2Challenge.cpp">
+    <ClCompile Include="CppChallenges\CPPClassAndObjectChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ArrayManipulationChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPClassChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="InputOutputChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPClassTemplateChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="RansomNoteChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPInheritanceIntroChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="TwoStringsCallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPLowerBoundChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SherlockAnagramsChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPMapChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CountRatioTripletsChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPOverloadOperatorChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FrequencyQuieriesChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPPreprocessorChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="DataTypesChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPPrettyPrintChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ConditionalStatementsChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPSetChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ForLoopChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPStringsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionsChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPStructChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="PointerChallenge.cpp">
+    <ClCompile Include="CppChallenges\CPPVectorEraseChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ArrayIntroductionChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day1IfStatementChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="VariableSizedArraysChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day2DataTypesChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day2DataTypesChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day3OperatorsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="DequeSTLChallenge.cpp">
+    <ClCompile Include="DaysChallenges\day4ClassVsInstanceChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="BubbleSortChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day5LoopsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MergeSortChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day6LetsReviewChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day3OperatorsChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day7ArraysChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MarkAndToysChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day8DictionariesandMaps.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ComparatorSortChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day9RecursionChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="RectangleAreaChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day12InheritanceChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="VectorSortChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day13AbstractClassesChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FraudulentNotifications.cpp">
+    <ClCompile Include="DaysChallenges\Day14ScopeChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day1IfStatementChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day15LinkedListChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="StringsAnagramsChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day16ExceptionsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="day4ClassVsInstanceChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day17MoreExceptionsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="StringStreamChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day18QueuesAndStacksChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="AlternatingCharsChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day19InterfaceChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SherlockValidStringChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day20BubbleSortChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day5LoopsChallenge.cpp">
+    <ClCompile Include="DaysChallenges\Day21GenericChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day6LetsReviewChallenge.cpp">
+    <ClCompile Include="MIPT\CompositeNumsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SpecialStrAgainChallenge.cpp">
+    <ClCompile Include="ProblemSolving\CountingValleysChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day7ArraysChallenge.cpp">
+    <ClCompile Include="ProblemSolving\CountRatioTripletsChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CommonChildChallenge.cpp">
+    <ClCompile Include="Strings\CommonChildChallenge.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CompositeNumsChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Strings\ComparatorSortChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPStringsChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="GreedyAlgorithms\LuckBalanceChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day8DictionariesandMaps.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="GreedyAlgorithms\MarkAndToysChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day9RecursionChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="GreedyAlgorithms\MinAbsDifferenceChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MinAbsDifferenceChallenge.cpp">
-      <Filter>Исходные файлы\GreedyAlgorithms</Filter>
+    <ClCompile Include="HashTables\RansomNoteChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="AllAnyNoneOfChallenge.cpp">
-      <Filter>Исходные файлы\STDLibraryChallenges</Filter>
+    <ClCompile Include="Lists\DoubleLinkedList.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="LuckBalanceChallenge.cpp">
-      <Filter>Исходные файлы\GreedyAlgorithms</Filter>
+    <ClCompile Include="Lists\DoublyLinkedListChallenges.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPStructChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Lists\SinglyLinkedList.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day12InheritanceChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="Lists\SinglyLinkedListChallenges.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day13AbstractClassesChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="ProblemSolving\FrequencyQuieriesChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day14ScopeChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="ProblemSolving\JumpingOnCloudsChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day15LinkedListChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="ProblemSolving\MinimumSwap2Challenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day16ExceptionsChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="ProblemSolving\NewYearChaosChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day17MoreExceptionsChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="Sorting\FraudulentNotifications.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day18QueuesAndStacksChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="Strings\RepeatedStringChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPClassChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Strings\SherlockAnagramsChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPClassAndObjectChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Strings\SherlockValidStringChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPBoxItChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Strings\SpecialStrAgainChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPInheritanceIntroChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Strings\StringsAnagramsChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MultyInheritanceChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Strings\StringStreamChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPOverloadOperatorChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Strings\TwoStringsCallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPLowerBoundChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="DaysChallenges\MultyInheritanceChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPSetChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Arrays\HourglassChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPVectorEraseChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Arrays\LeftRotationChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPMapChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Arrays\MergeSortChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPPrettyPrintChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Arrays\SocksMerchantChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPClassTemplateChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Arrays\VariableSizedArraysChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPPPreprocessorChallenge.cpp">
-      <Filter>Исходные файлы\CPP_Challenges</Filter>
+    <ClCompile Include="Arrays\VectorSortChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day19InterfaceChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="CppChallenges\DataTypesChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SinglyLinkedListChallenges.cpp">
-      <Filter>Исходные файлы\Lists</Filter>
+    <ClCompile Include="CppChallenges\DequeSTLChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SinglyLinkedList.cpp">
-      <Filter>Исходные файлы\Lists</Filter>
+    <ClCompile Include="CppChallenges\ForLoopChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="DoubleLinkedList.cpp">
-      <Filter>Исходные файлы\Lists</Filter>
+    <ClCompile Include="CppChallenges\FunctionsChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="DoublyLinkedListChallenges.cpp">
-      <Filter>Исходные файлы\Lists</Filter>
+    <ClCompile Include="CppChallenges\InputOutputChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day20BubbleSortChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="CppChallenges\PointerChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Day21GenericChallenge.cpp">
-      <Filter>Исходные файлы\DaysChallenges</Filter>
+    <ClCompile Include="CppChallenges\RectangleAreaChallenge.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -278,11 +275,11 @@
     <ClInclude Include="HackerRankMiscellaneous.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="SinglyLinkedList.h">
-      <Filter>Исходные файлы\Lists</Filter>
+    <ClInclude Include="Lists\DoubleLinkedList.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="DoubleLinkedList.h">
-      <Filter>Исходные файлы\Lists</Filter>
+    <ClInclude Include="Lists\SinglyLinkedList.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

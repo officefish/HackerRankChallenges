@@ -1,5 +1,5 @@
 #include ".././pch.h"
-#include "../../HackerRankChallenges/Challenges.h"
+#include "../HackerRankChallenges/Challenges.h"
 
 using std::vector;
 using std::string;

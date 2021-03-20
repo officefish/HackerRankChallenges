@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include ".././pch.h"
-#include "../../HackerRankChallenges/Challenges.h"
+#include "./Challenges.h"
 
 using std::vector;
 using std::string;

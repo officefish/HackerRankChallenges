@@ -1,5 +1,5 @@
 #include ".././pch.h"
-#include "../../HackerRankChallenges/Challenges.h"
+#include "./Challenges.h"
 
 
 TEST(CPPChallengesTests, PrimeNumbersTest_01) {

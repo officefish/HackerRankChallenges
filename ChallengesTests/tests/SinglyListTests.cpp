@@ -3,8 +3,8 @@
 #include <sstream>
 
 #include ".././pch.h"
-#include "../../HackerRankChallenges/Challenges.h"
-#include "../../HackerRankChallenges/SinglyLinkedList.h"
+#include "./Challenges.h"
+#include "./Lists/SinglyLinkedList.h"
 
 namespace {
     using std::cin, std::cout, std::endl;
@@ -42,6 +42,44 @@ TEST(SinglyListChallengesTests, InsertNodeInHeadTest_01) {
     vector<int> data2{ 3, 2, 1 };
     for (const auto& i : data2) {
         llist2_head = sll::InsertNodeAtHead(llist1->head, i);
+    }
+    string listStr = ToString(llist2_head);
+    string output{ "1, 2, 3, 4, 5, 6, 7, 8, 9 " };
+    EXPECT_EQ(output, listStr);
+}
+
+TEST(SinglyListChallengesTests, InsertNodeInTailTest_01) {
+
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 3, 4, 5, 6 };
+    InsertNodeInRange(llist1, data1);
+
+    // dynamicInput
+    //SinglyLinkedList* llist2;
+    SinglyLinkedListNode* llist2_head = nullptr;
+    vector<int> data2{ 7, 8, 9 };
+    for (const auto& i : data2) {
+        llist2_head = sll::InsertNodeAtTail(llist1->head, i);
+    }
+    string listStr = ToString(llist2_head);
+    string output{ "1, 2, 3, 4, 5, 6, 7, 8, 9 " };
+    EXPECT_EQ(output, listStr);
+}
+
+TEST(SinglyListChallengesTests, InsertNodeAtPositionTest_01) {
+
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 3, 7, 8, 9 };
+    InsertNodeInRange(llist1, data1);
+
+    // dynamicInput
+    //SinglyLinkedList* llist2;
+    SinglyLinkedListNode* llist2_head = nullptr;
+    vector<int> data2{ 4, 5, 6 };
+    for (const auto& i : data2) {
+        llist2_head = sll::InsertNodeAtPosition(llist1->head, i, i);
     }
     string listStr = ToString(llist2_head);
     string output{ "1, 2, 3, 4, 5, 6, 7, 8, 9 " };

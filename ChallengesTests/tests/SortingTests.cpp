@@ -1,27 +1,8 @@
 #include ".././pch.h"
-#include "../../HackerRankChallenges/Challenges.h"
+#include "./Challenges.h"
 
 using std::vector;
 using std::string;
-
-TEST(SortingChallengesTests, BubbleSortTest_01) {
-
-	vector<int> input = { 1, 2, 3 };
-
-	EXPECT_EQ(0, hrs::countSwaps(input));
-}
-TEST(SortingChallengesTests, BubbleSortTest_02) {
-
-	vector<int> input = { 3, 2, 1 };
-
-	EXPECT_EQ(3, hrs::countSwaps(input));
-}
-TEST(SortingChallengesTests, BubbleSortTest_03) {
-
-	vector<int> input = { 4, 2, 3, 1 };
-
-	EXPECT_EQ(5, hrs::countSwaps(input));
-}
 
 TEST(SortingChallengesTests, MergeSortTest_01) {
 
