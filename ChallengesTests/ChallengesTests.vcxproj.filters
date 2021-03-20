@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="tests\ArrayTests.cpp" />
+    <ClCompile Include="tests\CPPTests.cpp" />
+    <ClCompile Include="tests\DaysChallengesTests.cpp" />
+    <ClCompile Include="tests\GreedyAlgorithmsTests.cpp" />
+    <ClCompile Include="tests\HashTablesTests.cpp" />
+    <ClCompile Include="tests\SinglyListTests.cpp" />
+    <ClCompile Include="tests\SortingTests.cpp" />
+    <ClCompile Include="tests\StringTests.cpp" />
+    <ClCompile Include="tests\WarmUpsTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
