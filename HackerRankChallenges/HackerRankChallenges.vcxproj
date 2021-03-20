@@ -142,8 +142,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\jes\HackerRankChallenge\Day10BinaryNumbersChallenge.cpp" />
-    <ClCompile Include="..\..\..\jes\HackerRankChallenge\Day112DArrayChallenge.cpp" />
     <ClCompile Include="AllAnyNoneOfChallenge.cpp" />
     <ClCompile Include="AlternatingCharsChallenge.cpp" />
     <ClCompile Include="ArrayIntroductionChallenge.cpp" />

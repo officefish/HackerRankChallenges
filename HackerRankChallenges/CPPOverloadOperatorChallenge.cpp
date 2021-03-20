@@ -48,4 +48,5 @@ int overloadOperatorChallenge()
     y.input(s2);
     Complex z = x + y;
     cout << z << endl;
+    return 0;
 }

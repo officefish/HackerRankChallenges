@@ -14,7 +14,7 @@ public:
 };
 void Student::input() {
     int16_t score;
-    for (int16_t i; i < 5; ++i) {
+    for (int16_t i = 0; i < 5; ++i) {
         std::cin >> score;
         scores.push_back(score);
     }

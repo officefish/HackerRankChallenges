@@ -36,4 +36,5 @@ int setChallenge() {
             break;
         }
     }
+    return 0;
 }

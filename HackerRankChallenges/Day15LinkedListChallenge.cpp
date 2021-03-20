@@ -49,6 +49,7 @@ int day15LinkedListChallenge() {
         head = mylist.insert(head, data);
     }
     mylist.display(head);
+    return 0;
 }
 
 /* (1)

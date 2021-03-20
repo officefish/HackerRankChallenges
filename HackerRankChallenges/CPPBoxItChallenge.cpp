@@ -88,4 +88,5 @@ int boxItChallenge() {
 			cout << NewBox << endl;
 		}
 	}
+    return 0;
 }

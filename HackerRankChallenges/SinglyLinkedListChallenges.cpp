@@ -297,6 +297,7 @@ int removeDuplicatesInSortedChallenge() {
         cout << "\n";
         sll::FreeSinglyLinkedList(llist1);
     }
+    return 0;
 }
 
 int listHasCycleChallenge() {
