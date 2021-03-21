@@ -300,6 +300,12 @@ int removeDuplicatesInSortedChallenge() {
     return 0;
 }
 
+void InsertNodeInRange(SinglyLinkedList* llist, const std::vector<int>& datas) {
+    for (const auto& i : datas) {
+        llist->InsertNode(i);
+    }
+}
+
 int listHasCycleChallenge() {
     int tests;
     cin >> tests;

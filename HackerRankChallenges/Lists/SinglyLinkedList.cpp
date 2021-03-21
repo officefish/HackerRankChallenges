@@ -52,17 +52,19 @@ namespace sll {
                 cout << sep;
         }
     }
-    void FreeSinglyLinkedList(SinglyLinkedListNode* node) {
-        while (node) {
-            SinglyLinkedListNode* temp = node;
-            node = node->next;
+    void FreeSinglyLinkedList(SinglyLinkedListNode* head) {
+        SinglyLinkedListNode* current = head;
+        while (current != nullptr) {
+            SinglyLinkedListNode* temp = current;
+            current = current->next;
             free(temp);
+            if (current == head) return;
         }
     }
-    SinglyLinkedListNode* InsertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+    SinglyLinkedListNode* InsertNodeAtHead(SinglyLinkedListNode* head, int data) {
         SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
-        if (llist == nullptr) return newNode;
-        newNode->next = llist;
+        if (head == nullptr) return newNode;
+        newNode->next = head;
         return newNode;
     }
     SinglyLinkedListNode* InsertNodeAtTail(SinglyLinkedListNode* head, int data) {
@@ -77,19 +79,26 @@ namespace sll {
     }
     SinglyLinkedListNode* InsertNodeAtPosition(SinglyLinkedListNode* head, int data, int position) {
         SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
+        SinglyLinkedListNode* previous = nullptr;
         // empty list or 0 position
         if (head == nullptr) return newNode;
+        if (position < 0) return head;
         if (position == 0) {
             newNode->next = head;
             return newNode;
         }
-        SinglyLinkedListNode* currentNode = head;
+        SinglyLinkedListNode* current = head;
         while (position - 1 > 0) {
-            currentNode = currentNode->next;
-            position--;
+            previous = current;
+            current = current->next;
+            --position;
+            if (current == nullptr) {
+                previous->next = newNode;
+                return head; // out of range
+            }
         }
-        newNode->next = currentNode->next;
-        currentNode->next = newNode;
+        newNode->next = current->next;
+        current->next = newNode;
         return head;
         // double pointers are sexy!
         // SinglyLinkedListNode** pp = &head;
@@ -101,11 +110,12 @@ namespace sll {
         // return head;
     }
     SinglyLinkedListNode* DeleteNode(SinglyLinkedListNode* head, int position) {
-        if (head == nullptr) return head;
+        if (head == nullptr || position < 0) return head;
         SinglyLinkedListNode* currentNode = head;
         SinglyLinkedListNode* previousNode = nullptr;
         if (position == 0) {
-            head = head->next;
+            if (head->next != nullptr)
+                head = head->next;
             free(currentNode);
             return head;
         }
@@ -113,13 +123,31 @@ namespace sll {
             previousNode = currentNode;
             currentNode = currentNode->next;
             --position;
+            if (currentNode == nullptr) return head; // out of range
         }
-        if (currentNode->next != nullptr && previousNode != nullptr) {
-            previousNode->next = currentNode->next;
-        }
+        previousNode->next = currentNode->next;
         free(currentNode);
         return head;
     }
+
+    SinglyLinkedListNode* DeleteNodeByValue(SinglyLinkedListNode* head, int value) {
+        if (head == nullptr) return head;
+        SinglyLinkedListNode* current = head;
+        SinglyLinkedListNode* previous = nullptr;
+        while (current != nullptr) {
+            if (current->data == value) {
+                SinglyLinkedListNode* tmp = current;
+                current = current->next;
+                if (previous != nullptr) previous->next = current;
+                free(tmp);
+            } else {
+                previous = current;
+                current = current->next;
+            }
+        }
+        return head;
+    }
+
     SinglyLinkedListNode* Reverse(SinglyLinkedListNode* head) {
         SinglyLinkedListNode* tail, * currentNode;
         tail = nullptr;
@@ -132,7 +160,21 @@ namespace sll {
         return tail;
     }
 
-    int GetNodeData(SinglyLinkedListNode* head, int positionFromTail) {
+    int GetNodeData(SinglyLinkedListNode* head, int position) {
+        if (head == nullptr) NULL;
+        int index = 0;
+        SinglyLinkedListNode* currentNode = head;
+        SinglyLinkedListNode* targetNode = head;
+        while (currentNode != nullptr) {
+            if (index++ == position) {
+                targetNode = currentNode;
+            }
+            currentNode = currentNode->next;
+        }
+        return targetNode != nullptr ? targetNode->data : INT_MIN;
+    }
+
+    int GetNodeDataFromTail(SinglyLinkedListNode* head, int positionFromTail) {
         if (head == nullptr) NULL;
         int index = 0;
         SinglyLinkedListNode* currentNode = head;
@@ -143,7 +185,7 @@ namespace sll {
                 targetNode = targetNode->next;
             }
         }
-        return targetNode != nullptr ? targetNode->data : 0;
+        return targetNode != nullptr ? targetNode->data : INT_MIN;
     }
 
     bool CompareLists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {

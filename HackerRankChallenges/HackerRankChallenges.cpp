@@ -56,7 +56,9 @@ int main()
     //Lists
     //return sortListChallenge();
     //return mergeSinglySortedChallenge();
-    return sortedInsertChallenge();
+    //return sortedInsertChallenge();
+    //return deleteNodeChallenge();
+    return listHasCycleChallenge();
 
     //C++
     //return inputOutputChallenge();
