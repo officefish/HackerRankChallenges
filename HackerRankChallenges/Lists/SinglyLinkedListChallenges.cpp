@@ -201,7 +201,7 @@ int sortListChallenge() {
     llist2->InsertNode(5);
     llist2->InsertNode(1);
 
-    sll::Sort(llist2->head);
+    sll::BubbleSort(llist2->head);
 
     sll::PrintSinglyLinkedList(llist2->head, " ", cout);
 
@@ -229,8 +229,8 @@ int mergeSinglySortedChallenge() {
     llist2->InsertNode(5);
     llist2->InsertNode(1);
 
-    SinglyLinkedListNode* llist1_head = sll::Sort(llist1->head);
-    SinglyLinkedListNode* llist2_head = sll::Sort(llist2->head);
+    SinglyLinkedListNode* llist1_head = sll::BubbleSort(llist1->head);
+    SinglyLinkedListNode* llist2_head = sll::BubbleSort(llist2->head);
 
     SinglyLinkedListNode* merged = sll::MergeSorted(llist1_head, llist2_head);
 

@@ -40,6 +40,10 @@ int leftRotationChallenge();
 int newYearChaosChallenge();
 int minimumSwap2Challenge();
 int arrayManipulationChallenge();
+int reverseArrayChallenge_c();
+int reverseArrayChallenge();
+int reverseArraySTDChallenge();
+int sparseArraysChallenge();
 
 //HashTables
 int ransomNoteChallenge();
@@ -129,6 +133,14 @@ namespace hrs {
 	int countingValleys(int, string);
 	int jumpingOnClouds(vector<int>);
 	long repeatedString(string, long);
+	std::pair<size_t, size_t> minMaxSum(std::vector<int32_t> row);
+	size_t accumulate(std::vector<int32_t> row);
+	std::pair<int8_t, int8_t>compareTheTriplets(vector<int16_t> a, vector<int16_t> b);
+	int16_t diagonalDifference(vector<vector<int8_t>> arr);
+	std::string plusMinus(std::vector<int16_t> arr);
+	std::string staircase(int8_t n);
+	int64_t birthdayCakeCandles(std::vector<int32_t> candles);
+	std::string timeConversion(std::string s, std::string iPattern, std::string oPattern);
 
 	// Arrays
 	int hourglassSum(vector<vector<int>>);
@@ -136,6 +148,10 @@ namespace hrs {
 	int minimumBribes(vector<int>);
 	int minimumSwaps(vector<int>);
 	long arrayManipulation(int, vector<vector<int>>);
+	void reverseArray(vector<int32_t>*);
+	void reverseArray_c(int*, int length);
+	void reverseArray_std(vector<int32_t>*);
+	vector<int> matchingStrings(vector<string> strings, vector<string> queries);
 
 	//HashTables
 	bool checkMagazine(vector<string>, vector<string>);

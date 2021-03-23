@@ -125,6 +125,48 @@ TEST(SinglyListChallengesTests, InsertNodeAtPositionTest_MoreThanSizeIndex) {
     sll::FreeSinglyLinkedList(llist1->head);
 }
 
+TEST(SinglyListChallengesTests, InsertNodeAtMiddleTest_InsertInOdd) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 4, 5 };
+    InsertNodeInRange(llist1, data1);
+    // insert
+    llist1->head = sll::InsertNodeAtMiddle(llist1->head, 3);
+    string listStr = ToString(llist1->head);
+    string output{ "1, 2, 3, 4, 5" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
+}
+
+TEST(SinglyListChallengesTests, InsertNodeAtMiddleTest_InsertInEven) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 4, 5, 6 };
+    InsertNodeInRange(llist1, data1);
+    // insert
+    llist1->head = sll::InsertNodeAtMiddle(llist1->head, 3);
+    string listStr = ToString(llist1->head);
+    string output{ "1, 2, 3, 4, 5, 6" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
+}
+
+TEST(SinglyListChallengesTests, InsertNodeAtMiddleTest_InsertInEmpty) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    // insert
+    llist1->head = sll::InsertNodeAtMiddle(llist1->head, 1);
+    string listStr = ToString(llist1->head);
+    string output{ "1" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
+}
+
+
+
 TEST(SinglyListChallengesTests, DeleteNodeTest_CorrectRequest) {
     // initial
     SinglyLinkedList* llist1 = new SinglyLinkedList();
@@ -181,6 +223,35 @@ TEST(SinglyListChallengesTests, DeleteNodeByValue_Test1) {
 
     sll::FreeSinglyLinkedList(llist1->head);
 
+}
+
+TEST(SinglyListChallengesTests, DeleteMiddle_DeleteInOdd) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 9, 3, 4, 5};
+    InsertNodeInRange(llist1, data1);
+    // delete
+    llist1->head = sll::DeleteMiddle(llist1->head);
+    string listStr = ToString(llist1->head);
+    string output{ "1, 2, 3, 4, 5" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
+
+}
+
+TEST(SinglyListChallengesTests, DeleteMiddle_DeleteInEven) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 3, 9, 4, 5, 6 };
+    InsertNodeInRange(llist1, data1);
+    // delete
+    llist1->head = sll::DeleteMiddle(llist1->head);
+    string listStr = ToString(llist1->head);
+    string output{ "1, 2, 3, 4, 5, 6" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
 }
 
 TEST(SinglyListChallengesTests, GetNodeData_CorrectInput) {
@@ -273,7 +344,7 @@ TEST(SinglyListChallengesTests, SortList_Test1) {
     SinglyLinkedList* llist1 = new SinglyLinkedList();
     vector<int> data1{ 1, 6, 2, 7, 3, 8, 4, 9, 5 };
     InsertNodeInRange(llist1, data1);
-    llist1->head = sll::Sort(llist1->head);
+    llist1->head = sll::BubbleSort(llist1->head);
     // insert
     string listStr = ToString(llist1->head);
     string output{ "1, 2, 3, 4, 5, 6, 7, 8, 9" };
@@ -316,6 +387,49 @@ TEST(SinglyListChallengesTests, RemoveDublicatesInSorted_Test1) {
     sll::FreeSinglyLinkedList(llist1->head);
 }
 
+TEST(SinglyListChallengesTests, InsertInSortedNode_Test1) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 3, 5, 6, 7 };
+    InsertNodeInRange(llist1, data1);
+    // insert node in sorted list
+    SinglyLinkedListNode* node = new SinglyLinkedListNode(4);
+    llist1->head = sll::InsertInSortedNode(llist1->head, node);
+    string listStr = ToString(llist1->head);
+    string output{ "1, 2, 3, 4, 5, 6, 7" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
+}
+
+TEST(SinglyListChallengesTests, InsertInSortedData_Test1) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 1, 2, 3, 5, 6, 7 };
+    InsertNodeInRange(llist1, data1);
+    // insert data in sorted list
+    llist1->head = sll::InsertInSortedData(llist1->head, 4);
+    string listStr = ToString(llist1->head);
+    string output{ "1, 2, 3, 4, 5, 6, 7" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
+}
+
+TEST(SinglyListChallengesTests, SortInsert_Test1) {
+    // initial
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    vector<int> data1{ 2, 3, 1, 5, 7, 6, 4 };
+    InsertNodeInRange(llist1, data1);
+    // insert data in sorted list
+    llist1->head = sll::SortInsert(llist1->head);
+    string listStr = ToString(llist1->head);
+    string output{ "1, 2, 3, 4, 5, 6, 7" };
+    EXPECT_EQ(output, listStr);
+
+    sll::FreeSinglyLinkedList(llist1->head);
+}
+
 TEST(SinglyListChallengesTests, HasCycle_Test_True) {
     // initial
     SinglyLinkedList* llist1 = new SinglyLinkedList();
@@ -346,9 +460,6 @@ TEST(SinglyListChallengesTests, FreeList_NotCycled) {
     vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     InsertNodeInRange(llist1, data1);
     sll::FreeSinglyLinkedList(llist1->head);
-    //llist1->tail->next = llist1->head;
-    // cycling
-    //hasCycle check
     EXPECT_EQ(true, true);
 }
 

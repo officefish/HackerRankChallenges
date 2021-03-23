@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -144,10 +144,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arrays\ArrayManipulationChallenge.cpp" />
+    <ClCompile Include="Arrays\DynamicArrayChallenge.cpp" />
     <ClCompile Include="Arrays\HourglassChallenge.cpp" />
     <ClCompile Include="Arrays\LeftRotationChallenge.cpp" />
     <ClCompile Include="Arrays\MergeSortChallenge.cpp" />
+    <ClCompile Include="Arrays\ReverseArrayChallenge.cpp" />
     <ClCompile Include="Arrays\SocksMerchantChallenge.cpp" />
+    <ClCompile Include="Arrays\SparceArrayChallenge.cpp" />
     <ClCompile Include="Arrays\VariableSizedArraysChallenge.cpp" />
     <ClCompile Include="Arrays\VectorSortChallenge.cpp" />
     <ClCompile Include="CppChallenges\ArrayIntroductionChallenge.cpp" />
@@ -206,6 +209,7 @@
     <ClCompile Include="HackerRankMiscellaneous.cpp" />
     <ClCompile Include="ProblemSolving\CountingValleysChallenge.cpp" />
     <ClCompile Include="ProblemSolving\CountRatioTripletsChallenge.cpp" />
+    <ClCompile Include="ProblemSolving\Easy\WarmUpChallenges.cpp" />
     <ClCompile Include="ProblemSolving\FrequencyQuieriesChallenge.cpp" />
     <ClCompile Include="ProblemSolving\JumpingOnCloudsChallenge.cpp" />
     <ClCompile Include="ProblemSolving\MinimumSwap2Challenge.cpp" />
