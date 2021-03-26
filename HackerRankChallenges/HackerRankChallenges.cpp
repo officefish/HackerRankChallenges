@@ -58,8 +58,12 @@ int main()
     //return mergeSinglySortedChallenge();
     //return sortedInsertChallenge();
     //return deleteNodeChallenge();
-    return listHasCycleChallenge();
-
+    //return listHasCycleChallenge();
+    //return deleteNthNodeChallenge();
+   //return  countCommonNodesChallenge();
+    //return splitMiddleChallenge();
+    //return splitEvenOddChallenge();
+    return reorderChallenge();
     //C++
     //return inputOutputChallenge();
     //return dataTypesChallenge();

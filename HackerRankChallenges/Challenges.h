@@ -86,6 +86,11 @@ int mergeSinglySortedChallenge();
 int findMergePointChallenge();
 int removeDuplicatesInSortedChallenge();
 int listHasCycleChallenge();
+int deleteNthNodeChallenge();
+int countCommonNodesChallenge();
+int splitMiddleChallenge();
+int splitEvenOddChallenge();
+int reorderChallenge();
 // doubly
 int sortedInsertChallenge();
 

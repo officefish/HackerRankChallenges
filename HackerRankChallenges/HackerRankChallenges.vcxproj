@@ -204,6 +204,13 @@
     <ClCompile Include="Lists\DoublyLinkedListChallenges.cpp" />
     <ClCompile Include="Lists\SinglyLinkedList.cpp" />
     <ClCompile Include="Lists\SinglyLinkedListChallenges.cpp" />
+    <ClCompile Include="Lists\SLL\del\DelSLL.cpp" />
+    <ClCompile Include="Lists\SLL\get\GetSLL.cpp" />
+    <ClCompile Include="Lists\SLL\insert\InsertSLL.cpp" />
+    <ClCompile Include="Lists\SLL\merge\MergeSLL.cpp" />
+    <ClCompile Include="Lists\SLL\split\SplitSLL.cpp" />
+    <ClCompile Include="Lists\SLL\transform\TransformSLL.cpp" />
+    <ClCompile Include="Lists\SLL\validate\ValidateSLL.cpp" />
     <ClCompile Include="MIPT\CompositeNumsChallenge.cpp" />
     <ClCompile Include="HackerRankChallenges.cpp" />
     <ClCompile Include="HackerRankMiscellaneous.cpp" />

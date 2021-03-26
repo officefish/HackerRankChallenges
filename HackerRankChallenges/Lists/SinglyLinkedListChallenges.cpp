@@ -201,7 +201,7 @@ int sortListChallenge() {
     llist2->InsertNode(5);
     llist2->InsertNode(1);
 
-    sll::BubbleSort(llist2->head);
+    sll::SortBubble(llist2->head);
 
     sll::PrintSinglyLinkedList(llist2->head, " ", cout);
 
@@ -229,8 +229,8 @@ int mergeSinglySortedChallenge() {
     llist2->InsertNode(5);
     llist2->InsertNode(1);
 
-    SinglyLinkedListNode* llist1_head = sll::BubbleSort(llist1->head);
-    SinglyLinkedListNode* llist2_head = sll::BubbleSort(llist2->head);
+    SinglyLinkedListNode* llist1_head = sll::SortBubble(llist1->head);
+    SinglyLinkedListNode* llist2_head = sll::SortBubble(llist2->head);
 
     SinglyLinkedListNode* merged = sll::MergeSorted(llist1_head, llist2_head);
 
@@ -273,7 +273,7 @@ int findMergePointChallenge() {
                 ptr2 = ptr2->next;
         }
         ptr2->next = ptr1;
-        int result = sll::MergedEntyNodeValue(llist1->head, llist2->head);
+        int result = sll::FindIntersectionEntyValue(llist1->head, llist2->head);
         cout << result << "\n";
     }
     return 0;
@@ -341,3 +341,82 @@ int listHasCycleChallenge() {
     }
     return 0;
 }
+
+int deleteNthNodeChallenge() {
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    std::vector<int> data1{ 1, 2, 3, 4, 5, 6 };
+    InsertNodeInRange(llist1, data1);
+    // delete
+    llist1->head = sll::DeleteEveryNthNode(llist1->head, -1);
+    sll::Print(llist1->head);
+    return 0;
+    //std::string listStr = ToString(llist1->head);
+}
+
+int countCommonNodesChallenge() {
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    std::vector<int> data1{ 1, 2, 3, 4, 5 };
+    InsertNodeInRange(llist1, data1);
+
+    SinglyLinkedList* llist2 = new SinglyLinkedList();
+    std::vector<int> data2{ 1, 2, 3, 4, 5 };
+    InsertNodeInRange(llist2, data2);
+
+    int result = sll::CountCommonNodes(llist1->head, llist2->head);
+    cout << result << endl;
+    return 0;
+}
+
+int splitMiddleChallenge() {
+
+    cout << "SplitMiddleChallenge" << endl;
+
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    std::vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    InsertNodeInRange(llist1, data1);
+
+    SinglyLinkedListNode* left = nullptr;
+    SinglyLinkedListNode* right = nullptr;
+
+    sll::SplitMiddle(llist1->head, &left, &right);
+    cout << sll::Size(left) << " " << sll::Size(right) << endl;
+    sll::Print(left);
+    cout << endl;
+    sll::Print(right);
+
+    return 0;
+}
+
+int splitEvenOddChallenge() {
+
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    std::vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    InsertNodeInRange(llist1, data1);
+
+    SinglyLinkedListNode* left = nullptr;
+    SinglyLinkedListNode* right = nullptr;
+
+    sll::SplitAlternate(llist1->head, &left, &right);
+    cout << sll::Size(left) << " " << sll::Size(right) << endl;
+    sll::Print(left);
+    cout << endl;
+    sll::Print(right);
+
+    return 0;
+}
+
+int reorderChallenge() {
+
+    SinglyLinkedList* llist1 = new SinglyLinkedList();
+    std::vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    InsertNodeInRange(llist1, data1);
+
+    SinglyLinkedListNode* merged = sll::Reorder(llist1->head);
+    //sll::ModularAlternateMerge(&left, &right);
+    //cout << sll::Size(merged) << endl;
+    sll::Print(merged);
+
+    return 0;
+}
+
+

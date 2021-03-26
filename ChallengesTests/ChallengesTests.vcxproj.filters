@@ -8,13 +8,21 @@
     <ClCompile Include="tests\DaysChallengesTests.cpp" />
     <ClCompile Include="tests\GreedyAlgorithmsTests.cpp" />
     <ClCompile Include="tests\HashTablesTests.cpp" />
-    <ClCompile Include="tests\SinglyListTests.cpp" />
     <ClCompile Include="tests\SortingTests.cpp" />
     <ClCompile Include="tests\StringTests.cpp" />
     <ClCompile Include="tests\WarmUpsTests.cpp" />
+    <ClCompile Include="tests\list\singly\SplitSLLTests.cpp" />
+    <ClCompile Include="tests\list\singly\InsertSLLTests.cpp" />
+    <ClCompile Include="tests\list\singly\DeleteSLLTests.cpp" />
+    <ClCompile Include="tests\list\singly\GetSLLTests.cpp" />
+    <ClCompile Include="tests\list\singly\TransformSLLTests.cpp" />
+    <ClCompile Include="tests\list\singly\MergeSLLTests.cpp" />
+    <ClCompile Include="tests\list\singly\ValidateSLLTests.cpp" />
+    <ClCompile Include="tests\list\singly\SLLMiscellaneous.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="tests\list\singly\slltests.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
