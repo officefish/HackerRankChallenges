@@ -2,7 +2,7 @@
 
 namespace slltests {
 
-    TEST(SinglyListChallengesTests_Get, GetNode_CorrectIndex) {
+    TEST(SLLTests_Get, GetNode_CorrectIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -24,7 +24,7 @@ namespace slltests {
     }
 
 
-    TEST(SinglyListChallengesTests_Get, GetNode_NegativeIndex) {
+    TEST(SLLTests_Get, GetNode_NegativeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -37,7 +37,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNode_OutOfRangeIndex) {
+    TEST(SLLTests_Get, GetNode_OutOfRangeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -50,7 +50,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeData_CorrectIndex) {
+    TEST(SLLTests_Get, GetNodeData_CorrectIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -70,9 +70,7 @@ namespace slltests {
 
         sll::FreeSinglyLinkedList(llist1->head);
     }
-
-
-    TEST(SinglyListChallengesTests_Get, GetNodeData_NegativeIndex) {
+    TEST(SLLTests_Get, GetNodeData_NegativeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -85,7 +83,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeData_OutOfRangeIndex) {
+    TEST(SLLTests_Get, GetNodeData_OutOfRangeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -98,7 +96,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeFromTail_CorrectIndex) {
+    TEST(SLLTests_Get, GetNodeFromTail_CorrectIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -119,7 +117,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeFromTail_NegativeIndex) {
+    TEST(SLLTests_Get, GetNodeFromTail_NegativeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -132,7 +130,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeFromTail_OutOfRangeIndex) {
+    TEST(SLLTests_Get, GetNodeFromTail_OutOfRangeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -145,7 +143,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeFromTailData_CorrectIndex) {
+    TEST(SLLTests_Get, GetNodeFromTailData_CorrectIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -166,7 +164,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeFromTailData_NegativeIndex) {
+    TEST(SLLTests_Get, GetNodeFromTailData_NegativeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -179,7 +177,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeFromTailData_OutOfRangeIndex) {
+    TEST(SLLTests_Get, GetNodeFromTailData_OutOfRangeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -192,7 +190,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetMiddleNode_InEven) {
+    TEST(SLLTests_Get, GetMiddleNode_InEven) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -205,7 +203,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetMiddleNode_InOdd) {
+    TEST(SLLTests_Get, GetMiddleNode_InOdd) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -218,7 +216,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetMiddleNodeData_InEven) {
+    TEST(SLLTests_Get, GetMiddleNodeData_InEven) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -231,7 +229,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetMiddleNodeData_InOdd) {
+    TEST(SLLTests_Get, GetMiddleNodeData_InOdd) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -244,7 +242,33 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetFractionalNode_CorrectIndex) {
+    TEST(SLLTests_Get, GetMiddlePrevNode_InEven) {
+        // initial
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        // insert
+        vector<int> data{ 1, 2, 3, 4, 5 };
+        InsertNodeInRange(llist1, data);
+
+        SinglyLinkedListNode* prevMiddleNode = sll::GetPrevMiddleNode(llist1->head);
+        EXPECT_EQ(2, prevMiddleNode->data);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+    }
+
+    TEST(SLLTests_Get, GetPrevMiddleNode_InOdd) {
+        // initial
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        // insert
+        vector<int> data{ 1, 2, 3, 4, 5, 6 };
+        InsertNodeInRange(llist1, data);
+
+        SinglyLinkedListNode* prevMiddleNode = sll::GetPrevMiddleNode(llist1->head);
+        EXPECT_EQ(3, prevMiddleNode->data);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+    }
+
+    TEST(SLLTests_Get, GetFractionalNode_CorrectIndex) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -265,7 +289,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist2->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetFractionalNode_NegativeIndex) {
+    TEST(SLLTests_Get, GetFractionalNode_NegativeIndex) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -277,7 +301,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetFractionalNode_OutOfRangeIndex) {
+    TEST(SLLTests_Get, GetFractionalNode_OutOfRangeIndex) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -289,7 +313,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetFractionalNodeData_CorrectIndex) {
+    TEST(SLLTests_Get, GetFractionalNodeData_CorrectIndex) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -310,7 +334,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist2->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetFractionalNodeData_NegativeIndex) {
+    TEST(SLLTests_Get, GetFractionalNodeData_NegativeIndex) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -322,7 +346,62 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Get, GetNodeAddresses_CorrectInput) {
+    TEST(SLLTests_Get, GetFractionalNodeData_OutOfRangeIndex) {
+
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 4, 5, 6 };
+        InsertNodeInRange(llist1, data1);
+
+        int fractionalNodeData = sll::GetFractionalNodeData(llist1->head, 7);
+        EXPECT_EQ(-1, fractionalNodeData);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+    }
+
+    TEST(SLLTests_Get, GetModularNode_CorrectIndex) {
+
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 4, 5, 6, 7 };
+        InsertNodeInRange(llist1, data1);
+
+        SinglyLinkedListNode* modularNode1 = sll::GetModularNode(llist1->head, 3);
+        EXPECT_EQ(6, modularNode1->data);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+
+        SinglyLinkedList* llist2 = new SinglyLinkedList();
+        vector<int> data2{ 3, 7, 1, 9, 8 };
+        InsertNodeInRange(llist2, data2);
+
+        SinglyLinkedListNode* modularNode2 = sll::GetModularNode(llist2->head, 2);
+        EXPECT_EQ(9, modularNode2->data);
+
+        sll::FreeSinglyLinkedList(llist2->head);
+    }
+
+    TEST(SLLTests_Get, GetModularNodeData_CorrectIndex) {
+
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 4, 5, 6, 7 };
+        InsertNodeInRange(llist1, data1);
+
+        int modular1 = sll::GetModularNodeData(llist1->head, 3);
+        EXPECT_EQ(6, modular1);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+
+        SinglyLinkedList* llist2 = new SinglyLinkedList();
+        vector<int> data2{ 3, 7, 1, 9, 8 };
+        InsertNodeInRange(llist2, data2);
+
+        int modular2 = sll::GetModularNodeData(llist2->head, 2);
+        EXPECT_EQ(9, modular2);
+
+        sll::FreeSinglyLinkedList(llist2->head);
+    }
+
+
+    TEST(SLLTests_Get, GetNodeAddresses_CorrectInput) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3 };
@@ -340,18 +419,6 @@ namespace slltests {
         EXPECT_EQ(true, status1);
         bool status2 = a.find(reinterpret_cast<uintptr_t>(node2)) != a.end();
         EXPECT_EQ(true, status2);
-
-        sll::FreeSinglyLinkedList(llist1->head);
-    }
-
-    TEST(SinglyListChallengesTests_Get, GetFractionalNodeData_OutOfRangeIndex) {
-
-        SinglyLinkedList* llist1 = new SinglyLinkedList();
-        vector<int> data1{ 1, 2, 3, 4, 5, 6 };
-        InsertNodeInRange(llist1, data1);
-
-        int fractionalNodeData = sll::GetFractionalNodeData(llist1->head, 7);
-        EXPECT_EQ(-1, fractionalNodeData);
 
         sll::FreeSinglyLinkedList(llist1->head);
     }

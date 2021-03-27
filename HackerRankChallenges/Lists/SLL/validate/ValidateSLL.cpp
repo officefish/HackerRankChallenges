@@ -2,8 +2,6 @@
 
 namespace sll {
 
-
-
     bool CompareLists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
         // recursion
         //if (head1 == nullptr && head2 == nullptr)

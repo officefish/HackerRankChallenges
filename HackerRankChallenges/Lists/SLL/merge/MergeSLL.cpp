@@ -2,6 +2,17 @@
 
 namespace sll {
 
+    SinglyLinkedListNode* Merge(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
+        if (not head1 and not head2) return nullptr;
+        if (head1 and not head2) return head1;
+        if (not head1 and head2) return head2;
+        SinglyLinkedListNode* head = head1;
+        while (head1->next) {
+            head1 = head1->next;
+        }
+        head1->next = head2;
+        return head;
+    }
 
     SinglyLinkedListNode* MergeSorted(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
         if (head1 == nullptr || head2 == nullptr) return nullptr;
@@ -97,10 +108,8 @@ namespace sll {
         *head2 = curr2;
     }
 
-    SinglyLinkedListNode* MergeInReverseOrder(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2)
+    SinglyLinkedListNode* MergeSortedReverse(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2)
     {
-        // your code goes here
-        // your code goes here
         if (not head1 and not head2) return nullptr;
         SinglyLinkedListNode* res = NULL;
         while (head1 and head2) {

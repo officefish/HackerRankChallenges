@@ -2,7 +2,7 @@
 
 namespace slltests {
 
-    TEST(SinglyListChallengesTests, Reverse_Test1) {
+    TEST(SLLTests_Transform, Reverse_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 5, 4, 3, 2, 1 };
@@ -16,7 +16,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, ReverseBetween_Test1) {
+    TEST(SLLTests_Transform, ReverseBetween_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 5, 4, 3, 2, 1 };
@@ -30,7 +30,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, ReverseBetween_NegativeIndex) {
+    TEST(SLLTests_Transform, ReverseBetween_NegativeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 5, 4, 3, 2, 1 };
@@ -44,7 +44,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, ReverseBetween_OutOfRangeIndex) {
+    TEST(SLLTests_Transform, ReverseBetween_OutOfRangeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 5, 4, 3, 2, 1 };
@@ -59,7 +59,7 @@ namespace slltests {
     }
 
 
-    TEST(SinglyListChallengesTests, Partition_Test1) {
+    TEST(SLLTests_Transform, Partition_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 4, 4, 5, 2, 3, 4, 5 };
@@ -75,7 +75,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, Segregate_Test1) {
+    TEST(SLLTests_Transform, Segregate_Test1) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 4, 4, 5, 0, 3, 1, 0 };
@@ -92,7 +92,7 @@ namespace slltests {
     }
 
 
-    TEST(SinglyListChallengesTests, BubbleSortList_Test1) {
+    TEST(SLLTests_Transform, SortBubble_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 6, 2, 7, 3, 8, 4, 9, 5 };
@@ -106,17 +106,84 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, SortInsert_Test1) {
+    TEST(SLLTests_Transform, SortInsert_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
-        vector<int> data1{ 2, 3, 1, 5, 7, 6, 4 };
+        vector<int> data1{ 8, 2, 3, 1, 5, 7, 6, 4 };
         InsertNodeInRange(llist1, data1);
         // insert data in sorted list
         llist1->head = sll::SortInsert(llist1->head);
         string listStr = ToString(llist1->head);
-        string output{ "1, 2, 3, 4, 5, 6, 7" };
+        string output{ "1, 2, 3, 4, 5, 6, 7, 8" };
         EXPECT_EQ(output, listStr);
 
         sll::FreeSinglyLinkedList(llist1->head);
+    }
+
+    TEST(SLLTests_Transform, SortReorder_CorrectInput) {
+        // initial
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8 };
+        InsertNodeInRange(llist1, data1);
+        // insert data in sorted list
+        llist1->head = sll::Reorder(llist1->head);
+        llist1->head = sll::SortReorder(llist1->head);
+        string listStr = ToString(llist1->head);
+        string output{ "1, 2, 3, 4, 5, 6, 7, 8" };
+        EXPECT_EQ(output, listStr);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+    }
+
+    TEST(SLLTests_Transform, SwapByIndex_CorrectInput) {
+        // initial
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8 };
+        InsertNodeInRange(llist1, data1);
+        // insert data in sorted list
+        llist1->head = sll::Swap(llist1->head, 2, 7);
+        string listStr = ToString(llist1->head);
+        string output{ "1, 7, 3, 4, 5, 6, 2, 8" };
+        EXPECT_EQ(output, listStr);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+    }
+    TEST(SLLTests_Transform, PairwiseSwap_CorrectInput) {
+        // initial
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8 };
+        InsertNodeInRange(llist1, data1);
+        // insert data in sorted list
+        llist1->head = sll::PairwiseSwap(llist1->head);
+        string listStr = ToString(llist1->head);
+        string output{ "2, 1, 4, 3, 6, 5, 8, 7" };
+        EXPECT_EQ(output, listStr);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+    }
+
+    TEST(SLLTests_Transform, SwapZigZag_CorrectInput) {
+
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 4 };
+        InsertNodeInRange(llist1, data1);
+
+        llist1->head = sll::SwapZigZag(llist1->head);
+        string listStr = ToString(llist1->head);
+        string output{ "1, 3, 2, 4" };
+        EXPECT_EQ(output, listStr);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+
+        SinglyLinkedList* llist2 = new SinglyLinkedList();
+        vector<int> data2{ 11, 15, 20, 5, 10 };
+        InsertNodeInRange(llist2, data2);
+
+        llist2->head = sll::SwapZigZag(llist2->head);
+        string listStr2 = ToString(llist1->head);
+        string output2{ "20, 5, 15, 10" };
+        EXPECT_EQ(output2, listStr2);
+
+        sll::FreeSinglyLinkedList(llist2->head);
     }
 }

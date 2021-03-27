@@ -1,7 +1,7 @@
 #include "./slltests.h"
 
 namespace slltests {
-    TEST(SinglyListChallengesTests_DELETE, DeleteNode_CorrectRequest) {
+    TEST(SLLTests_Del, DeleteNode_CorrectRequest) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 9, 2, 9, 3, 9, 4, 9, 5, 9 };
@@ -18,7 +18,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteNode_NegativeIndex) {
+    TEST(SLLTests_Del, DeleteNode_NegativeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -32,7 +32,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteNodeTest_OutOfRangeIndex) {
+    TEST(SLLTests_Del, DeleteNodeTest_OutOfRangeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -44,7 +44,7 @@ namespace slltests {
         EXPECT_EQ(output, listStr);
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteNodeByValue_CorrectIndex) {
+    TEST(SLLTests_Del, DeleteNodeByValue_CorrectIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 9, 2, 9, 3, 9, 4, 9, 5, 9 };
@@ -59,7 +59,7 @@ namespace slltests {
 
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteMiddle_DeleteInOdd) {
+    TEST(SLLTests_Del, DeleteMiddle_DeleteInOdd) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 9, 3, 4, 5 };
@@ -74,7 +74,7 @@ namespace slltests {
 
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteMiddle_DeleteInEven) {
+    TEST(SLLTests_Del, DeleteMiddle_DeleteInEven) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 9, 4, 5, 6 };
@@ -88,7 +88,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteEveryNthNode_NoDevision) {
+    TEST(SLLTests_Del, DeleteEveryNthNode_NoDevision) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -112,7 +112,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist2->head);
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteEveryNthNode_LessThen_2_Index) {
+    TEST(SLLTests_Del, DeleteEveryNthNode_LessThen_2_Index) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -128,7 +128,7 @@ namespace slltests {
         EXPECT_EQ(true, llist2->head == nullptr);
     }
 
-    TEST(SinglyListChallengesTests_Delete, DeleteEveryNthNode_OutOfRangeIndex) {
+    TEST(SLLTests_Del, DeleteEveryNthNode_OutOfRangeIndex) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6 };
@@ -142,7 +142,46 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Delete, RemoveDublicates_CorrectInput) {
+    TEST(SLLTests_Del, DeleteBetween_CorrectInput) {
+
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 1, 2, 3, 10, 10, 10, 4, 5 };
+        InsertNodeInRange(llist1, data1);
+
+        llist1->head = sll::DeleteBetween(llist1->head, 3, 3);
+        string listStr = ToString(llist1->head);
+        string output{ "1, 2, 3, 4, 5" };
+        EXPECT_EQ(output, listStr);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+    }
+
+    TEST(SLLTests_Del, DeleteBetweenRange_CorrectInput) {
+
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 9, 1, 3, 5, 9, 4, 10, 1 };
+        InsertNodeInRange(llist1, data1);
+
+        llist1->head = sll::DeleteBetweenRange(llist1->head, 2, 1);
+        string listStr = ToString(llist1->head);
+        string output{ "9, 1, 5, 9, 10, 1" };
+        EXPECT_EQ(output, listStr);
+
+        sll::FreeSinglyLinkedList(llist1->head);
+
+        SinglyLinkedList* llist2 = new SinglyLinkedList();
+        vector<int> data2{ 1, 2, 3, 4, 5, 6 };
+        InsertNodeInRange(llist2, data2);
+
+        llist2->head = sll::DeleteBetweenRange(llist2->head, 6, 1);
+        string list2Str = ToString(llist2->head);
+        string output2{ "1, 2, 3, 4, 5, 6" };
+        EXPECT_EQ(output2, list2Str);
+
+        sll::FreeSinglyLinkedList(llist2->head);
+    }
+
+    TEST(SLLTests_Del, RemoveDublicates_CorrectInput) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 1, 3, 4, 2, 5, 4, 6, 6 };
@@ -156,7 +195,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Delete, RemoveDublicatesPairs_CorrectInput) {
+    TEST(SLLTests_Del, RemoveDublicatesPairs_CorrectInput) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 1, 2, 2, 3, 4, 4, 5, 6, 6 };
@@ -170,7 +209,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, RemoveDublicatesInSorted_CorrectInput) {
+    TEST(SLLTests_Del, RemoveDublicatesInSorted_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
@@ -184,7 +223,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, FreeList_NotCycled) {
+    TEST(SLLTests_Del, FreeList_NotCycled) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -193,7 +232,7 @@ namespace slltests {
         EXPECT_EQ(true, true);
     }
 
-    TEST(SinglyListChallengesTests, FreeList_Cycled) {
+    TEST(SLLTests_Del, FreeList_Cycled) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -202,6 +241,20 @@ namespace slltests {
         llist1->tail->next = llist1->head;
         sll::FreeSinglyLinkedList(llist1->head);
         EXPECT_EQ(true, true);
+    }
+
+    TEST(SLLTests_Del, DeleteNodesWithRightGreater) {
+        // initial
+        SinglyLinkedList* llist1 = new SinglyLinkedList();
+        vector<int> data1{ 12, 15, 10, 11, 5, 6, 2, 3 };
+        InsertNodeInRange(llist1, data1);
+
+        llist1->head = sll::DeleteNodesWithRightGreater(llist1->head);
+        string listStr = ToString(llist1->head);
+        string output{ "15, 11, 6, 3" };
+        EXPECT_EQ(output, listStr);
+
+        sll::FreeSinglyLinkedList(llist1->head);
     }
 
 }

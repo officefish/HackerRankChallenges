@@ -1,7 +1,7 @@
 #include "./slltests.h"
 namespace slltests {
 
-    TEST(SinglyListChallengesTests_Validate, CompareLists_True) {
+    TEST(SLLTests_Validate, CompareLists_True) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -18,7 +18,7 @@ namespace slltests {
     }
 
 
-    TEST(SinglyListChallengesTests_Validate, CompareLists_False) {
+    TEST(SLLTests_Validate, CompareLists_False) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -34,7 +34,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist2->head);
     }
 
-    TEST(SinglyListChallengesTests_Validate, CountCommonNodes_CorrectInput) {
+    TEST(SLLTests_Validate, CountCommonNodes_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -58,9 +58,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist2->head);
     }
 
-
-
-    TEST(SinglyListChallengesTests_Validate, HasCycle_Test_True) {
+    TEST(SLLTests_Validate, HasCycle_Test_True) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -72,7 +70,7 @@ namespace slltests {
         EXPECT_EQ(true, hasCycle);
     }
 
-    TEST(SinglyListChallengesTests_Validate, HasCycle_Test_False) {
+    TEST(SLLTests_Validate, HasCycle_Test_False) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };

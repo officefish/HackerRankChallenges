@@ -173,4 +173,60 @@ namespace sll {
         return head;
     }
 
+    SinglyLinkedListNode* DeleteNodesWithRightGreater(SinglyLinkedListNode* head) {
+        if (head->next == NULL)
+            return head;
+        SinglyLinkedListNode* temp = DeleteNodesWithRightGreater(head->next);
+        if (temp->data > head->data)
+            return temp;
+        else
+            head->next = temp;
+        return head;
+    }
+
+    SinglyLinkedListNode* DeleteBetween(SinglyLinkedListNode* head, int M, int N) {
+        SinglyLinkedListNode* curr = head, * prev = nullptr;
+
+        for (int i = 1; i < M and curr; i++)
+            curr = curr->next;
+
+        if (not curr or not curr->next)  return head;
+        prev = curr;
+        int x = N;
+        while (x-- and prev)
+            prev = prev->next;
+
+        if (not prev) {
+            curr->next = NULL;
+            return head;
+        }
+        curr->next = prev->next;
+        curr = prev->next;
+
+        return head;
+    }
+
+    SinglyLinkedListNode* DeleteBetweenRange(SinglyLinkedListNode* head, int M, int N)
+    {
+        SinglyLinkedListNode* curr = head, * prev = nullptr;
+        while (curr) {
+            for (int i = 1; i < M and curr; i++)
+                curr = curr->next;
+
+            if (not curr or not curr->next)  return head;
+            prev = curr;
+            int x = N;
+            while (x-- and prev)
+                prev = prev->next;
+
+            if (not prev) {
+                curr->next = NULL;
+                return head;
+            }
+            curr->next = prev->next;
+            curr = prev->next;
+        }
+        return head;
+    }
+
 }

@@ -156,4 +156,39 @@ namespace sll {
         return head;
     }
 
+    SinglyLinkedListNode* proOfPolynomials(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2, int n1, int n2)
+    {
+        std::vector<int> arr;
+        int i = 0, j = 0;
+        SinglyLinkedListNode* temp1 = head1, * temp2 = head2;
+        for (i = 0; i < n1; i++) {
+            for (j = 0; j < n2; j++) {
+                arr[i + j] = arr[i + j] + temp1->data * temp2->data;
+                temp2 = temp2->next;
+            }
+            temp2 = head2;
+            temp1 = temp1->next;
+        }
+        temp1 = head1; i = 0;
+        while (temp1->next) {
+            temp1->data = arr[i++];
+            temp1 = temp1->next;
+        }
+        temp1->data = arr[i++];
+        if (i < arr.size()) {
+            temp1->next = head2;
+            temp1 = temp1->next;
+        } else
+            temp1->next = nullptr;
+
+        while (i < arr.size() and temp1) {
+            temp1->data = arr[i++];
+            if (i < arr.size())
+                temp1 = temp1->next;
+            else
+                temp1->next = nullptr;
+        }
+        return head1;
+    }
+
 }

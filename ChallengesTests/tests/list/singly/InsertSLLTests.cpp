@@ -2,7 +2,7 @@
 
 
 namespace slltests {
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtHead_CorrectInput) {
+    TEST(SLLTests_Insert, InsertNodeAtHead_CorrectInput) {
 
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
@@ -20,7 +20,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtTail_CorrectInput) {
+    TEST(SLLTests_Insert, InsertNodeAtTail_CorrectInput) {
 
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
@@ -38,7 +38,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtPosition_CorrectInput) {
+    TEST(SLLTests_Insert, InsertNodeAtPosition_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 7, 8, 9 };
@@ -55,7 +55,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtPosition_NegativeIndex) {
+    TEST(SLLTests_Insert, InsertNodeAtPosition_NegativeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -69,7 +69,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtPosition_ListSizeIndex) {
+    TEST(SLLTests_Insert, InsertNodeAtPosition_ListSizeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -82,7 +82,7 @@ namespace slltests {
 
         sll::FreeSinglyLinkedList(llist1->head);
     }
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtPosition_MoreThanSizeIndex) {
+    TEST(SLLTests_Insert, InsertNodeAtPosition_MoreThanSizeIndex) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 4, 5 };
@@ -96,7 +96,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtMiddle_InsertInOdd) {
+    TEST(SLLTests_Insert, InsertNodeAtMiddle_InsertInOdd) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 4, 5 };
@@ -110,7 +110,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtMiddle_InsertInEven) {
+    TEST(SLLTests_Insert, InsertNodeAtMiddle_InsertInEven) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 4, 5, 6 };
@@ -124,7 +124,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests_Insert, InsertNodeAtMiddle_InsertInEmpty) {
+    TEST(SLLTests_Insert, InsertNodeAtMiddle_InsertInEmpty) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         // insert
@@ -136,8 +136,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-
-    TEST(SinglyListChallengesTests, InsertInSortedNode_Test1) {
+    TEST(SLLTests_Insert, InsertInSortedNode_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 5, 6, 7 };
@@ -152,7 +151,7 @@ namespace slltests {
         sll::FreeSinglyLinkedList(llist1->head);
     }
 
-    TEST(SinglyListChallengesTests, InsertInSortedData_Test1) {
+    TEST(SLLTests_Insert, InsertInSortedData_CorrectInput) {
         // initial
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         vector<int> data1{ 1, 2, 3, 5, 6, 7 };

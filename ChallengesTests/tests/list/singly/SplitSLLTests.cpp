@@ -1,7 +1,7 @@
 #include "./slltests.h"
 
 namespace slltests {
-    TEST(SinglyListChallengesTests_Split, SplitMiddle_CorrectInput) {
+    TEST(SLLTests_Split, SplitMiddle_CorrectInput) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         std::vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -21,7 +21,7 @@ namespace slltests {
         EXPECT_EQ(output2, rightStr);
     }
 
-    TEST(SinglyListChallengesTests_Split, SplitAlternate_CorrectInput) {
+    TEST(SLLTests_Split, SplitAlternate_CorrectInput) {
 
         SinglyLinkedList* llist1 = new SinglyLinkedList();
         std::vector<int> data1{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };

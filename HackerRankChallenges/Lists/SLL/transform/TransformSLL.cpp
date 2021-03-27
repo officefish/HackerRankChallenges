@@ -1,7 +1,6 @@
 #include "../.././SinglyLinkedList.h"
 
 namespace sll {
-
     SinglyLinkedListNode* Reverse(SinglyLinkedListNode* head) {
         SinglyLinkedListNode* tail, * currentNode;
         tail = nullptr;
@@ -46,8 +45,28 @@ namespace sll {
         return head;
     }
 
+    SinglyLinkedListNode* ReverseAlternate(SinglyLinkedListNode* head) {
+        SinglyLinkedListNode* even = NULL, * odd = NULL;
+        SplitAlternate(head, &even, &odd);
+        odd = Reverse(odd);
+        head = MergeAlternate(even, odd);
+        return head;
+    }
 
-
+    SinglyLinkedListNode* ReverseEveryNth(SinglyLinkedListNode* head, int Nth) {
+        SinglyLinkedListNode* prev = NULL;
+        SinglyLinkedListNode* curr = head;
+        SinglyLinkedListNode* q = NULL;
+        int counter = Nth;
+        while (counter-- && curr != NULL) {
+            q = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = q;
+        }
+        if (head != NULL) head->next = ReverseEveryNth(q, Nth);
+        return prev;
+    }
 
     SinglyLinkedListNode* Partition(SinglyLinkedListNode* head, int x) {
         /* Let us initialize first and last nodes of
@@ -120,6 +139,7 @@ namespace sll {
     SinglyLinkedListNode* Segregate(SinglyLinkedListNode* head) {
         return Partition(head, 1);
     }
+
     SinglyLinkedListNode* SegregateAlternate(SinglyLinkedListNode* head) {
         if (!head) return nullptr;
         if (!head->next) return head;
@@ -185,8 +205,12 @@ namespace sll {
         return head;
     }
 
-
-
+    SinglyLinkedListNode* SortReorder(SinglyLinkedListNode* head) {
+        SinglyLinkedListNode* even = NULL, * odd = NULL;
+        SplitAlternate(head, &even, &odd);
+        odd = Reverse(odd);
+        return MergeSorted(even, odd);
+    }
 
     SinglyLinkedListNode* Rotate(SinglyLinkedListNode* head, int Nth) {
         if (Nth <= 0) return head;
@@ -255,7 +279,6 @@ namespace sll {
         return head;
     }
 
-
     SinglyLinkedListNode* SwapData(SinglyLinkedListNode* head, SinglyLinkedListNode* xNode, SinglyLinkedListNode* yNode) {
         if (!head) return nullptr;
         if (!xNode or !yNode) return head;
@@ -292,40 +315,69 @@ namespace sll {
         return head;
     }
 
-    SinglyLinkedListNode* Swap(SinglyLinkedListNode* head, int x_index, int y_index) {
-        // Nothing to do if x and y are same
-        if (x_index == y_index)
-            return head;
-        SinglyLinkedListNode* prevX = GetNode(head, x_index - 1);
-        SinglyLinkedListNode* prevY = GetNode(head, y_index - 1);
-        SinglyLinkedListNode* currX = nullptr;
-        SinglyLinkedListNode* currY = nullptr;
-        if (!prevX or !prevY) return head;
-        // swap
-        currX = prevX->next;
-        currY = prevY->next;
-        currX->next = prevY->next->next;
-        currY->next = prevX->next->next;
-        prevX->next = currY;
-        prevY->next = currX;
+    SinglyLinkedListNode* Swap(SinglyLinkedListNode* head, int key1, int key2) {
+        auto swap {
+            [](SinglyLinkedListNode** f, SinglyLinkedListNode** s) {
+                SinglyLinkedListNode* tmp = *f;
+                *f = *s;
+                *s = tmp;
+            }
+        };
+        if (key1 == key2) return head;
+        SinglyLinkedListNode** first = &head;
+
+        while (*first && (*first)->data != key1)
+            first = &(*first)->next;
+
+        if (*first == NULL) return head;
+        SinglyLinkedListNode** second = &head;
+
+        while (*second && (*second)->data != key2)
+            second = &(*second)->next;
+
+        if (*second == NULL) return head;
+        swap(first, second);
+        swap(&(*first)->next, &(*second)->next);
 
         return head;
     }
 
-    SinglyLinkedListNode* PairwiseSwap(SinglyLinkedListNode* head) {
-        if (!head) return nullptr;
-        SinglyLinkedListNode* dummy = new SinglyLinkedListNode(0);
-        dummy->next = head;
-        SinglyLinkedListNode* dummy_next = dummy->next;
-        SinglyLinkedListNode* curr = head;
-        while (curr and curr->next) {
-            SinglyLinkedListNode* tmp = curr;
-            curr = curr->next->next;
-            tmp->next->next = nullptr;
-            dummy_next->next = Swap(tmp, 0, 1);
-            dummy_next = dummy_next->next;
+
+    SinglyLinkedListNode* SwapZigZag(SinglyLinkedListNode* head) {
+        bool flag = true;
+        // Traverse linked list starting from head.
+        SinglyLinkedListNode* current = head;
+        while (current->next != NULL) {
+            if (flag) {
+                if (current->data > current->next->data) {
+                    std::swap(current->data, current->next->data);
+                }
+            } else {
+                if (current->data < current->next->data) {
+                    std::swap(current->data, current->next->data);
+                }
+            }
+            current = current->next;
+            flag = !flag;  /* flip flag for reverse checking */
         }
-        return dummy->next;
+        return head;
+    }
+
+    SinglyLinkedListNode* PairwiseSwap(SinglyLinkedListNode* head) {
+        SinglyLinkedListNode* prev = NULL;
+        SinglyLinkedListNode* next = NULL;
+        SinglyLinkedListNode* curr = head;
+        int c = 0;
+        while (curr && c < 2) {
+            next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+            c++;
+        }
+        if (next != NULL)
+            head->next = PairwiseSwap(next);
+        return prev;
     }
 
 }
