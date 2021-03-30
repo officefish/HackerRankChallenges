@@ -15,11 +15,67 @@ namespace {
             int llist_item;
             cin >> llist_item;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            llist->InsertNode(llist_item);
+            llist->insert(llist_item);
         }
     }
 
 }
+
+int listInitializeChallenge() {
+
+    return 0;
+}
+
+int listUniformInitializeChallenge() {
+
+   /* SinglyLinkedList list;
+    list.partial_permutation(10).print();
+    cout << endl;
+    list.concat().partial_permutation(10,false).print();
+    cout << endl;
+    list.concat().partial_combination(7, 5).print();
+    cout << endl;
+    list.concat().partial_combination(7, 5, false).print();
+    cout << endl;
+    list.concat().partial_reflection(7, 5).repeat(7).print();
+    cout << endl;
+    list.concat().partial_reflection(7, 5, false).print();*/
+
+    //SinglyLinkedList list{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    //SinglyLinkedList list2{ 10, 20, 30, 40, 50 };
+
+
+
+
+    //SinglyLinkedList list{ 1, 3, 4 };
+    //list.index_insert(2, 1).print();
+    //SinglyLinkedList list{ 1, 2, 5, 6 };
+
+    //list.index_insert(3, 2).print();
+    //list.index_insert(4, 3).print();
+    //list.index_insert(10, 0).print();
+    //list.concat().index_insert(10, 100).print();
+    //list.concat().erase(1, 5).print();
+    //list.concat().erase_between(1, 5).print();
+    SinglyLinkedList list{ 1, 2, 3, 4, 5, 6 };
+
+    list.concat().erase_between(1, 1).print();
+    list.concat().erase_between(1, 4).print();
+    list.concat().erase_between(5, 0).print();
+
+    //list.concat().erase(7, 5).print();
+    //list.concat().erase_between(7, 5).print();
+
+    //list.concat().erase(3, 9).print();
+    //list.concat().erase_between(3, 9).print();
+    //list.index_insert(list2, 2).print();
+
+    //list.insert(list2).reverse_print(); // same
+
+    return 0;
+}
+
+/*
 
 int insertNodeAtHeadChallenge() {
     SinglyLinkedList* llist = new SinglyLinkedList();
@@ -33,7 +89,7 @@ int insertNodeAtHeadChallenge() {
         SinglyLinkedListNode* llist_head = InsertNodeAtHead(llist->head, llist_item);
         llist->head = llist_head;
     }
-    sll::PrintSinglyLinkedList(llist->head, " ", std::cout);
+    sll::Print(llist->head, " ", std::cout);
     std::cout << "\n";
     sll::FreeSinglyLinkedList(llist->head);
     return 0;
@@ -54,7 +110,7 @@ int insertNodeAtPositionChallenge() {
     SinglyLinkedListNode* llist_head = reinterpret_cast<SinglyLinkedListNode*>(
         sll::InsertNodeAtPosition(llist->head, data, position)
     );
-    sll::PrintSinglyLinkedList(llist_head, " ", std::cout);
+    sll::Print(llist_head, " ", std::cout);
     std::cout << "\n";
     FreeSinglyLinkedList(llist_head);
     return 0;
@@ -72,7 +128,7 @@ int deleteNodeChallenge() {
     SinglyLinkedListNode* llist1 = reinterpret_cast<SinglyLinkedListNode*>(
         sll::DeleteNode(llist->head, position)
     );
-    sll::PrintSinglyLinkedList(llist1, " ", cout);
+    sll::Print(llist1, " ", cout);
     cout << "\n";
     sll::FreeSinglyLinkedList(llist1);
     return 0;
@@ -84,7 +140,7 @@ int printListChallenge() {
     cin >> llist_count;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     InsertNodeInRange(llist, llist_count);
-    Print(llist->head);
+    Print(llist->head, " ", cout);
     return 0;
 }
 
@@ -98,7 +154,7 @@ int printReverseChallenge() {
         cin >> llist_count;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         InsertNodeInRange(llist, llist_count);
-        sll::ReversePrint(llist->head);
+        sll::ReversePrint(llist->head, " ", cout);
     }
     return 0;
 }
@@ -115,7 +171,7 @@ int instertNodeAtTailChallenge() {
         SinglyLinkedListNode* llist_head = InsertNodeAtTail(llist->head, llist_item);
         llist->head = llist_head;
     }
-    sll::PrintSinglyLinkedList(llist->head, " ", cout);
+    sll::Print(llist->head, " ", cout);
     cout << "\n";
     sll::FreeSinglyLinkedList(llist->head);
     return 0;
@@ -132,7 +188,7 @@ int reverseListChallenge() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         InsertNodeInRange(llist, llist_count);
         SinglyLinkedListNode* llist1 = Reverse(llist->head);
-        sll::PrintSinglyLinkedList(llist1, " ", cout);
+        sll::Print(llist1, " ", cout);
         cout << "\n";
         sll::FreeSinglyLinkedList(llist1);
     }
@@ -186,24 +242,24 @@ int compareListsChallenge() {
 
 int sortListChallenge() {
     SinglyLinkedList* llist1 = new SinglyLinkedList();
-    llist1->InsertNode(1);
-    llist1->InsertNode(2);
-    llist1->InsertNode(3);
-    llist1->InsertNode(4);
-    llist1->InsertNode(5);
+    llist1->insert(1);
+    llist1->insert(2);
+    llist1->insert(3);
+    llist1->insert(4);
+    llist1->insert(5);
 
     //cout << llist1->size() << endl;
 
     SinglyLinkedList* llist2 = new SinglyLinkedList();
-    llist2->InsertNode(2);
-    llist2->InsertNode(4);
-    llist2->InsertNode(3);
-    llist2->InsertNode(5);
-    llist2->InsertNode(1);
+    llist2->insert(2);
+    llist2->insert(4);
+    llist2->insert(3);
+    llist2->insert(5);
+    llist2->insert(1);
 
     sll::SortBubble(llist2->head);
 
-    sll::PrintSinglyLinkedList(llist2->head, " ", cout);
+    sll::Print(llist2->head, " ", cout);
 
     bool result = sll::CompareLists(llist1->head, llist2->head);
     cout << std::boolalpha << result << "\n";
@@ -216,25 +272,25 @@ int sortListChallenge() {
 
 int mergeSinglySortedChallenge() {
     SinglyLinkedList* llist1 = new SinglyLinkedList();
-    llist1->InsertNode(1);
-    llist1->InsertNode(2);
-    llist1->InsertNode(1);
-    llist1->InsertNode(4);
-    llist1->InsertNode(3);
+    llist1->insert(1);
+    llist1->insert(2);
+    llist1->insert(1);
+    llist1->insert(4);
+    llist1->insert(3);
 
     SinglyLinkedList* llist2 = new SinglyLinkedList();
-    llist2->InsertNode(2);
-    llist2->InsertNode(4);
-    llist2->InsertNode(3);
-    llist2->InsertNode(5);
-    llist2->InsertNode(1);
+    llist2->insert(2);
+    llist2->insert(4);
+    llist2->insert(3);
+    llist2->insert(5);
+    llist2->insert(1);
 
     SinglyLinkedListNode* llist1_head = sll::SortBubble(llist1->head);
     SinglyLinkedListNode* llist2_head = sll::SortBubble(llist2->head);
 
     SinglyLinkedListNode* merged = sll::MergeSorted(llist1_head, llist2_head);
 
-    sll::PrintSinglyLinkedList(merged, " ", cout);
+    sll::Print(merged, " ", cout);
 
     sll::FreeSinglyLinkedList(merged);
     return 0;
@@ -293,7 +349,7 @@ int removeDuplicatesInSortedChallenge() {
         InsertNodeInRange(llist, llist_count);
 
         SinglyLinkedListNode* llist1 = sll::RemoveDuplicatesInSorted(llist->head);
-        sll::PrintSinglyLinkedList(llist1, " ", cout);
+        sll::Print(llist1, " ", cout);
         cout << "\n";
         sll::FreeSinglyLinkedList(llist1);
     }
@@ -302,7 +358,7 @@ int removeDuplicatesInSortedChallenge() {
 
 void InsertNodeInRange(SinglyLinkedList* llist, const std::vector<int>& datas) {
     for (const auto& i : datas) {
-        llist->InsertNode(i);
+        llist->insert(i);
     }
 }
 
@@ -348,7 +404,7 @@ int deleteNthNodeChallenge() {
     InsertNodeInRange(llist1, data1);
     // delete
     llist1->head = sll::DeleteEveryNthNode(llist1->head, -1);
-    sll::Print(llist1->head);
+    sll::Print(llist1->head, " ", cout);
     return 0;
     //std::string listStr = ToString(llist1->head);
 }
@@ -380,9 +436,9 @@ int splitMiddleChallenge() {
 
     sll::SplitMiddle(llist1->head, &left, &right);
     cout << sll::Size(left) << " " << sll::Size(right) << endl;
-    sll::Print(left);
+    sll::Print(left, " ", cout);
     cout << endl;
-    sll::Print(right);
+    sll::Print(right, " ", cout);
 
     return 0;
 }
@@ -398,9 +454,9 @@ int splitEvenOddChallenge() {
 
     sll::SplitAlternate(llist1->head, &left, &right);
     cout << sll::Size(left) << " " << sll::Size(right) << endl;
-    sll::Print(left);
+    sll::Print(left, " ", cout);
     cout << endl;
-    sll::Print(right);
+    sll::Print(right, " ", cout);
 
     return 0;
 }
@@ -414,9 +470,9 @@ int reorderChallenge() {
     SinglyLinkedListNode* merged = sll::Reorder(llist1->head);
     //sll::ModularAlternateMerge(&left, &right);
     //cout << sll::Size(merged) << endl;
-    sll::Print(merged);
+    sll::Print(merged, " ", cout);
 
     return 0;
 }
 
-
+*/

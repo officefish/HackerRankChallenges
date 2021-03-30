@@ -6,37 +6,115 @@
 #include <stack>
 
 namespace sll {
-	class SinglyLinkedListNode {
+
+	class SinglyLinkedListNode final {
 	public:
 		int data;
-		SinglyLinkedListNode* next;
+		std::shared_ptr<SinglyLinkedListNode> next;
+
+		SinglyLinkedListNode(const SinglyLinkedListNode&) = delete;
 		SinglyLinkedListNode() = default;
-		~SinglyLinkedListNode() = default;
+		~SinglyLinkedListNode();
 		SinglyLinkedListNode(int node_data);
-		SinglyLinkedListNode* GetTail(SinglyLinkedListNode* head);
+		std::shared_ptr<SinglyLinkedListNode> GetTail(const std::shared_ptr<SinglyLinkedListNode> head);
 	};
-	class SinglyLinkedList {
+	class SinglyLinkedList final {
 	public:
-		SinglyLinkedListNode* head;
-		SinglyLinkedListNode* tail;
-		SinglyLinkedList();
-		~SinglyLinkedList() = default;
-		void InsertNode(int data);
-		int size();
+		std::shared_ptr<SinglyLinkedListNode> head;
+
+		explicit SinglyLinkedList();
+		SinglyLinkedList(int data);
+		SinglyLinkedList(const SinglyLinkedList&);
+		SinglyLinkedList(const std::initializer_list<int>& list);
+		~SinglyLinkedList();
+
+		SinglyLinkedList& insert(int data);
+		SinglyLinkedList& insert(const std::initializer_list<int>& list);
+		SinglyLinkedList& insert(const SinglyLinkedList& head);
+		SinglyLinkedList& back_insert(int data);
+		SinglyLinkedList& back_insert(const std::initializer_list<int>& list);
+		SinglyLinkedList& back_insert(const SinglyLinkedList& head);
+		SinglyLinkedList& middle_insert(int data);
+		SinglyLinkedList& middle_insert(const std::initializer_list<int>& list);
+		SinglyLinkedList& middle_insert(const SinglyLinkedList& head);
+		SinglyLinkedList& index_insert(int data, int index);
+		SinglyLinkedList& index_insert(const std::initializer_list<int>& list, size_t index);
+		SinglyLinkedList& index_insert(const SinglyLinkedList& head, size_t index);
+		SinglyLinkedList& alternate_insert(const std::initializer_list<int>& list, size_t frequency = 1);
+		SinglyLinkedList& alternate_insert(const SinglyLinkedList& head, size_t frequency = 1);
+		SinglyLinkedList& group_insert(const std::initializer_list<int>& list, size_t frequency = 1);
+		SinglyLinkedList& group_insert(const SinglyLinkedList& head, size_t frequency = 1);
+
+
+		SinglyLinkedList& erase(size_t from, size_t count);
+		SinglyLinkedList& erase_between(size_t from, size_t to);
+
+		SinglyLinkedList concat(const std::initializer_list<int>& list = {});
+
+		SinglyLinkedList& repeat(size_t limit);
+
+		SinglyLinkedList& partial_permutation(int32_t limit, bool resultOnly = true);
+		SinglyLinkedList& partial_combination(int32_t limit, int32_t factors, bool resultOnly = true);
+		SinglyLinkedList& partial_reflection(int32_t limit, int32_t factors, bool resultOnly = true);
+
+		SinglyLinkedList& print(std::string sep, std::ostream& cout);
+		SinglyLinkedList& print();
+		SinglyLinkedList& reverse_print(std::string sep, std::ostream& cout);
+		SinglyLinkedList& reverse_print();
+
+
+
+		std::string toString();
+		//SinglyLinkedList* free();
+
+		int size() const;
 	};
-	int Size(SinglyLinkedListNode* head);
-	void PrintSinglyLinkedList(SinglyLinkedListNode* node, std::string sep, std::ostream& cout);
-	void FreeSinglyLinkedList(SinglyLinkedListNode* node);
 
-	void Print(SinglyLinkedListNode* head);
-	void ReversePrint(SinglyLinkedListNode* head);
+	typedef SinglyLinkedListNode Node;
+	typedef std::shared_ptr<SinglyLinkedListNode> s_ptr;
+	typedef std::weak_ptr<SinglyLinkedListNode> w_ptr;
 
-	SinglyLinkedListNode* InsertNodeAtHead(SinglyLinkedListNode* llist, int data);
-	SinglyLinkedListNode* InsertNodeAtTail(SinglyLinkedListNode* head, int data);
-	SinglyLinkedListNode* InsertNodeAtPosition(SinglyLinkedListNode* head, int data, int position);
-	SinglyLinkedListNode* InsertNodeAtMiddle(SinglyLinkedListNode* head, int data);
+	s_ptr Clear(s_ptr head, size_t from = 0);
+	void Free(const s_ptr head);
+
+	int Size(s_ptr head);
+	void Print(const s_ptr head, std::string sep, std::ostream& cout);
+	void ReversePrint(const s_ptr head, std::string sep, std::ostream& cout);
+
+	s_ptr Copy(const s_ptr head);
+
+	s_ptr Insert(const s_ptr head, int data);
+	s_ptr BackInsert(const s_ptr head, int data);
+	s_ptr MiddleInsert(const s_ptr head, int data);
+	s_ptr MiddleInsert(const s_ptr head, s_ptr head2);
+	s_ptr IndexInsert(s_ptr head, int data, size_t index);
+	s_ptr IndexInsert(const s_ptr head1, const s_ptr head2, size_t index);
+	s_ptr AlternateInsert(const s_ptr head1, const s_ptr head2, size_t frequency);
+	s_ptr GroupInsert(const s_ptr head1, const s_ptr head2, size_t frequency);
+	s_ptr Repeat(s_ptr head, size_t limit);
+
+	s_ptr Erase(s_ptr, size_t begin, size_t count);
+	s_ptr EraseBetween(s_ptr head, size_t begin, size_t end);
+
+	s_ptr Merge(const s_ptr head, const std::initializer_list<int>&);
+	s_ptr Merge(s_ptr head1, s_ptr head2);
+	s_ptr BackMerge(const s_ptr head, const std::initializer_list<int>&);
+
+	s_ptr GetPrevMiddle(const s_ptr head);
+	s_ptr GetByIndex(s_ptr head, size_t index);
+	s_ptr GetByIndexOrLast(s_ptr head, size_t index);
+
+	s_ptr PartialPermutation(s_ptr head, int32_t limit);
+	s_ptr PartialPermutationConstant(s_ptr head, int32_t n);
+	s_ptr PartialCombination(s_ptr head, int32_t limit, int32_t factors);
+	s_ptr PartialCombinationConstant(s_ptr head, int32_t n, int32_t k);
+	s_ptr PartialReflection(s_ptr head, int32_t limit, int32_t factors);
+	s_ptr PartialReflectionConstant(s_ptr head, int32_t n, int32_t k);
+
+	/*
 	SinglyLinkedListNode* InsertInSortedNode(SinglyLinkedListNode* head, SinglyLinkedListNode* target);
 	SinglyLinkedListNode* InsertInSortedData(SinglyLinkedListNode* head, int data);
+	SinglyLinkedListNode* InsertInCircularSorted(SinglyLinkedListNode* head, int data);
 
 	SinglyLinkedListNode* GetNode(SinglyLinkedListNode* head, int position);
 	SinglyLinkedListNode* GetNodeFromTail(SinglyLinkedListNode* head, int position);
@@ -71,6 +149,7 @@ namespace sll {
 	SinglyLinkedListNode* MergeAlternate(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2);
 	void MergeAlternateModular(SinglyLinkedListNode** head1, SinglyLinkedListNode** head2);
 	SinglyLinkedListNode* MergeSortedReverse(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2);
+	SinglyLinkedListNode* MergeSortedRecurenly(SinglyLinkedListNode* a, SinglyLinkedListNode* b);
 
 	SinglyLinkedListNode* Reverse(SinglyLinkedListNode* head);
 	SinglyLinkedListNode* ReverseBetween(SinglyLinkedListNode* head, int m, int n);
@@ -86,10 +165,11 @@ namespace sll {
 	SinglyLinkedListNode* Reorder(SinglyLinkedListNode* head);
 	SinglyLinkedListNode* RearangeAlternate(SinglyLinkedListNode* head);
 	SinglyLinkedListNode* SwapData(SinglyLinkedListNode* head, SinglyLinkedListNode* xNode, SinglyLinkedListNode* yNode);
-	SinglyLinkedListNode* Swap(SinglyLinkedListNode* head, SinglyLinkedListNode* xNode, SinglyLinkedListNode* yNode);
+	SinglyLinkedListNode* SwapNext(SinglyLinkedListNode* head, SinglyLinkedListNode* xNode, SinglyLinkedListNode* yNode);
 	SinglyLinkedListNode* Swap(SinglyLinkedListNode* head, int x_index, int y_index);
 	SinglyLinkedListNode* PairwiseSwap(SinglyLinkedListNode* head);
 	SinglyLinkedListNode* SwapZigZag(SinglyLinkedListNode* head);
+	long long unsigned int DecimalValue(SinglyLinkedListNode* head);
 
 	bool CompareLists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2);
 	int CountCommonNodes(SinglyLinkedListNode* node1, SinglyLinkedListNode* node2);
@@ -99,12 +179,16 @@ namespace sll {
 	int FindIntersectionEntyValue (SinglyLinkedListNode* head1, SinglyLinkedListNode* head2);
 	SinglyLinkedListNode* FindIntersectionEntyRecursively(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2);
 	int FindIntersectionEntyDataRecursively(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2);
-	bool HasCycle(SinglyLinkedListNode* head);
 	bool IsPalindrome(SinglyLinkedListNode* head);
 	int MaxPalingrome(SinglyLinkedListNode* head);
-
-
+	bool HasCycle(SinglyLinkedListNode* head);
+	int CountNodesinLoop(SinglyLinkedListNode* head);
+	SinglyLinkedListNode* GetCycleBeginNode(SinglyLinkedListNode* head);
+	SinglyLinkedListNode* GetCycleEndNode(SinglyLinkedListNode* head);
+	SinglyLinkedListNode* BreakCycle(SinglyLinkedListNode* head);
+	void SplitCycle(SinglyLinkedListNode* head, SinglyLinkedListNode** head1_ref, SinglyLinkedListNode** head2_ref);
 
 	int SumNth(SinglyLinkedListNode* head, int nth);
+	*/
 }
 

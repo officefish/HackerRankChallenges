@@ -19,6 +19,9 @@
     <ClCompile Include="tests\list\singly\MergeSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\ValidateSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\SLLMiscellaneous.cpp" />
+    <ClCompile Include="tests\list\singly\SLL_API_Tests.cpp" />
+    <ClCompile Include="tests\list\singly\api\_Api_Transform_Tests.cpp" />
+    <ClCompile Include="tests\list\singly\api\_Api_Erase_Tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

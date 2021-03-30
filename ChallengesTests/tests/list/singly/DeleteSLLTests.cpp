@@ -1,5 +1,6 @@
 #include "./slltests.h"
 
+/*
 namespace slltests {
     TEST(SLLTests_Del, DeleteNode_CorrectRequest) {
         // initial
@@ -258,3 +259,4 @@ namespace slltests {
     }
 
 }
+*/

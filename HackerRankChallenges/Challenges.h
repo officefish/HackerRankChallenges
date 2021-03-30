@@ -72,6 +72,8 @@ int luckBalanceChallenge();
 
 //Lists
 // singly
+int listUniformInitializeChallenge();
+
 int insertNodeAtHeadChallenge();
 int instertNodeAtTailChallenge();
 int insertNodeAtPositionChallenge();
@@ -183,6 +185,10 @@ namespace hrs {
 	int minAbsDifference_uSTD(vector<int>);
 	int32_t luckBalance(int32_t, vector<vector<int32_t>>);
 
+	// math
+	int32_t partial_permutation(int32_t n);
+	int32_t partial_combination(int32_t n, int32_t k);
+	int32_t partial_reflection(int32_t n, int32_t k);
 
 	//DayChallenges
 	vector<int> reverseRange(char, const vector<int>& input);

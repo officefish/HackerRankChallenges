@@ -13,5 +13,6 @@ namespace slltests {
 
     void InsertNodeInRange(SinglyLinkedList* llist, const vector<int>& datas);
     string ToString(SinglyLinkedListNode* node);
+    string ToStringLoop(SinglyLinkedListNode* node, SinglyLinkedListNode* end);
 
 }

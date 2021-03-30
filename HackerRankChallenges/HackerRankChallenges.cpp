@@ -54,6 +54,7 @@ int main()
     //return luckBalanceChallenge();
 
     //Lists
+    listUniformInitializeChallenge();
     //return sortListChallenge();
     //return mergeSinglySortedChallenge();
     //return sortedInsertChallenge();
@@ -63,7 +64,8 @@ int main()
    //return  countCommonNodesChallenge();
     //return splitMiddleChallenge();
     //return splitEvenOddChallenge();
-    return reorderChallenge();
+    //return reorderChallenge();
+
     //C++
     //return inputOutputChallenge();
     //return dataTypesChallenge();

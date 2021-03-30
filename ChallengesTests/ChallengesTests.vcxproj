@@ -49,11 +49,14 @@
     <ClCompile Include="tests\DaysChallengesTests.cpp" />
     <ClCompile Include="tests\GreedyAlgorithmsTests.cpp" />
     <ClCompile Include="tests\HashTablesTests.cpp" />
+    <ClCompile Include="tests\list\singly\api\_Api_Erase_Tests.cpp" />
+    <ClCompile Include="tests\list\singly\api\_Api_Transform_Tests.cpp" />
     <ClCompile Include="tests\list\singly\DeleteSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\GetSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\InsertSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\MergeSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\SLLMiscellaneous.cpp" />
+    <ClCompile Include="tests\list\singly\SLL_API_Tests.cpp" />
     <ClCompile Include="tests\list\singly\SplitSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\TransformSLLTests.cpp" />
     <ClCompile Include="tests\list\singly\ValidateSLLTests.cpp" />
@@ -96,6 +99,7 @@
       <AdditionalIncludeDirectories>D:\СppStudy\HackerRankChallenges\HackerRankChallenges;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

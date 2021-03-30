@@ -1,6 +1,6 @@
 
 #include "./SinglyLinkedList.h"
-
+#include <sstream>
 
 namespace sll {
 
@@ -9,81 +9,234 @@ namespace sll {
          this->next = nullptr;
     }
 
-    SinglyLinkedListNode* SinglyLinkedListNode::GetTail(SinglyLinkedListNode* head){
-        while (head->next != nullptr)
-            head = head->next;
-        return head;
+    SinglyLinkedListNode::~SinglyLinkedListNode() {
+        this->next = nullptr;
+    }
+
+    s_ptr SinglyLinkedListNode::GetTail(const s_ptr head){
+        std::shared_ptr<Node> current = head;
+        while (current->next)
+            current = current->next;
+        return current;
     }
 
     SinglyLinkedList::SinglyLinkedList() {
          this->head = nullptr;
-         this->tail = nullptr;
     }
 
-    void SinglyLinkedList::InsertNode(int node_data) {
-        SinglyLinkedListNode* node = new SinglyLinkedListNode(node_data);
-        if (!this->head) {
-            this->head = node;
+    SinglyLinkedList::~SinglyLinkedList() {
+        sll::Free(this->head);
+        this->head = nullptr;
+    }
+
+    SinglyLinkedList::SinglyLinkedList(int data) {
+        this->head = Insert(this->head, data);
+    }
+
+    SinglyLinkedList::SinglyLinkedList(const std::initializer_list<int>& list) {
+        this->head = Merge(this->head, list);
+    }
+
+    SinglyLinkedList::SinglyLinkedList(const SinglyLinkedList& source) {
+        this->head = Copy(source.head);
+    }
+
+    SinglyLinkedList& SinglyLinkedList::insert(const std::initializer_list<int>& list) {
+        this->head = Merge(this->head, list);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::insert(const SinglyLinkedList& list) {
+        this->head = Merge(list.head, this->head);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::insert(int data) {
+        this->head = Insert(this->head, data);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::back_insert(int data) {
+        this->head = BackInsert(this->head, data);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::back_insert(const std::initializer_list<int>& list) {
+        this->head = BackMerge(this->head, list);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::back_insert(const SinglyLinkedList& list) {
+        this->head = Merge(this->head, list.head);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::middle_insert(int data) {
+        this->head = MiddleInsert(this->head, data);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::middle_insert(const std::initializer_list<int>& list) {
+        s_ptr tmp = Merge(tmp, list);
+        this->head = MiddleInsert(this->head, tmp);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::middle_insert(const SinglyLinkedList& list) {
+        this->head = MiddleInsert(this->head, list.head);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::index_insert(int data, int index) {
+        this->head = IndexInsert(this->head, data, index);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::index_insert(const std::initializer_list<int>& list, size_t index) {
+        s_ptr tmp = Merge(tmp, list);
+        this->head = IndexInsert(this->head, tmp, index);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::index_insert(const SinglyLinkedList& list, size_t index) {
+        this->head = IndexInsert(this->head, list.head, index);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::alternate_insert(const std::initializer_list<int>& list, size_t frequency) {
+        s_ptr tmp = Merge(tmp, list);
+        this->head = AlternateInsert(this->head, tmp, frequency);
+        return *this;
+
+    }
+    SinglyLinkedList& SinglyLinkedList::alternate_insert(const SinglyLinkedList& list, size_t frequency) {
+        this->head = AlternateInsert(this->head, list.head, frequency);
+        return *this;
+    }
+    SinglyLinkedList& SinglyLinkedList::group_insert(const std::initializer_list<int>& list, size_t frequency) {
+        s_ptr tmp = Merge(tmp, list);
+        this->head = GroupInsert(this->head, tmp, frequency);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::group_insert(const SinglyLinkedList& list, size_t frequency) {
+        this->head = GroupInsert(this->head, list.head, frequency);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::erase(size_t from, size_t count) {
+        this->head = Erase(this->head, from, count);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::erase_between(size_t from, size_t to) {
+        this->head = EraseBetween(this->head, from, to);
+        return *this;
+    }
+
+    SinglyLinkedList SinglyLinkedList::concat(const std::initializer_list<int>& list) {
+        SinglyLinkedList new_list;
+        new_list.head = Copy(head);
+        new_list.head = BackMerge(new_list.head, list);
+        return new_list;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::repeat(size_t limit) {
+        this->head = Repeat(this->head, limit);
+        return *this;
+    }
+
+
+    SinglyLinkedList& SinglyLinkedList::partial_permutation(int32_t limit, bool resultOnly) {
+        if (resultOnly) {
+            this->head = PartialPermutationConstant(this->head, limit);
+            // Clear(1);
         } else {
-            this->tail->next = node;
+            this->head = PartialPermutation(this->head, limit);
         }
-        this->tail = node;
+        return *this;
     }
 
-    int SinglyLinkedList::size() {
+    SinglyLinkedList& SinglyLinkedList::partial_combination(int32_t limit, int32_t factors, bool resultOnly) {
+        if (factors > limit) factors = limit;
+        if (resultOnly)
+            this->head = PartialCombinationConstant(this->head, limit, factors);
+            // Clear(this->head, 1);
+        else
+            this->head = PartialCombination(this->head, limit, factors);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::partial_reflection(int32_t limit, int32_t factors, bool resultOnly) {
+        if (factors > limit) factors = limit;
+        if (resultOnly)
+            this->head = PartialReflectionConstant(this->head, limit, factors);
+        // Clear(this->head, 1);
+        else
+            this->head = PartialReflection(this->head, limit, factors);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::print(std::string sep, std::ostream& cout) {
+        cout << "{ ";
+        Print(this->head, sep, cout);
+        cout << " }" << std::endl;
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::print() {
+        this->print(", ", std::cout);
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::reverse_print(std::string sep, std::ostream& cout) {
+        ReversePrint(this->head, sep, cout);
+        cout << std::endl;
+        return *this;
+    }
+
+    SinglyLinkedList& SinglyLinkedList::reverse_print() {
+        this->reverse_print(" ", std::cout);
+        return *this;
+    }
+
+    std::string SinglyLinkedList::toString() {
+        std::stringstream ss;
+        ss << "{";
+        Print(this->head, ", ", ss);
+        ss << "}";
+        return ss.str();
+    }
+
+    int SinglyLinkedList::size() const {
         return sll::Size(this->head);
     }
 
-    int Size(SinglyLinkedListNode* head) {
+    int Size(const s_ptr head) {
         int counter = { 0 };
-        SinglyLinkedListNode* current = head;
-        while (current != NULL) {
+        s_ptr current = head;
+        while (current) {
             ++counter;
             current = current->next;
         }
         return counter;
     }
 
-    void PrintSinglyLinkedList(SinglyLinkedListNode* node, std::string sep, std::ostream& cout) {
-        while (node) {
-            cout << node->data;
-            node = node->next;
-            if (node)
-                cout << sep;
-        }
-    }
-    void FreeSinglyLinkedList(SinglyLinkedListNode* head) {
-        SinglyLinkedListNode* current = head;
-        std::set<intptr_t> adresses;
-        while (current != nullptr) {
-            // cash current adress
-            adresses.insert(reinterpret_cast<intptr_t>(current));
-            // list loop
-            SinglyLinkedListNode* temp = current;
-            current = current->next;
-            // if adress is not unique this list is circled,
-            // so we stop go through
-            auto search = adresses.find(reinterpret_cast<intptr_t>(current));
-            if (search == adresses.end())
-                free(temp);
-            else
-                return;
-        }
+    void sll::Print(const s_ptr head, std::string sep, std::ostream& cout) {
+        if (not head) return;
+        cout << head->data;
+        if (head->next) cout << sep;
+        sll::Print(head->next, sep, cout);
     }
 
-    void Print(SinglyLinkedListNode* head) {
-        if (head == nullptr) return;
-        std::cout << head->data << std::endl;
-        Print(head->next);
-    }
-
-    void ReversePrint(SinglyLinkedListNode* head) {
-        if (head == nullptr) return;
-        ReversePrint(head->next);
-        std::cout << head->data << std::endl;
+    void sll::ReversePrint(const s_ptr head, std::string sep, std::ostream& cout) {
+        if (not head) return;
+        sll::ReversePrint(head->next, sep, cout);
+        cout << head->data << sep;
     }
 
     // TODO: need to rename and repackage this:
+    /*
     SinglyLinkedListNode* AddSameSize(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2, int* carry) {
         SinglyLinkedListNode* temp;
         int car = 0;
@@ -190,5 +343,5 @@ namespace sll {
         }
         return head1;
     }
-
+    */
 }
